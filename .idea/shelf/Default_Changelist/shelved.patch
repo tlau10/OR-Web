@@ -1,0 +1,157 @@
+Index: frontend/src/router/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import Vue from 'vue'\r\nimport VueRouter from 'vue-router'\r\nimport Home from '../views/Home.vue'\r\n\r\nVue.use(VueRouter)\r\n\r\nconst routes = [\r\n  {\r\n    path: '/',\r\n    name: 'Home',\r\n    component: Home\r\n  },\r\n  {\r\n    path: '/about',\r\n    name: 'About',\r\n    // route level code-splitting\r\n    // this generates a separate chunk (about.[hash].js) for this route\r\n    // which is lazy-loaded when the route is visited.\r\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/About.vue')\r\n  },\r\n  {\r\n    path: '/methoden',\r\n    name: 'Methoden',\r\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/Methoden.vue')\r\n  },\r\n  {\r\n    path: '/solver',\r\n    name: 'Solver',\r\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/Solver.vue')\r\n  },\r\n  {\r\n    path: '/handbuch',\r\n    name: 'Handbuch',\r\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/Handbuch.vue')\r\n  },\r\n  {\r\n    path: '/methodenuebersicht',\r\n    name: 'Methodenübersicht',\r\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/Methodenuebersicht.vue')\r\n  }\r\n]\r\n\r\nconst router = new VueRouter({\r\n  routes\r\n})\r\n\r\nexport default router\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- frontend/src/router/index.js	(revision 14f27fff4b76e19e7ed141a7c878fb2c951d63e2)
++++ frontend/src/router/index.js	(date 1622029908010)
+@@ -28,12 +28,23 @@
+     name: 'Solver',
+     component: () => import(/* webpackChunkName: "about" */ '../views/Solver.vue')
+   },
++
+   {
+     path: '/handbuch',
+     name: 'Handbuch',
+     component: () => import(/* webpackChunkName: "about" */ '../views/Handbuch.vue')
+   },
+   {
++    path: '/PTSS',
++    name: 'PTSS',
++    component: () => import(/* webpackChunkName: "about" */ '../views/Methoden/PTSS.vue')
++  },
++  {
++    path: '/PowerLP',
++    name: 'PowerLP',
++    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
++  },
++  {
+     path: '/methodenuebersicht',
+     name: 'Methodenübersicht',
+     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(date 1622029333347)
++++ .idea/codeStyles/Project.xml	(date 1622029333347)
+@@ -0,0 +1,25 @@
++<component name="ProjectCodeStyleConfiguration">
++  <code_scheme name="Project" version="173">
++    <JetCodeStyleSettings>
++      <option name="PACKAGES_TO_USE_STAR_IMPORTS">
++        <value>
++          <package name="java.util" alias="false" withSubpackages="false" />
++          <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
++          <package name="io.ktor" alias="false" withSubpackages="true" />
++        </value>
++      </option>
++      <option name="PACKAGES_IMPORT_LAYOUT">
++        <value>
++          <package name="" alias="false" withSubpackages="true" />
++          <package name="java" alias="false" withSubpackages="true" />
++          <package name="javax" alias="false" withSubpackages="true" />
++          <package name="kotlin" alias="false" withSubpackages="true" />
++          <package name="" alias="true" withSubpackages="true" />
++        </value>
++      </option>
++    </JetCodeStyleSettings>
++    <ScalaCodeStyleSettings>
++      <option name="MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE" value="true" />
++    </ScalaCodeStyleSettings>
++  </code_scheme>
++</component>
+\ No newline at end of file
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/codeStyleConfig.xml	(date 1622029333356)
++++ .idea/codeStyles/codeStyleConfig.xml	(date 1622029333356)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1622029333335)
++++ .idea/modules.xml	(date 1622029333335)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/OR-WebSS21.iml" filepath="$PROJECT_DIR$/.idea/OR-WebSS21.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1622029333313)
++++ .idea/misc.xml	(date 1622029333313)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1622029333322)
++++ .idea/vcs.xml	(date 1622029333322)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.gitignore	(date 1622029332769)
++++ .idea/.gitignore	(date 1622029332769)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/OR-WebSS21.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/OR-WebSS21.iml	(date 1622029333305)
++++ .idea/OR-WebSS21.iml	(date 1622029333305)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
