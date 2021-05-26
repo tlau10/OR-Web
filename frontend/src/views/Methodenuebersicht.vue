@@ -1,10 +1,15 @@
 <template>
+<div class="about">
+  <v-breadcrumbs
+      :items="items"
+      large
+    ></v-breadcrumbs>
   <v-simple-table>
     <template v-slot:default>
       <thead>
         <tr>
           <th class="text-left">Kategorie</th>
-          <th class="text-left">Name</th>
+          <th class="text-left">Methodenname</th>
           <th class="text-left">Kurzbeschreibung</th>
           <th class="text-center">technische Dokumentation</th>
           <th class="text-center">Benutzerhandbuch</th>
@@ -150,4 +155,23 @@
       </tbody>
     </template>
   </v-simple-table>
+  </div>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      items: [
+        {
+          text: 'Home',
+          disabled: false,
+          href: '/',
+        },
+        {
+          text: 'Methodenübersicht',
+          disabled: true,
+        }
+      ]
+    })
+  }
+</script>
