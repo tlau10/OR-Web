@@ -23,25 +23,25 @@
         >-->
         <tr>
           <td class="text-center">Transportplanung</td>
-          <td class="text-left">
-            Paket Transport Simulation System 1.1 (PTSS)
+          <td class="text-left"><a href="">
+            Paket Transport Simulation System 1.1 (PTSS)</a>
           </td>
           <td class="text-left"></td>
-          <td class="text-center"><v-button href="" download><v-icon>mdi-file-cog-outline</v-icon></v-button></td>
-          <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
-          <td class="text-center"><v-icon>mdi-download</v-icon></td>
-        </tr>
-        <tr>
-          <td class="text-center">Transportplanung</td>
-          <td class="text-left">TR-Optimizer 2.1</td>
-          <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-download</v-icon></td>
         </tr>
         <tr>
           <td class="text-center">Transportplanung</td>
-          <td class="text-left">BOP - Beladungsoptimierung 1.1</td>
+          <td class="text-left"><a href="">TR-Optimizer 2.1</a></td>
+          <td class="text-left"></td>
+          <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
+          <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
+          <td class="text-center"><v-icon>mdi-download</v-icon></td>
+        </tr>
+        <tr>
+          <td class="text-center">Transportplanung</td>
+          <td class="text-left"><a href="">BOP - Beladungsoptimierung 1.1</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -49,7 +49,7 @@
         </tr>
         <tr>
           <td class="text-center">Standortplanung</td>
-          <td class="text-left">Eisenstadt 1.4</td>
+          <td class="text-left"><a href="">Eisenstadt 1.4</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -57,7 +57,7 @@
         </tr>
         <tr>
           <td class="text-center">Standortplanung</td>
-          <td class="text-left">innerbetriebliche Standortplanung 1.1</td>
+          <td class="text-left"><a href="">innerbetriebliche Standortplanung 1.1</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -65,7 +65,7 @@
         </tr>
         <tr>
           <td class="text-center">Standortplanung</td>
-          <td class="text-left">Standortplanung 3.0</td>
+          <td class="text-left"><a href="">Standortplanung 3.0</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -73,7 +73,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Zuordnungsplanung 2.1</td>
+          <td class="text-left"><a href="">Zuordnungsplanung 2.1</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -81,7 +81,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Lineare Portfolio Optimierung 2.0</td>
+          <td class="text-left"><a href="">Lineare Portfolio Optimierung 2.0</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -89,7 +89,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Roundtrip 0.9</td>
+          <td class="text-left"><a href="">Roundtrip 0.9</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -98,7 +98,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Job Shop 2.2</td>
+          <td class="text-left"><a href="">Job Shop 2.2</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -106,7 +106,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Verkehrsplaner</td>
+          <td class="text-left"><a href="">Verkehrsplaner</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -114,7 +114,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Maschinenbelegungsplanung 5.2</td>
+          <td class="text-left"><a href="">Maschinenbelegungsplanung 5.2</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -122,7 +122,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">OP-Scheduling 2.3</td>
+          <td class="text-left"><a href="">OP-Scheduling 2.3</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -130,7 +130,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Ernährungsplaner 2.0</td>
+          <td class="text-left"><a href="">Ernährungsplaner 2.0</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -138,7 +138,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Einkaufswagen</td>
+          <td class="text-left"><a href="">Einkaufswagen</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
@@ -146,7 +146,7 @@
         </tr>
         <tr>
           <td class="text-center">Personalplanung</td>
-          <td class="text-left">Hotelmanager 5.0</td>
+          <td class="text-left"><a href="">Hotelmanager 5.0</a></td>
           <td class="text-left"></td>
           <td class="text-center"><v-icon>mdi-file-cog-outline</v-icon></td>
           <td class="text-center"><v-icon>mdi-file-account-outline</v-icon></td>
