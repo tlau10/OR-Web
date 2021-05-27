@@ -28,21 +28,10 @@ const routes = [
     name: 'Solver',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver.vue')
   },
-
   {
     path: '/handbuch',
     name: 'Handbuch',
     component: () => import(/* webpackChunkName: "about" */ '../views/Handbuch.vue')
-  },
-  {
-    path: '/PTSS',
-    name: 'PTSS',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methoden/PTSS.vue')
-  },
-  {
-    path: '/PowerLP',
-    name: 'PowerLP',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
   },
   {
     path: '/methodenuebersicht',
