@@ -20,9 +20,15 @@
                             <th class="text-center">Download</th>
                         </tr>
                     </thead>
-                    <tbody v-for="kategorie in a.kategorie" :key="kategorie.name" border="2">
-                        <tr class="text-center">{{kategorie.name}}</tr>
-                        <tr v-for="solver in kategorie.solver" :key="solver.name" border="2">
+                    <tbody v-for="kategorie in kategorie" :key="kategorie.name">
+                        <tr class="text-center">
+                            <td>{{kategorie.name}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr v-for="solver in kategorie.solver" :key="solver.name">
                             <td></td>
                             <td>
                                 <v-btn :to="solver.start" depressed plain block class="text-capitalize">
@@ -52,7 +58,7 @@
     </v-container>
     </v-card>
 </template>
-<!--Interaktive Solver, Grafische Solver, Solver ohne Kategorie-->
+
 <script>
   export default {
     data: () => ({
@@ -67,7 +73,6 @@
           disabled: true,
         }
       ],
-    a: {
       kategorie: [
             {
               name: '',
@@ -155,7 +160,6 @@
               ]
           },
       ],
-    },
     })
   }
 </script>
