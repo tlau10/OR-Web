@@ -17,25 +17,26 @@
           v-for="item in methoden"
           :key="item.name"
         >-->
-          <!-- TODO <a> href ergänzen  -->
-          <!-- TODO <v-btn> href [&action?] ergänzen -->
+          <!-- TODO <a> href zu entsprechende Methode ergänzen  -->
+          <!-- TODO <v-btn> href zu-Center ergänzen -->
+          <!-- TODO nach jeweils letzten Kategorie-Eintrag Borderlinie dicker machen -->
           <tr>
             <td class="text-center" rowspan="3">Transportplanung</td>
             <td class="text-left">
               <a href=""> Paket Transport Simulation System 1.1 (PTSS)</a>
             </td>
             <td class="text-center">
-              <v-btn text icon href="file_test.pdf" target="_blank" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -45,17 +46,17 @@
             <td class="text-left"><a href="">TR-Optimizer 2.1</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -67,17 +68,17 @@
             </td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -87,17 +88,17 @@
             <td class="text-left"><a href="">Eisenstadt 1.4</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -109,17 +110,17 @@
             </td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -129,17 +130,17 @@
             <td class="text-left"><a href="">Standortplanung 3.0</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -149,17 +150,17 @@
             <td class="text-left"><a href="">Zuordnungsplanung 2.1</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -171,17 +172,17 @@
             </td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -191,17 +192,17 @@
             <td class="text-left"><a href="">Roundtrip 0.9</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -212,17 +213,17 @@
             <td class="text-left"><a href="">Job Shop 2.2</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -232,17 +233,17 @@
             <td class="text-left"><a href="">Verkehrsplaner</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -254,17 +255,17 @@
             </td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -274,17 +275,17 @@
             <td class="text-left"><a href="">OP-Scheduling 2.3</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -294,17 +295,17 @@
             <td class="text-left"><a href="">Ernährungsplaner 2.0</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -314,17 +315,17 @@
             <td class="text-left"><a href="">Einkaufswagen</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -334,17 +335,17 @@
             <td class="text-left"><a href="">Hotelmanager 5.0</a></td>
 
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon href="" download>
+              <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
