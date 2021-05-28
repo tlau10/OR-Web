@@ -5,11 +5,11 @@
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-left">Kategorie</th>
-            <th class="text-left">Methodenname</th>
-            <th class="text-center">technische Dokumentation</th>
-            <th class="text-center">Benutzerhandbuch</th>
-            <th class="text-center">Download</th>
+            <th class="text-left" style="border-bottom: 2px solid darkgrey;">Kategorie</th>
+            <th class="text-left" style="border-bottom: 2px solid darkgrey;">Methodenname</th>
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">technische Dokumentation</th>
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">Benutzerhandbuch</th>
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">Download</th>
           </tr>
         </thead>
         <tbody>
@@ -20,8 +20,9 @@
           <!-- TODO <a> href zu entsprechende Methode ergänzen  -->
           <!-- TODO <v-btn> href zu-Center ergänzen -->
           <!-- TODO nach jeweils letzten Kategorie-Eintrag Borderlinie dicker machen -->
+          <!-- TODO style auslagern in CSS -->
           <tr>
-            <td class="text-center" rowspan="3">Transportplanung</td>
+            <td class="text-center" rowspan="3" style="border-bottom: 2px solid darkgrey;">Transportplanung</td>
             <td class="text-left">
               <a href=""> Paket Transport Simulation System 1.1 (PTSS)</a>
             </td>
@@ -44,7 +45,6 @@
           <tr>
             <!-- <td class="text-center">Transportplanung</td> -->
             <td class="text-left"><a href="">TR-Optimizer 2.1</a></td>
-
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -63,28 +63,28 @@
           </tr>
           <tr>
             <!-- <td class="text-center">Transportplanung</td> -->
-            <td class="text-left">
+            <td class="text-left" style="border-bottom:2px solid darkgrey;">
               <a href="">BOP - Beladungsoptimierung 1.1</a>
             </td>
 
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
           </tr>
           <tr>
-            <td class="text-center" rowspan="3">Standortplanung</td>
+            <td class="text-center" rowspan="3" style="border-bottom:2px solid darkgrey;">Standortplanung</td>
             <td class="text-left"><a href="">Eisenstadt 1.4</a></td>
 
             <td class="text-center">
@@ -127,26 +127,26 @@
           </tr>
           <tr>
             <!--  <td class="text-center">Standortplanung</td> -->
-            <td class="text-left"><a href="">Standortplanung 3.0</a></td>
+            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Standortplanung 3.0</a></td>
 
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
           </tr>
           <tr>
-            <td class="text-center" rowspan="10">Personalplanung</td>
+            <td class="text-center" rowspan="10" style="border-bottom:2px solid darkgrey;">Personalplanung</td>
             <td class="text-left"><a href="">Zuordnungsplanung 2.1</a></td>
 
             <td class="text-center">
@@ -332,19 +332,19 @@
           </tr>
           <tr>
             <!--  <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Hotelmanager 5.0</a></td>
+            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Hotelmanager 5.0</a></td>
 
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
-            <td class="text-center">
+            <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
