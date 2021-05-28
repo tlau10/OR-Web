@@ -37,7 +37,12 @@ const routes = [
     path: '/methodenuebersicht',
     name: 'Methodenübersicht',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
-  }
+  },
+  {
+    path: '/solveruebersicht',
+    name: 'Solverübersicht',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solveruebersicht.vue')
+  },
 ]
 
 const router = new VueRouter({
