@@ -6,9 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c16df0d-824d-4e9b-b813-3a1e53b1e2bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/Methods/PTSS.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/Solver/PLP.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/plp2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/ptss.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Methods/PTSS.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Methods/PTSS.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Solver/PLP.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Solver/PLP.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +30,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/assets" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mauri\IdeaProjects\OR-WebSS21\frontend\src\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauri\IdeaProjects\OR-WebSS21\frontend\src\views\Solver" />
       <recent name="C:\Users\mauri\IdeaProjects\OR-WebSS21\frontend\src\views\Methods" />
@@ -42,6 +51,9 @@
       <updated>1622714429126</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

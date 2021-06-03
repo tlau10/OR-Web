@@ -32,7 +32,7 @@
 
     <!--App bar 009a93  80cdc9-->
     <v-card class="overflow-hidden">
-      <v-app-bar dark shrink-on-scroll src="..\public\orwebBanner.png" app>
+      <v-app-bar dark prominent src="..\public\orwebBanner.png" app>
         <v-app-bar-nav-icon
           @click="drawer = !drawer"
           color="#009a93"
@@ -78,7 +78,9 @@ export default {
       { title: "Methoden", icon: "mdi-debug-step-over", to: "/methoden" },
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
-      { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"}
+      { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
+      { title: "PTSS", icon: "mdi-book-open-variant", to: "/PTSS" },
+      { title: "PLP", icon: "mdi-book-open-variant", to: "/PowerLP" }
     ],
   }),
 };

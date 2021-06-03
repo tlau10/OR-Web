@@ -1,46 +1,41 @@
 <template>
-<html>
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-  <title>Power-LP 2.0</title>
-  <link rel="stylesheet" type="text/css" href="../../CSS/main.css">
-</head>
+    <v-container
+        class="spacing-playground pa-6"
+        fluid
+      >
 
-	<body bgcolor="00BFFF" bgproperties="fixed">
+        <head>
+          <meta charset="UTF-8"/>
+          <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+          <title>Power-LP 2.0</title>
+        </head>
 
-	<div class="content">
+        <body>
+             <h1>Power-LP 2.0</h1>
+             <hr noshade size=1>
+             <div class="infoPics">
+                 <img width="600px" src="@/assets/plp2.jpg"></img>
+             </div>
+             <hr noshade size=1>
+             <h2>Beschreibung des Solvers:</h2>
+             <p>Power-LP 2.0 ist ein Frontend und erm&ouml;glicht das L&ouml;sen von LP Modellen mit Hilfe folgender Solver:</p>
 
-		<h1>Power-LP 2.0</h1>
+             <ul>
+                 <li>LP_Solve</li>
+                 <li>GLPK</li>
+                 <li>Weidenauer</li>
+                 <li>ILOG CPLEX</li>
+                 <li>CBC</li>
+             </ul>
 
-<hr noshade size=1>
+             <p>	Die Eingabewerte k&ouml;nnen Zahlenwerte sein (Ganz- oder Real-). Realzahlwerte werden automatisch in gek&uuml;rzte Br&uuml;che umgewandelt.
+             Zus&auml;tzlich k&ouml;nnen die Werte auch sofort als Br&uuml;che angegeben werden.
+             </p>
 
-<div class="infoPics">
-<img width="600px" SRC="plp2.JPG"></img>
-</div>
+             <p><b>Performance:</b> <br> Bei 100 Zeilen und 100 Spalten rechnet der Power-LP in wenigen Sekunden das Ergebnis aus.</p>
 
-<hr noshade size=1>
+             <p><b>Wichtiger Hinweis:</b> <br> Zellen nicht mit Doppelklick selektieren, da sie sonst deselektiert werden. Einfacher Klick gen&uuml;gt.</p>
+        </body>
 
-	<h2>Beschreibung des Solvers:</h2>
-	<p>Power-LP 2.0 ist ein Frontend und erm&ouml;glicht das L&ouml;sen von LP Modellen mit Hilfe folgender Solver:</p>
-
-<ul>
-	<li>LP_Solve</li>
-	<li>GLPK</li>
-	<li>Weidenauer</li>
-	<li>ILOG CPLEX</li>
-	<li>CBC</li>
-</ul>
-
-<p>	Die Eingabewerte k&ouml;nnen Zahlenwerte sein (Ganz- oder Real-). Realzahlwerte werden automatisch in gek&uuml;rzte Br&uuml;che umgewandelt.
-Zus&auml;tzlich k&ouml;nnen die Werte auch sofort als Br&uuml;che angegeben werden.
-</p>
-
-<p><b>Performance:</b> <br> Bei 100 Zeilen und 100 Spalten rechnet der Power-LP in wenigen Sekunden das Ergebnis aus.</p>
-
-<p><b>Wichtiger Hinweis:</b> <br> Zellen nicht mit Doppelklick selektieren, da sie sonst deselektiert werden. Einfacher Klick gen&uuml;gt.</p>
-
-</div>
-</body>
-</html>
+    </v-container>
 </template>
