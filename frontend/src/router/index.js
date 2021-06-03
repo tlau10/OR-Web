@@ -37,7 +37,17 @@ const routes = [
     path: '/methodenuebersicht',
     name: 'Methodenübersicht',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
-  }
+  },
+   {
+     path: '/PTSS',
+     name: 'PTSS',
+     component: () => import(/* webpackChunkName: "about" */ '../views/Methoden/PTSS.vue')
+   },
+   {
+     path: '/PowerLP',
+     name: 'PowerLP',
+     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
+   }
 ]
 
 const router = new VueRouter({
