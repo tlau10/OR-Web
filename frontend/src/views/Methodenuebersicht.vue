@@ -24,7 +24,7 @@
           <tr>
             <td class="text-center" rowspan="3" style="border-bottom: 2px solid darkgrey;">Transportplanung</td>
             <td class="text-left">
-              <a href=""> Paket Transport Simulation System 1.1 (PTSS)</a>
+              <a v-bind:href="'/PTSS'">Paket Transport Simulation System 1.1 (PTSS)</a>
             </td>
             <td class="text-center">
               <v-btn text icon href="">

@@ -100,7 +100,7 @@
                 },
                 {
                     name: 'Power LP 2.0',
-                    start:'',
+                    start:'PowerLP',
                     dokumentation :'',
                     handbuch: '',
                     download: '',
