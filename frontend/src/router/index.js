@@ -37,6 +37,11 @@ const routes = [
     path: '/methodenuebersicht',
     name: 'Methodenübersicht',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
+  },
+  {
+    path: '/Home',
+    name: 'Home',
+    component: () => import('../views/home_ORWEB.blade.php')
   }
 ]
 
