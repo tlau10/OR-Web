@@ -28,7 +28,7 @@
           <tr v-for="item in kategorie.item" :key="item.name">
             <td class="text-center">{{ kategorie.name }}</td>
             <td class="text-left">
-              <v-btn
+            <v-btn
                 :to="item.start"
                 depressed
                 plain
@@ -36,9 +36,11 @@
                 >{{ item.name }}</v-btn>
             </td>
             <td class="text-center">
+              <div id="app">
               <v-btn text icon :to="item.dokumentation">
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
+              </div>
             </td>
             <td class="text-center">
               <v-btn text icon :to="item.handbuch">
@@ -281,4 +283,11 @@ export default {
     ],
   }),
 };
+
+var app = new Vue({
+  el: '#app',
+  methods:{
+    onclick(){alert("hi")}
+  }
+})
 </script>
