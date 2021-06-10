@@ -37,18 +37,18 @@
             </td>
             <td class="text-center">
               <div id="app">
-              <v-btn text icon :to="item.dokumentation">
+              <v-btn text icon :href="item.dokumentation" download>
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
               </div>
             </td>
             <td class="text-center">
-              <v-btn text icon :to="item.handbuch">
+              <v-btn text icon :href="item.handbuch">
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon :to="item.download">
+              <v-btn text icon :href="item.download">
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
@@ -80,7 +80,7 @@ export default {
           {
             name: "Wagner-Whitin-LP",
             start: "",
-            dokumentation: "",
+            dokumentation: "orwebBanner.png",
             handbuch: "",
             download: "",
           },
@@ -283,11 +283,4 @@ export default {
     ],
   }),
 };
-
-var app = new Vue({
-  el: '#app',
-  methods:{
-    onclick(){alert("hi")}
-  }
-})
 </script>
