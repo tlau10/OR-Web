@@ -18,13 +18,12 @@
           :key="item.name"
         >-->
           <!-- TODO <a> href zu entsprechende Methode ergänzen  -->
-          <!-- TODO <v-btn> href zu-Center ergänzen -->
-          <!-- TODO nach jeweils letzten Kategorie-Eintrag Borderlinie dicker machen -->
+          <!-- TODO <v-btn> href zu Download-Center ergänzen -->
           <!-- TODO style auslagern in CSS -->
           <tr>
             <td class="text-center" rowspan="3" style="border-bottom: 2px solid darkgrey;">Transportplanung</td>
             <td class="text-left">
-              <a v-bind:href="'/PTSS'">Paket Transport Simulation System 1.1 (PTSS)</a>
+              <v-btn :to="'PTSS'" depressed plain block class="text-capitalize">Paket Transport Simulation System 1.1 (PTSS)</v-btn>
             </td>
             <td class="text-center">
               <v-btn text icon href="">
@@ -43,8 +42,7 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Transportplanung</td> -->
-            <td class="text-left"><a href="">TR-Optimizer 2.1</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">TR-Optimizer 2.1</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -62,11 +60,9 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Transportplanung</td> -->
             <td class="text-left" style="border-bottom:2px solid darkgrey;">
-              <a href="">BOP - Beladungsoptimierung 1.1</a>
+              <v-btn :to="''" depressed plain block class="text-capitalize">BOP - Beladungsoptimierung 1.1</v-btn>
             </td>
-
             <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -85,8 +81,7 @@
           </tr>
           <tr>
             <td class="text-center" rowspan="3" style="border-bottom:2px solid darkgrey;">Standortplanung</td>
-            <td class="text-left"><a href="">Eisenstadt 1.4</a></td>
-
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Eisenstadt 1.4</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -104,9 +99,8 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Standortplanung</td> -->
             <td class="text-left">
-              <a href="">innerbetriebliche Standortplanung 1.1</a>
+              <v-btn :to="''" depressed plain block class="text-capitalize">innerbetriebliche Standortplanung 1.1</v-btn>
             </td>
             <td class="text-center">
               <v-btn text icon href="">
@@ -125,8 +119,7 @@
             </td>
           </tr>
           <tr>
-            <!--  <td class="text-center">Standortplanung</td> -->
-            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Standortplanung 3.0</a></td>
+            <td class="text-left" style="border-bottom:2px solid darkgrey;"><v-btn :to="''" depressed plain block class="text-capitalize">Standortplanung 3.0</v-btn></td>
             <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -145,7 +138,7 @@
           </tr>
           <tr>
             <td class="text-center" rowspan="10" style="border-bottom:2px solid darkgrey;">Personalplanung</td>
-            <td class="text-left"><a href="">Zuordnungsplanung 2.1</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Zuordnungsplanung 2.1</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -163,9 +156,8 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
             <td class="text-left">
-              <a href="">Lineare Portfolio Optimierung 2.0</a>
+              <v-btn :to="''" depressed plain block class="text-capitalize">Lineare Portfolio Optimierung 2.0</v-btn>
             </td>
             <td class="text-center">
               <v-btn text icon href="">
@@ -184,8 +176,7 @@
             </td>
           </tr>
           <tr>
-            <!--  <td class="text-center">Personalplanung</td>-->
-            <td class="text-left"><a href="">Roundtrip 0.9</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Roundtrip 0.9</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -203,8 +194,7 @@
             </td>
           </tr>
           <tr>
-            <!--  <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Job Shop 2.2</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Job Shop 2.2</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -222,8 +212,7 @@
             </td>
           </tr>
           <tr>
-            <!--   <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Verkehrsplaner</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Verkehrsplaner</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -241,9 +230,8 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
             <td class="text-left">
-              <a href="">Maschinenbelegungsplanung 5.2</a>
+              <v-btn :to="''" depressed plain block class="text-capitalize">Maschinenbelegungsplanung 5.2</v-btn>
             </td>
             <td class="text-center">
               <v-btn text icon href="">
@@ -262,8 +250,7 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">OP-Scheduling 2.3</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">OP-Scheduling 2.3</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -281,8 +268,7 @@
             </td>
           </tr>
           <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Ernährungsplaner 2.0</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Ernährungsplaner 2.0</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -300,8 +286,7 @@
             </td>
           </tr>
           <tr>
-            <!--   <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Einkaufswagen</a></td>
+            <td class="text-left"><v-btn :to="''" depressed plain block class="text-capitalize">Einkaufswagen</v-btn></td>
             <td class="text-center">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
@@ -319,8 +304,7 @@
             </td>
           </tr>
           <tr>
-            <!--  <td class="text-center">Personalplanung</td> -->
-            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Hotelmanager 5.0</a></td>
+            <td class="text-left" style="border-bottom:2px solid darkgrey;"><v-btn :to="''" depressed plain block class="text-capitalize">Hotelmanager 5.0</v-btn></td>
             <td class="text-center" style="border-bottom:2px solid darkgrey;">
               <v-btn text icon href="">
                 <v-icon>mdi-file-cog-outline</v-icon>
