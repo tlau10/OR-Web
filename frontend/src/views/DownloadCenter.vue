@@ -43,12 +43,12 @@
               </div>
             </td>
             <td class="text-center">
-              <v-btn text icon :href="item.handbuch">
+              <v-btn text icon :href="item.handbuch" download>
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
-              <v-btn text icon :href="item.download">
+              <v-btn text icon :href="item.download" download>
                 <v-icon>mdi-download</v-icon>
               </v-btn>
             </td>
