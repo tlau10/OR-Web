@@ -5,19 +5,19 @@
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-left" style="border-bottom: 2px solid darkgrey">
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               Kategorie
             </th>
-            <th class="text-left" style="border-bottom: 2px solid darkgrey">
+            <th class="text-left" style="border-bottom: 2px solid darkgrey;">
               Methodenname
             </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey">
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               technische Dokumentation
             </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey">
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               Benutzerhandbuch
             </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey">
+            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               Download
             </th>
           </tr>
@@ -57,7 +57,6 @@
     </v-simple-table>
   </div>
 </template>
-
 <script>
 export default {
   data: () => ({
@@ -77,14 +76,14 @@ export default {
         name: "Bestellmengenplanung",
         method: [
           {
-            name: "Wagner-Whitin-LP",
+            name: "Wagner-Whitin-LP 1.3",
             start: "",
             dokumentation: "",
             handbuch: "",
             download: "",
           },
           {
-            name: "Wagner-Whitin",
+            name: "Wagner-Whitin 1.2",
             start: "",
             dokumentation: "",
             handbuch: "",
@@ -199,7 +198,7 @@ export default {
             download: "",
           },
           {
-            name: "Einkaufswagen",
+            name: "Einkaufswagenoptimierung 1.0",
             start: "",
             dokumentation: "",
             handbuch: "",
