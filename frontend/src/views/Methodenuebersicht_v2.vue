@@ -8,7 +8,27 @@
       sort-by="name"
       group-by="Kategorie"
       class="elevation-1"
-      ></v-data-table>
+      >
+      <template v-slot:[`item.name`]="{ item }">
+ <v-btn
+                :to="item.start"
+                depressed
+                plain
+                class="text-capitalize"
+                >{{ item.name }}</v-btn
+              >
+      </template>
+      <template v-slot:[`item.start`]="{ item }">
+         <v-btn text icon :to="item.start">
+                <v-icon>mdi-information-outline</v-icon>
+              </v-btn>
+      </template>
+      <template v-slot:[`item.download`]="{ item }">
+            <v-btn text icon :to="item.download">
+                <v-icon>mdi-download</v-icon>
+              </v-btn>
+      </template>
+      </v-data-table>
      </template>
   </div>
 </template>
