@@ -5,23 +5,22 @@
       <template v-slot:default>
         <thead>
           <tr>
-             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-center" id="th">
               Kategorie
             </th>
-             <th class="text-left" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-left">
               Methodenname
             </th>
-             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-center">
               Details
             </th>
-             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-center">
               Download
             </th>
           </tr>
         </thead>
-        <tbody v-for="kategorie in kategorie" :key="kategorie.name">
+        <tbody v-for="kategorie in kategorie" :key="kategorie.name" >
           <!-- TODO Links für :to ergänzen  -->
-          <!-- TODO style auslagern in CSS style="border-top: 2px solid darkgrey;" -->
           <tr v-for="method in kategorie.method" :key="method.name">
             <td class="text-center">{{ kategorie.name }}</td>
             <td class="text-left">
@@ -173,3 +172,7 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+@import "@/assets/style.scss";
+
+</style>
