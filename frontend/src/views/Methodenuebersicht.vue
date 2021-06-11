@@ -5,19 +5,16 @@
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               Kategorie
             </th>
-            <th class="text-left" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-left" style="border-bottom: 2px solid darkgrey;">
               Methodenname
             </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
-              technische Dokumentation
+             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+              Details
             </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
-              Benutzerhandbuch
-            </th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">
+             <th class="text-center" style="border-bottom: 2px solid darkgrey;">
               Download
             </th>
           </tr>
@@ -37,13 +34,8 @@
               >
             </td>
             <td class="text-center">
-              <v-btn text icon :to="method.dokumentation">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon :to="method.handbuch">
-                <v-icon>mdi-file-account-outline</v-icon>
+              <v-btn text icon :to="method.start">
+                <v-icon>mdi-information-outline</v-icon>
               </v-btn>
             </td>
             <td class="text-center">
@@ -78,15 +70,11 @@ export default {
           {
             name: "Wagner-Whitin-LP 1.3",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Wagner-Whitin 1.2",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
         ],
@@ -97,22 +85,16 @@ export default {
           {
             name: "TR-Optimizer 2.1",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "PTSS - Paket Transport Simulation System 1.1",
             start: "PTSS",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "BOP - Beladungsoptimierung 1.1",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
         ],
@@ -123,92 +105,66 @@ export default {
           {
             name: "Eisenstadt 1.4",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "innerbetriebliche Standortplanung 1.1",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Standortplanung 3.0",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Zuordnungsplanung 2.1",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Lineare Portfolio Optimierung 2.0",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Roundtrip 0.9",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Job Shop 2.2",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Verkehrsplaner",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Maschinenbelegungsplanung 5.2",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "OP-Scheduling 2.3",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Ernährungsplaner 2.0",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Einkaufswagenoptimierung 1.0",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
           {
             name: "Hotelmanager 5.0",
             start: "",
-            dokumentation: "",
-            handbuch: "",
             download: "",
           },
         ],
