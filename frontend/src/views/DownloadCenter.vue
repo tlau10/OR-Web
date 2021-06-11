@@ -190,7 +190,7 @@ export default {
             download: "",
           },
           {
-            name: "Einkaufswagen",
+            name: "Einkaufswagenoptimierung 1.0",
             start: "",
             dokumentation: "",
             handbuch: "Methods/Einkaufswagenoptimierung_Benutzerhandbuch.pdf",
