@@ -40,7 +40,7 @@ const routes = [
   },
   {
     path: '/methodenuebersicht_v2',
-    name: 'Methodenübersicht',
+    name: 'Methodenübersicht_v2',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht_v2.vue')
   },
   {
