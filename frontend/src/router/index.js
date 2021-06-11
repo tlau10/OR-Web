@@ -39,6 +39,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
   },
   {
+    path: '/methodenuebersicht_v2',
+    name: 'Methodenübersicht',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht_v2.vue')
+  },
+  {
     path: '/solveruebersicht',
     name: 'Solverübersicht',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solveruebersicht.vue')

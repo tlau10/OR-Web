@@ -79,6 +79,7 @@ export default {
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
       { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
+      { title: "Methodenübersicht_v2", icon: "mdi-function-variant", to: "/methodenuebersicht_v2"},
       { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"}
     ],
   }),
