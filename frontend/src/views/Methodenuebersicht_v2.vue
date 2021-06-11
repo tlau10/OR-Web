@@ -2,12 +2,12 @@
   <div class="about">
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
      <template>
-    <v-data-table
-      :headers="headers"
+    <v-data-table :headers="headers"
       :items="method"
+      sort-by="name"
       group-by="kategorie"
       class="elevation-1"
-      show-group-by></v-data-table>
+      ></v-data-table>
      </template>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
       },
     ],
     headers: [
-      { text: "Methodenname", align: "start", value: "method.name" },
+      { text: "Methodenname", align: "start", value: "name" , groupable: false, },
       { text: "Kategorie", align: "left", value: "kategorie" },
       { text: "Details", align: "left", value: "start" },
       { text: "Download", align: "left", value: "download" },
@@ -143,3 +143,4 @@ export default {
     ],
   }),
 };
+</script>
