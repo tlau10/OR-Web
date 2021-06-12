@@ -8,12 +8,12 @@
       large
     ></v-breadcrumbs>
     <v-container
-      v-for="type in 2"
+      v-for="type in 0"
       :key="type"
     >
       <v-row justify="space-around">
         <v-col
-          v-for="card in 3"
+          v-for="card in 0"
           :key="card"
           cols="12"
           sm="6"
@@ -41,6 +41,12 @@
         </v-col>
       </v-row>
     </v-container>
+    <div>
+    <applet
+      archive="C:\Users\tim99\OneDrive\Dokumente\Studium6\Teamprojekt\Projekt\OR-WebSS21\frontend\src\PTSS1.1.jar"
+      code="ptss.PTSS.class">
+    </applet>
+    </div>
   </v-card>
 </template>
 

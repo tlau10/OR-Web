@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+"
+codebase="https://github.com/tlau10/Methodenbank/blob/main/Methoden/Kategorie%20A/PTSS1.1/01%20Programm/PTSS1.1.jar"
+href="http://www.javabeginners.de/webstart/jnlp/Cent.jnlp"> 
+    <information> 
+        <title>Cent</title> 
+        <vendor>javabeginners.de</vendor> 
+        <homepage href="http://javabeginners.de/Projekte/Applications/Cent.php"/> 
+        <description>
+            Cent - Konvertierung von Sonderzeichen zu HTML- oder numerischen Unicode-Entities
+        </description> 
+        <description kind="short">
+            Cent Sonderzeichenkonvertierer
+        </description> 
+        <offline-allowed/> 
+    </information> 
+    <security>
+        <all-permissions/>
+     </security>
+    <resources> 
+        <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/> 
+        <jar href="http://www.javabeginners.de/webstart/Cent.jar"/> 
+    </resources> 
+    <application-desc main-class="Cent"/> 
+</jnlp>
