@@ -19,7 +19,7 @@
               >
       </template>
       <template v-slot:[`item.start`]="{ item }">
-         <v-btn text icon :to="item.start">
+      <v-btn text icon :to="item.start">
                 <v-icon>mdi-information-outline</v-icon>
               </v-btn>
       </template>
@@ -49,8 +49,8 @@ export default {
     headers: [
       { text: "Methodenname", align: "start", value: "name" , groupable: false, },
       { text: "Kategorie", align: "left", value: "Kategorie" },
-      { text: "Details", align: "left", value: "start" },
-      { text: "Download", align: "left", value: "download" },
+      { text: "Details", align: "center", value: "start", sortable: false },
+      { text: "Download", align: "center", value: "download" , sortable: false},
     ],
     method: [
       {
