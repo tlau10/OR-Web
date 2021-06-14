@@ -108,7 +108,7 @@ export default {
           {
             name: "BOP - Beladungsoptimierung 1.1",
             start: "",
-            dokumentation: "Methods/BOP1.1_Dokumentation.pdf",
+            dokumentation: "Methods/BOP1.1_Dokumentation.zip",
             handbuch: "Methods/BOP1.1_Benutzerhandbuch.pdf",
             download: "",
           },
@@ -136,7 +136,7 @@ export default {
           {
             name: "Zuordnungsplanung 2.1",
             start: "",
-            dokumentation: "Methods/Zuordnungsplanung2.1_Dokumentation.pdf",
+            dokumentation: "Methods/Zuordnungsplanung2.1_Dokumentation.zip",
             handbuch: "Methods/Zuordnungsplanung2.1_Benutzerhandbuch.pdf",
             download: "",
           },
@@ -171,7 +171,7 @@ export default {
           {
             name: "Maschinenbelegungsplanung 5.2",
             start: "",
-            dokumentation: "Methods/Maschinenbelegungsplanung5.2_Dokumentation.pdf",
+            dokumentation: "Methods/Maschinenbelegungsplanung5.2_Dokumentation.zip",
             handbuch: "Methods/Maschinenbelegungsplanung5.2_Benutzerhandbuch.pdf",
             download: "",
           },
@@ -185,7 +185,7 @@ export default {
           {
             name: "Ernährungsplaner 2.0",
             start: "",
-            dokumentation: "Methods/Ernährungsplaner2.0_Dokumentation.pdf",
+            dokumentation: "Methods/Ernährungsplaner2.0_Dokumentation.zip",
             handbuch: "Methods/Ernährungsplaner2.0_Benutzerhandbuch.pdf",
             download: "",
           },
