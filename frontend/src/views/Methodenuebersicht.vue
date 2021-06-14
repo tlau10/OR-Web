@@ -5,22 +5,13 @@
       <template v-slot:default>
         <thead>
           <tr>
-             <th class="text-center" id="th">
-              Kategorie
-            </th>
-             <th class="text-left">
-              Methodenname
-            </th>
-             <th class="text-center">
-              Details
-            </th>
-             <th class="text-center">
-              Download
-            </th>
+            <th class="text-center" id="th">Kategorie</th>
+            <th class="text-left">Methodenname</th>
+            <th class="text-center">Details</th>
+            <th class="text-center">Download</th>
           </tr>
         </thead>
-        <tbody v-for="kategorie in kategorie" :key="kategorie.name" >
-          <!-- TODO Links für :to ergänzen  -->
+        <tbody v-for="kategorie in kategorie" :key="kategorie.name">
           <tr v-for="method in kategorie.method" :key="method.name">
             <td class="text-center">{{ kategorie.name }}</td>
             <td class="text-left">
@@ -68,13 +59,13 @@ export default {
         method: [
           {
             name: "Wagner-Whitin-LP 1.3",
-            start: "",
-            download: "",
+            start: "Wagner-Whitin-LP",
+            download: "DownloadCenter#Wagner-Whitin-LP",
           },
           {
             name: "Wagner-Whitin 1.2",
-            start: "",
-            download: "",
+            start: "Wagner-Whitin",
+            download: "DownloadCenter#Wagner-Whitin",
           },
         ],
       },
@@ -83,18 +74,18 @@ export default {
         method: [
           {
             name: "TR-Optimizer 2.1",
-            start: "",
-            download: "",
+            start: "TR-Optimizer",
+            download: "DownloadCenter#TR-Optimizer",
           },
           {
             name: "PTSS - Paket Transport Simulation System 1.1",
             start: "PTSS",
-            download: "",
+            download: "DownloadCenter#PTSS",
           },
           {
             name: "BOP - Beladungsoptimierung 1.1",
-            start: "",
-            download: "",
+            start: "BOP",
+            download: "DownloadCenter#BOP",
           },
         ],
       },
@@ -103,68 +94,68 @@ export default {
         method: [
           {
             name: "Eisenstadt 1.4",
-            start: "",
-            download: "",
+            start: "Eisenstadt",
+            download: "DownloadCenter#Eisenstadt",
           },
           {
             name: "innerbetriebliche Standortplanung 1.1",
-            start: "",
-            download: "",
+            start: "innerbetrieblicheStandortplanung",
+            download: "DownloadCenter#innerbetrieblicheStandortplanung",
           },
           {
             name: "Standortplanung 3.0",
-            start: "",
-            download: "",
+            start: "Standortplanung",
+            download: "DownloadCenter#Standortplanung",
           },
           {
             name: "Zuordnungsplanung 2.1",
-            start: "",
-            download: "",
+            start: "Zuordnungsplanung",
+            download: "DownloadCenter#Zuordnungsplanung",
           },
           {
             name: "Lineare Portfolio Optimierung 2.0",
-            start: "",
-            download: "",
+            start: "Portfolio",
+            download: "DownloadCenter#Portfolio",
           },
           {
             name: "Roundtrip 0.9",
-            start: "",
-            download: "",
+            start: "Roundtrip",
+            download: "DownloadCenter#Roundtrip",
           },
           {
             name: "Job Shop 2.2",
-            start: "",
-            download: "",
+            start: "JobShop",
+            download: "DownloadCenter#JobShop",
           },
           {
             name: "Verkehrsplaner",
-            start: "",
-            download: "",
+            start: "Verkehrsplaner",
+            download: "DownloadCenter#Verkehrsplaner",
           },
           {
             name: "Maschinenbelegungsplanung 5.2",
-            start: "",
-            download: "",
+            start: "Maschinenbelegungsplanung",
+            download: "DownloadCenter#Maschinenbelegungsplanung",
           },
           {
             name: "OP-Scheduling 2.3",
-            start: "",
-            download: "",
+            start: "OP-Scheduling",
+            download: "DownloadCenter#OP-Scheduling",
           },
           {
             name: "Ernährungsplaner 2.0",
-            start: "",
-            download: "",
+            start: "Ernährungsplaner",
+            download: "DownloadCenter#Ernährungsplaner",
           },
           {
             name: "Einkaufswagenoptimierung 1.0",
-            start: "",
-            download: "",
+            start: "Einkaufswagenoptimierung",
+            download: "DownloadCenter#Einkaufswagenoptimierung",
           },
           {
             name: "Hotelmanager 5.0",
-            start: "",
-            download: "",
+            start: "Hotelmanager",
+            download: "DownloadCenter#Hotelmanager",
           },
         ],
       },
@@ -174,5 +165,4 @@ export default {
 </script>
 <style lang="scss">
 @import "@/assets/style.scss";
-
 </style>

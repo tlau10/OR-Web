@@ -62,8 +62,8 @@ export default {
       {
         name: "Wagner-Whitin 1.2",
         Kategorie: "Bestellmengenplanung",
-        start: "",
-        download: "",
+        start: "Wagner-Whitin",
+        download: "Methodenuebersicht#Wagner-Whitin",
       },
       {
         name: "TR-Optimizer 2.1",
@@ -75,7 +75,7 @@ export default {
         name: "PTSS - Paket Transport Simulation System 1.1",
         Kategorie: "Transportplanung",
         start: "PTSS",
-        download: "",
+        download: "Methodenuebersicht#PTSS",
       },
       {
         name: "BOP - Beladungsoptimierung 1.1",
