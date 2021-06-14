@@ -26,7 +26,7 @@
           <!-- TODO Links für :to ergänzen  -->
           <!-- TODO style auslagern in CSS style="border-top: 2px solid darkgrey;" -->
           <tr v-for="item in kategorie.item" :key="item.name">
-            <td class="text-center">{{ kategorie.name }}</td>
+            <td class="text-center" :id="item.start">{{ kategorie.name }}</td>
             <td class="text-left">
             <v-btn
                 :to="item.start"
