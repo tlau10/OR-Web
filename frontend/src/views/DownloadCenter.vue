@@ -185,7 +185,7 @@ export default {
               "Methods/Maschinenbelegungsplanung5.2_Dokumentation.zip",
             handbuch:
               "Methods/Maschinenbelegungsplanung5.2_Benutzerhandbuch.pdf",
-            download: "Methods/Maschinenbelegungsplanung52.2_Programm.zip",
+            download: "Methods/Maschinenbelegungsplanung5.2_Programm.zip",
           },
           {
             name: "OP-Scheduling 2.3",
