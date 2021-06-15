@@ -28,18 +28,15 @@
           <tr v-for="item in kategorie.item" :key="item.name">
             <td class="text-center" :id="item.start">{{ kategorie.name }}</td>
             <td class="text-left">
-            <v-btn
-                :to="item.start"
-                depressed
-                plain
-                class="text-capitalize"
-                >{{ item.name }}</v-btn>
+              <v-btn :to="item.start" depressed plain class="text-capitalize">{{
+                item.name
+              }}</v-btn>
             </td>
             <td class="text-center">
               <div id="app">
-              <v-btn text icon :href="item.dokumentation" download>
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
+                <v-btn text icon :href="item.dokumentation" download>
+                  <v-icon>mdi-file-cog-outline</v-icon>
+                </v-btn>
               </div>
             </td>
             <td class="text-center">
@@ -57,7 +54,7 @@
       </template>
     </v-simple-table>
   </div>
-    </template>
+</template>
 
     <script>
 export default {
@@ -91,10 +88,11 @@ export default {
             handbuch: "Methods/Wagner-Whitin1.2_Benutzerhandbuch.pdf",
             download: "",
           },
-                    {
+          {
             name: "Leitstand Pflegestation 1.1",
             start: "",
-            dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
+            dokumentation:
+              "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
             handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
             download: "Methods/LeitstandPflegestation1.1_Programm.zip",
           },
@@ -129,9 +127,12 @@ export default {
           {
             name: "innerbetriebliche Standortplanung 1.1",
             start: "",
-            dokumentation: "Methods/InnerbetrieblicheStandortplanung1.1_Dokumentation.pdf",
-            handbuch: "Methods/InnerbetrieblicheStandortplanung1.1_Benutzerhandbuch.pdf",
-            download: "Methods/InnerbetrieblicheStandortplanung1.1_Programm.zip",
+            dokumentation:
+              "Methods/InnerbetrieblicheStandortplanung1.1_Dokumentation.pdf",
+            handbuch:
+              "Methods/InnerbetrieblicheStandortplanung1.1_Benutzerhandbuch.pdf",
+            download:
+              "Methods/InnerbetrieblicheStandortplanung1.1_Programm.zip",
           },
           {
             name: "Standortplanung 3.0",
@@ -150,8 +151,10 @@ export default {
           {
             name: "Lineare Portfolio Optimierung 2.0",
             start: "",
-            dokumentation: "Methods/LinearePortfoliooptimierung2.0_Dokumentation.pdf",
-            handbuch: "Methods/LinearePortfoliooptimierung2.0_Benutzerhandbuch.pdf",
+            dokumentation:
+              "Methods/LinearePortfoliooptimierung2.0_Dokumentation.pdf",
+            handbuch:
+              "Methods/LinearePortfoliooptimierung2.0_Benutzerhandbuch.pdf",
             download: "Methods/LinearePortfoliooptimierung2.0_Programm.zip",
           },
           {
@@ -178,8 +181,10 @@ export default {
           {
             name: "Maschinenbelegungsplanung 5.2",
             start: "",
-            dokumentation: "Methods/Maschinenbelegungsplanung5.2_Dokumentation.zip",
-            handbuch: "Methods/Maschinenbelegungsplanung5.2_Benutzerhandbuch.pdf",
+            dokumentation:
+              "Methods/Maschinenbelegungsplanung5.2_Dokumentation.zip",
+            handbuch:
+              "Methods/Maschinenbelegungsplanung5.2_Benutzerhandbuch.pdf",
             download: "Methods/Maschinenbelegungsplanung52.2_Programm.zip",
           },
           {
@@ -200,7 +205,8 @@ export default {
             name: "Einkaufswagenoptimierung 1.0",
             start: "",
             dokumentation: "",
-            handbuch: "Methods/Einkaufswagenoptimierung1.0_Benutzerhandbuch.pdf",
+            handbuch:
+              "Methods/Einkaufswagenoptimierung1.0_Benutzerhandbuch.pdf",
             download: "Methods/Einkaufswagenoptimierung1.0_Programm.zip",
           },
           {
@@ -222,7 +228,7 @@ export default {
             handbuch: "Solver/Iterator1.0_Benutzerhandbuch.pdf",
             download: "",
           },
-           {
+          {
             name: "Iterator 2.0",
             start: "",
             dokumentation: "Solver/Iterator2.0_Dokumentation.pdf",
@@ -253,7 +259,7 @@ export default {
           {
             name: "LiPS - Linear Program Solver",
             start: "",
-            dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf", 
+            dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
             handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
             download: "",
           },
