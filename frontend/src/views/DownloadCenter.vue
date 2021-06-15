@@ -91,6 +91,13 @@ export default {
             handbuch: "Methods/Wagner-Whitin1.2_Benutzerhandbuch.pdf",
             download: "",
           },
+                    {
+            name: "Leitstand Pflegestation 1.1",
+            start: "",
+            dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
+            handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
+            download: "Methods/LeitstandPflegestation1.1_Programm.zip",
+          },
           {
             name: "TR-Optimizer 2.1",
             start: "",
@@ -157,9 +164,9 @@ export default {
           {
             name: "Job-Shop 2.2",
             start: "",
-            dokumentation: "Methods/JobShop 2.2_Dokumentation.pdf",
-            handbuch: "Methods/JobShop 2.2_Benutzerhandbuch.pdf",
-            download: "Methods/JobShop 2.2_Programm.zip",
+            dokumentation: "Methods/JobShop2.2_Dokumentation.pdf",
+            handbuch: "Methods/JobShop2.2_Benutzerhandbuch.pdf",
+            download: "Methods/JobShop2.2_Programm.zip",
           },
           {
             name: "Verkehrsplaner",
