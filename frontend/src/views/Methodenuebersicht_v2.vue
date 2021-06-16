@@ -85,19 +85,19 @@ export default {
       },
       {
         name: "Eisenstadt 1.4",
-        Kategorie: "Personalplanung",
+        Kategorie: "Standortplanung",
         start: "",
         download: "",
       },
       {
         name: "innerbetriebliche Standortplanung 1.1",
-        Kategorie: "Personalplanung",
+        Kategorie: "Standortplanung",
         start: "",
         download: "",
       },
       {
         name: "Standortplanung 3.0",
-        Kategorie: "Personalplanung",
+        Kategorie: "Standortplanung",
         start: "",
         download: "",
       },
