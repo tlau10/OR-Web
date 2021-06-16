@@ -90,7 +90,7 @@ export default {
         ],
       },
       {
-        name: "Personalplanung",
+        name: "Standortplanung",
         method: [
           {
             name: "Eisenstadt 1.4",
@@ -106,7 +106,11 @@ export default {
             name: "Standortplanung 3.0",
             start: "Standortplanung",
             download: "DownloadCenter#Standortplanung",
-          },
+          } ,
+          ],},
+    {
+        name: "Personalplanung",
+        method: [         
           {
             name: "Zuordnungsplanung 2.1",
             start: "Zuordnungsplanung",
