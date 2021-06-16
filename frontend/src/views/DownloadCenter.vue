@@ -174,7 +174,7 @@ export default {
           {
             name: "Verkehrsplaner",
             start: "",
-            dokumentation: "Methods/Verkehrsplaner_Dokumentation.pdf",
+            dokumentation: "Methods/Verkehrsplaner_Dokumentation.zip",
             handbuch: "Methods/Verkehrsplaner_Benutzerhandbuch.pdf",
             download: "Methods/Verkehrsplaner_Programm.zip",
           },
