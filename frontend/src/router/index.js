@@ -41,7 +41,12 @@ const routes = [
   {
     path: '/Home',
     name: 'Home',
-    component: () => import('../views/home_ORWEB.blade.php')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+  },
+  {
+    path: '/Impressum',
+    name: 'Impressum',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Impressum.vue')
   }
 ]
 

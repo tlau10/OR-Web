@@ -1,4 +1,4 @@
-<template>
+node --version<template>
   <v-app id="inspire">
     <!--Navigation-->
     <v-navigation-drawer v-model="drawer" app>
@@ -78,7 +78,8 @@ export default {
       { title: "Methoden", icon: "mdi-debug-step-over", to: "/methoden" },
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
-      { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"}
+      { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
+      { title: "Impressum", icon: "mdi-alpha-i-circle", to: "/Impressum" }
     ],
   }),
 };
