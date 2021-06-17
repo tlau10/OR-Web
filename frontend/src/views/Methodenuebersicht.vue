@@ -1,348 +1,37 @@
 <template>
   <div class="about">
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
-    <v-simple-table>
-      <template v-slot:default>
-        <thead>
-          <tr>
-            <th class="text-left" style="border-bottom: 2px solid darkgrey;">Kategorie</th>
-            <th class="text-left" style="border-bottom: 2px solid darkgrey;">Methodenname</th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">technische Dokumentation</th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">Benutzerhandbuch</th>
-            <th class="text-center" style="border-bottom: 2px solid darkgrey;">Download</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!--  <tr
-          v-for="item in methoden"
-          :key="item.name"
-        >-->
-          <!-- TODO <a> href zu entsprechende Methode ergänzen  -->
-          <!-- TODO <v-btn> href zu-Center ergänzen -->
-          <!-- TODO nach jeweils letzten Kategorie-Eintrag Borderlinie dicker machen -->
-          <!-- TODO style auslagern in CSS -->
-          <tr>
-            <td class="text-center" rowspan="3" style="border-bottom: 2px solid darkgrey;">Transportplanung</td>
-            <td class="text-left">
-              <a v-bind:href="'/PTSS'">Paket Transport Simulation System 1.1 (PTSS)</a>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Transportplanung</td> -->
-            <td class="text-left"><a href="">TR-Optimizer 2.1</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Transportplanung</td> -->
-            <td class="text-left" style="border-bottom:2px solid darkgrey;">
-              <a href="">BOP - Beladungsoptimierung 1.1</a>
-            </td>
-
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center" rowspan="3" style="border-bottom:2px solid darkgrey;">Standortplanung</td>
-            <td class="text-left"><a href="">Eisenstadt 1.4</a></td>
-
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Standortplanung</td> -->
-            <td class="text-left">
-              <a href="">innerbetriebliche Standortplanung 1.1</a>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--  <td class="text-center">Standortplanung</td> -->
-            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Standortplanung 3.0</a></td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center" rowspan="10" style="border-bottom:2px solid darkgrey;">Personalplanung</td>
-            <td class="text-left"><a href="">Zuordnungsplanung 2.1</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left">
-              <a href="">Lineare Portfolio Optimierung 2.0</a>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--  <td class="text-center">Personalplanung</td>-->
-            <td class="text-left"><a href="">Roundtrip 0.9</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--  <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Job Shop 2.2</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--   <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Verkehrsplaner</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left">
-              <a href="">Maschinenbelegungsplanung 5.2</a>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">OP-Scheduling 2.3</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!-- <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Ernährungsplaner 2.0</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--   <td class="text-center">Personalplanung</td> -->
-            <td class="text-left"><a href="">Einkaufswagen</a></td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-          <tr>
-            <!--  <td class="text-center">Personalplanung</td> -->
-            <td class="text-left" style="border-bottom:2px solid darkgrey;"><a href="">Hotelmanager 5.0</a></td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </td>
-            <td class="text-center" style="border-bottom:2px solid darkgrey;">
-              <v-btn text icon href="">
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-        </tbody>
-      </template>
-    </v-simple-table>
+    <template>
+      <v-container>
+        <v-card> 
+      <v-data-table
+        :headers="headers"
+        :items="method"
+        :items-per-page="20"
+        sort-by="name"
+        group-by="Kategorie"
+        class="elevation-1"
+      >
+        <template v-slot:[`item.name`]="{ item }">
+          <v-btn :to="item.start" depressed plain class="text-capitalize">{{
+            item.name
+          }}</v-btn>
+        </template>
+        <template v-slot:[`item.start`]="{ item }">
+          <v-btn text icon :to="item.start">
+            <v-icon>mdi-information-outline</v-icon>
+          </v-btn>
+        </template>
+        <template v-slot:[`item.download`]="{ item }">
+          <v-btn text icon :to="item.download">
+            <v-icon>mdi-download</v-icon>
+          </v-btn>
+        </template>
+      </v-data-table>
+        </v-card></v-container>
+    </template>
   </div>
 </template>
-
 <script>
 export default {
   data: () => ({
@@ -357,6 +46,125 @@ export default {
         disabled: true,
       },
     ],
+    headers: [
+      { text: "Methodenname", align: "start", value: "name", groupable: false },
+      { text: "Kategorie", align: "left", value: "Kategorie" },
+      { text: "Details", align: "center", value: "start", sortable: false },
+      { text: "Download", align: "center", value: "download", sortable: false },
+    ],
+    method: [
+      {
+        name: "Wagner-Whitin-LP 1.3",
+        Kategorie: "Bestellmengenplanung",
+        start: "Wagner-Whitin-LP",
+        download: "DownloadCenter#Wagner-Whitin-LP",
+      },
+      {
+        name: "Wagner-Whitin 1.2",
+        Kategorie: "Bestellmengenplanung",
+        start: "Wagner-Whitin",
+        download: "Methodenuebersicht#Wagner-Whitin",
+      },
+      {
+        name: "TR-Optimizer 2.1",
+        Kategorie: "Transportplanung",
+        start: "TR-Optimizer",
+        download: "DownloadCenter#TR-Optimizer",
+      },
+      {
+        name: "PTSS - Paket Transport Simulation System 1.1",
+        Kategorie: "Transportplanung",
+        start: "PTSS",
+        download: "DownloadCenter#PTSS",
+      },
+      {
+        name: "BOP - Beladungsoptimierung 1.1",
+        Kategorie: "Transportplanung",
+        start: "BOP",
+        download: "DownloadCenter#BOP",
+      },
+      {
+        name: "Eisenstadt 1.4",
+        Kategorie: "Standortplanung",
+        start: "Eisenstadt",
+        download: "DownloadCenter#Eisenstadt",
+      },
+      {
+        name: "innerbetriebliche Standortplanung 1.1",
+        Kategorie: "Standortplanung",
+        start: "innerbetrieblicheStandortplanung",
+        download: "DownloadCenter#innerbetrieblicheStandortplanung",
+      },
+      {
+        name: "Standortplanung 3.0",
+        Kategorie: "Standortplanung",
+        start: "Standortplanung",
+        download: "DownloadCenter#Standortplanung",
+      },
+      {
+        name: "Zuordnungsplanung 2.1",
+        Kategorie: "Personalplanung",
+        start: "Zuordnungsplanung",
+        download: "DownloadCenter#Zuordnungsplanung",
+      },
+      {
+        name: "Lineare Portfolio Optimierung 2.0",
+        Kategorie: "Personalplanung",
+        start: "Portfolio",
+        download: "DownloadCenter#Portfolio",
+      },
+      {
+        name: "Roundtrip 0.9",
+        Kategorie: "Personalplanung",
+        start: "Roundtrip",
+        download: "DownloadCenter#Roundtrip",
+      },
+      {
+        name: "Job Shop 2.2",
+        Kategorie: "Personalplanung",
+        start: "JobShop",
+        download: "DownloadCenter#JobShop",
+      },
+      {
+        name: "Verkehrsplaner",
+        Kategorie: "Personalplanung",
+        start: "Verkehrsplaner",
+        download: "DownloadCenter#Verkehrsplaner",
+      },
+      {
+        name: "Maschinenbelegungsplanung 5.2",
+        Kategorie: "Personalplanung",
+        start: "Maschinenbelegungsplanung",
+        download: "DownloadCenter#Maschinenbelegungsplanung",
+      },
+      {
+        name: "OP-Scheduling 2.3",
+        Kategorie: "Personalplanung",
+        start: "OP-Scheduling",
+        download: "DownloadCenter#OP-Scheduling",
+      },
+      {
+        name: "Ernährungsplaner 2.0",
+        Kategorie: "Personalplanung",
+        start: "Ernährungsplaner",
+        download: "DownloadCenter#Ernährungsplaner",
+      },
+      {
+        name: "Einkaufswagenoptimierung 1.0",
+        Kategorie: "Personalplanung",
+        start: "Einkaufswagenoptimierung",
+        download: "DownloadCenter#Einkaufswagenoptimierung",
+      },
+      {
+        name: "Hotelmanager 5.0",
+        Kategorie: "Personalplanung",
+        start: "Hotelmanager",
+        download: "DownloadCenter#Hotelmanager",
+      },
+    ],
   }),
 };
 </script>
+<style lang="scss">
+@import "@/assets/style.scss";
+</style>
