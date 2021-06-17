@@ -2,6 +2,8 @@
   <div class="about">
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
     <template>
+      <v-container>
+        <v-card> 
       <v-data-table
         :headers="headers"
         :items="method"
@@ -26,6 +28,7 @@
           </v-btn>
         </template>
       </v-data-table>
+        </v-card></v-container>
     </template>
   </div>
 </template>
