@@ -62,6 +62,11 @@ const routes = [
     path: '/Impressum',
     name: 'Impressum',
     component: () => import(/* webpackChunkName: "about" */ '../views/Impressum.vue')
+  },
+  {
+    path: '/DownloadCenter',
+    name: 'DownloadCenter',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DownloadCenter.vue')
   }
 ]
 
