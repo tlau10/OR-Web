@@ -52,6 +52,16 @@ const routes = [
     path: '/PowerLP',
     name: 'PowerLP',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
+  },
+  {
+    path: '/Home',
+    name: 'Home',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+  },
+  {
+    path: '/Impressum',
+    name: 'Impressum',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Impressum.vue')
   }
 ]
 

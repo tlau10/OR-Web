@@ -1,4 +1,4 @@
-<template>
+node --version<template>
   <v-app id="inspire">
     <!--Navigation-->
     <v-navigation-drawer v-model="drawer" app>
@@ -74,12 +74,13 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { title: "Home", icon: "mdi-view-dashboard", to: "/" },
+      { title: "Home", icon: "mdi-view-dashboard", to: "/Home" },
       { title: "Methoden", icon: "mdi-debug-step-over", to: "/methoden" },
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
       { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
-      { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"}
+      { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"},
+      { title: "Impressum", icon: "mdi-alpha-i-circle", to: "/Impressum" }
     ],
   }),
 };
