@@ -74,19 +74,19 @@ export default {
       {
         name: "Methoden",
         item: [
-          {
+         {
             name: "Wagner-Whitin-LP 1.3",
             start: "",
             dokumentation: "Methods/Wagner-WithinLP1.3_Dokumentation.pdf",
             handbuch: "Methods/Wagner-WithinLP1.3_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Methods/WagnerWithinLP_Programm.zip",
           },
           {
             name: "Wagner-Whitin 1.2",
             start: "",
             dokumentation: "Methods/Wagner-Whitin1.2_Dokumentation.pdf",
             handbuch: "Methods/Wagner-Whitin1.2_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Methods/WagnerWithin1.2_Programm.zip",
           },
           {
             name: "Leitstand Pflegestation 1.1",
@@ -96,19 +96,19 @@ export default {
             handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
             download: "Methods/LeitstandPflegestation1.1_Programm.zip",
           },
-          {
+           {
             name: "TR-Optimizer 2.1",
             start: "",
             dokumentation: "Methods/TR-Optimizer2.1_Benutzerhandbuch.pdf",
             handbuch: "",
-            download: "",
+            download: "Methods/TR-Optimizer2.1_Programm.zip",
           },
           {
             name: "PTSS - Paket Transport Simulation System 1.1",
             start: "PTSS",
-            dokumentation: "Methods/PTSS_Dokumentation.pdf",
-            handbuch: "Methods/PTSS_Benutzerhandbuch.pdf",
-            download: "",
+            dokumentation: "Methods/PTSS1.1_Dokumentation.pdf",
+            handbuch: "Methods/PTSS1.1_Benutzerhandbuch.pdf",
+            download: "Methods/PTSS1.1_Programm.zip",
           },
           {
             name: "BOP - Beladungsoptimierung 1.1",
@@ -221,33 +221,33 @@ export default {
       {
         name: "Solver",
         item: [
-          {
+           {
             name: "Iterator 1.0",
             start: "",
             dokumentation: "Solver/Iterator1.0_Dokumentation.pdf",
             handbuch: "Solver/Iterator1.0_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/Iterator1.0_Solver.zip",
           },
           {
             name: "Iterator 2.0",
             start: "",
             dokumentation: "Solver/Iterator2.0_Dokumentation.pdf",
             handbuch: "Solver/Iterator2.0_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/Iterator2.0_Solver.zip",
           },
           {
             name: "LP-Solve Frontend",
             start: "",
             dokumentation: "Solver/LP-SolveFrontend_Dokumentation.pdf",
             handbuch: "",
-            download: "",
+            download: "Solver/LPSolve_Solver.zip",
           },
           {
             name: "GLPK - GNU Linear Programming Kit GUI",
             start: "",
             dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
             handbuch: "Solver/GLPKFrontend1.0_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/GLPK_Frontend1.0_Solver.zip",
           },
           {
             name: "Power LP 2.0",
@@ -261,35 +261,35 @@ export default {
             start: "",
             dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
             handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
-            download: "",
+            download: "Solver/LiPS_Solver.zip",
           },
           {
             name: "Dakin 2.0",
             start: "",
             dokumentation: "Solver/Dakin2.0_Dokumentation.pdf",
             handbuch: "Solver/Dakin2.0_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/Dakin2.0_Solver.zip",
           },
           {
             name: "Sensibilitätsanalyse",
             start: "",
             dokumentation: "Solver/Sensibilitaetsanalyse_Dokumentation.pdf",
             handbuch: "Solver/Sensibilitaetsanalyse_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/Sensibilitätsanalyse1.1_Solver.zip",
           },
           {
             name: "Primal Dual Wandler",
             start: "",
             dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
             handbuch: "Solver/PrimalDualWandler_Benutzerhandbuch.pdf",
-            download: "",
+            download: "Solver/PrimeDualWandler_Solver.zip",
           },
           {
             name: "OR GraphX",
             start: "",
             dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
             handbuch: "",
-            download: "",
+            download: "Solver/ORGraphX_Solver.zip",
           },
         ],
       },
