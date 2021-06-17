@@ -80,7 +80,7 @@ export default {
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
       { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
       { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"},
-      { title: "DownloadCenter", icon: "mdi-function-variant", to: "/DownloadCenter"}
+      { title: "DownloadCenter", icon: "mdi-archive-arrow-down", to: "/DownloadCenter"}
     ],
   }),
 };
