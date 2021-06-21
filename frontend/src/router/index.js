@@ -134,9 +134,64 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')
   },
   {
+    path: '/Dakin',
+    name: 'Dakin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Dakin.vue')
+  },
+  {
+    path: '/GLPK',
+    name: 'GLPK',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/GLPK.vue')
+  },
+  {
+    path: '/Iterator',
+    name: 'Iterator',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Iterator.vue')
+  },
+  {
+    path: '/Iterator2.0',
+    name: 'Iterator2.0',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Iterator2.0.vue')
+  },
+  {
+    path: '/LiPS',
+    name: 'LiPS',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/LiPS.vue')
+  },
+  {
+    path: '/LPSolve',
+    name: 'LPSolve',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/LPSolve.vue')
+  },
+  {
+    path: '/OR_GraphX',
+    name: 'OR_GraphX',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/OR_GraphX.vue')
+  },
+  {
     path: '/PowerLP',
     name: 'PowerLP',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PowerLP.vue')
+  },
+  {
+    path: '/PrimeDualWandler',
+    name: 'PrimeDualWandler',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PrimeDualWandler.vue')
+  },
+  {
+    path: '/Sensibilitätsanalyse',
+    name: 'Sensibilitätsanalyse',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Sensibilitätsanalyse.vue')
+  },
+  {
+    path: '/WebIteratorRSA',
+    name: 'WebIteratorRSA',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/WebIteratorRSA.vue')
+  },
+  {
+    path: '/WebIteratorSAU',
+    name: 'WebIteratorSAU',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/WebIteratorSAU.vue')
   },
   {
     path: '/DownloadCenter',
