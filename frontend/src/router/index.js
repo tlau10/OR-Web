@@ -49,6 +49,61 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/PTSS.vue')
   },
   {
+    path: '/Einkaufswagen',
+    name: 'Einkaufswagenoptimierung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Einkaufswagenoptimierung.vue')
+  },
+  {
+    path: '/Eisenstadt',
+    name: 'Eisenstadt',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Eisenstadt.vue')
+  },
+  {
+    path: '/Ernährungsplaner',
+    name: 'Ernährungsplaner',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Ernährungsplaner.vue')
+  },
+  {
+    path: '/IB_Standortplanung',
+    name: 'Innerbetriebliche_Standortplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Innerbetriebliche_Standortplanung.vue')
+  },
+  {
+    path: '/Jahresplanung',
+    name: 'Jahresplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Jahresplanung.vue')
+  },
+  {
+    path: '/Leitstand_Pflegestation',
+    name: 'Leitstand_Pflegestation',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Leitstand_Pflegestation.vue')
+  },
+  {
+    path: '/Maschinenbelegungsplanung',
+    name: 'Maschinenbelegungsplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Maschinenbelegungsplanung.vue')
+  },
+  {
+    path: '/OP_Scheduling',
+    name: 'OP_Scheduling',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/OP_Scheduling.vue')
+  },
+  {
+    path: '/Portfolio_Optimierung',
+    name: 'Portfolio_Optimierung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Portfolio_Optimierung.vue')
+  },
+  {
+    path: '/Roundtrip',
+    name: 'Roundtrip',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Roundtrip.vue')
+  },
+  {
+    path: '/Standortplanung',
+    name: 'Standortplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Standortplanung.vue')
+  },
+  {
     path: '/PowerLP',
     name: 'PowerLP',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
