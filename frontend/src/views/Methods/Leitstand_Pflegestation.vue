@@ -17,7 +17,7 @@
                 <hr noshade size=1>
                 
                 <div class="infoPics">
-                    <img src="@/assets/Leitstand_Pflegestation.gif">
+                    <img src="@/assets/leitstand_Pflegestation.gif">
                 </div>
                 <hr noshade size=1>
                 

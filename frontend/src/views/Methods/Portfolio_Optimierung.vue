@@ -15,7 +15,7 @@
 
                 <hr noshade size=1>
                 <div class="infoPics">
-                    <img src="@/assets/Portfolio2.0.jpg">
+                    <img src="@/assets/portfolio2.0.jpg">
                 </div>
                 <hr noshade size=1>
                 

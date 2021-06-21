@@ -17,7 +17,7 @@
                 
                 <hr noshade size=1>
                 <div class="infoPics">
-                    <img src="@/assets/Einkaufswagen2.gif">	
+                    <img src="@/assets/einkaufswagen2.gif">	
                 </div>
                 <hr noshade size=1>
                 <h2>Beschreibung der Methode:</h2>

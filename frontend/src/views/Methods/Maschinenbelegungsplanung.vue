@@ -14,7 +14,7 @@
             
                 <hr noshade size=1>
                 <div class="infoPics">
-                    <img src="@/assets/Mbp2003.gif">
+                    <img src="@/assets/mbp2003.gif">
                     </div>
                     
                 <hr noshade size=1>

@@ -104,6 +104,36 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Standortplanung.vue')
   },
   {
+    path: '/Tagesschichtplanung',
+    name: 'Tagesschichtplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Tagesschichtplanung.vue')
+  },
+  {
+    path: '/TR_Optimizer',
+    name: 'TR_Optimizer',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/TR_Optimizer.vue')
+  },
+  {
+    path: '/Verkehrsplaner',
+    name: 'Verkehrsplaner',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Verkehrsplaner.vue')
+  },
+  {
+    path: '/Wochenschichtplanung',
+    name: 'Wochenschichtplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Wochenschichtplanung.vue')
+  },
+  {
+    path: '/WagnerWithin',
+    name: 'WagnerWithin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWithin.vue')
+  },
+  {
+    path: '/Zuordnungsplanung',
+    name: 'Zuordnungsplanung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')
+  },
+  {
     path: '/PowerLP',
     name: 'PowerLP',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PLP.vue')
