@@ -10,7 +10,9 @@
             :items-per-page="30"
             sort-by="name"
             group-by="Art"
-            class="elevation-1"
+            class="elevation-1"            
+            disable-pagination
+            hide-default-footer
           >
             <template v-slot:[`item.name`]="{ item }">
               <v-btn
