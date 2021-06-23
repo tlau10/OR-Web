@@ -96,7 +96,7 @@ export default {
         start: "",
         dokumentation: "Methods/Wagner-WithinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WithinLP1.3_Benutzerhandbuch.pdf",
-        download: "Methods/WagnerWithinLP_Programm.zip",
+        download: "Methods/WagnerWithinLP1.3_Programm.zip",
       },
       {
         name: "Wagner-Whitin 1.2",
@@ -119,8 +119,8 @@ export default {
         name: "TR-Optimizer 2.1",
         Art: "Methoden",
         start: "",
-        dokumentation: "Methods/TR-Optimizer2.1_Benutzerhandbuch.pdf",
-        handbuch: "",
+        dokumentation: "Methods/TR-Optimizer2.1_Dokumentation.pdf",
+        handbuch: "Methods/TR-Optimizer2.1_Benutzerhandbuch.pdf",
         download: "Methods/TR-Optimizer2.1_Programm.zip",
       },
       {
@@ -178,9 +178,9 @@ export default {
         start: "",
         Art: "Methoden",
         dokumentation:
-          "Methods/LinearePortfoliooptimierung2.0_Dokumentation.pdf",
-        handbuch: "Methods/LinearePortfoliooptimierung2.0_Benutzerhandbuch.pdf",
-        download: "Methods/LinearePortfoliooptimierung2.0_Programm.zip",
+          "Methods/LinearePortfolioOptimierung2.0_Dokumentation.pdf",
+        handbuch: "Methods/LinearePortfolioOptimierung2.0_Benutzerhandbuch.pdf",
+        download: "Methods/LinearePortfolioOptimierung2.0_Programm.zip",
       },
       {
         name: "Roundtrip 0.9",
@@ -252,7 +252,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/Iterator1.0_Dokumentation.pdf",
         handbuch: "Solver/Iterator1.0_Benutzerhandbuch.pdf",
-        download: "Solver/Iterator1.0_Solver.zip",
+        download: "Solver/Iterator1.0_Programm.zip",
       },
       {
         name: "Iterator 2.0",
@@ -260,7 +260,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/Iterator2.0_Dokumentation.pdf",
         handbuch: "Solver/Iterator2.0_Benutzerhandbuch.pdf",
-        download: "Solver/Iterator2.0_Solver.zip",
+        download: "Solver/Iterator2.0_Programm.zip",
       },
       {
         name: "LP-Solve Frontend",
@@ -268,7 +268,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/LP-SolveFrontend_Dokumentation.pdf",
         handbuch: "",
-        download: "Solver/LPSolve_Solver.zip",
+        download: "Solver/LPSolveFrontend_Programm.zip",
       },
       {
         name: "GLPK - GNU Linear Programming Kit GUI",
@@ -276,7 +276,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
         handbuch: "Solver/GLPKFrontend1.0_Benutzerhandbuch.pdf",
-        download: "Solver/GLPK_Frontend1.0_Solver.zip",
+        download: "Solver/GLPK_Frontend1.0_Programm.zip",
       },
       {
         name: "Power LP 2.0",
@@ -292,7 +292,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
         handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
-        download: "Solver/LiPS_Solver.zip",
+        download: "Solver/LiPS_Programm.zip",
       },
       {
         name: "Dakin 2.0",
@@ -300,15 +300,15 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/Dakin2.0_Dokumentation.pdf",
         handbuch: "Solver/Dakin2.0_Benutzerhandbuch.pdf",
-        download: "Solver/Dakin2.0_Solver.zip",
+        download: "Solver/Dakin2.0_Programm.zip",
       },
       {
         name: "Sensibilitätsanalyse",
         start: "",
         Art: "Solver",
-        dokumentation: "Solver/Sensibilitaetsanalyse_Dokumentation.pdf",
-        handbuch: "Solver/Sensibilitaetsanalyse_Benutzerhandbuch.pdf",
-        download: "Solver/Sensibilitätsanalyse1.1_Solver.zip",
+        dokumentation: "Solver/Sensibilitaetsanalyse1.1_Dokumentation.pdf",
+        handbuch: "Solver/Sensibilitaetsanalyse1.1_Benutzerhandbuch.pdf",
+        download: "Solver/Sensibilitätsanalyse1.1_Programm.zip",
       },
       {
         name: "Primal Dual Wandler",
@@ -316,7 +316,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
         handbuch: "Solver/PrimalDualWandler_Benutzerhandbuch.pdf",
-        download: "Solver/PrimeDualWandler_Solver.zip",
+        download: "Solver/PrimeDualWandler_Programm.zip",
       },
       {
         name: "OR GraphX",
@@ -324,7 +324,7 @@ export default {
         Art: "Solver",
         dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
         handbuch: "",
-        download: "Solver/ORGraphX_Solver.zip",
+        download: "Solver/ORGraphX_Programm.zip",
       },
     ],
   }),
