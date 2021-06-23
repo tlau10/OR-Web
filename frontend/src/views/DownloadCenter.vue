@@ -6,6 +6,9 @@
         <v-card>
           <v-data-table
             :headers="headers"
+            v-model="selected"
+            height="650"
+            fixed-header
             :items="item"
             :items-per-page="30"
             sort-by="name"
