@@ -10,7 +10,7 @@
             :items-per-page="30"
             sort-by="name"
             group-by="Art"
-            class="elevation-1"            
+            class="elevation-1"
             disable-pagination
             hide-default-footer
           >
@@ -117,7 +117,7 @@ export default {
         name: "Wagner-Whitin 1.2",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "",
+        start: "WagnerWithin",
         Art: "Methoden",
         dokumentation: "Methods/Wagner-Whitin1.2_Dokumentation.pdf",
         handbuch: "Methods/Wagner-Whitin1.2_Benutzerhandbuch.pdf",
@@ -127,7 +127,7 @@ export default {
         name: "TR-Optimizer 2.1",
         Art: "Methoden",
         Kategorie: "Transportplanung",
-        start: "",
+        start: "TR_Optimizer",
         dokumentation: "Methods/TR-Optimizer2.1_Dokumentation.pdf",
         handbuch: "Methods/TR-Optimizer2.1_Benutzerhandbuch.pdf",
         download: "Methods/TR-Optimizer2.1_Programm.zip",
@@ -145,7 +145,7 @@ export default {
         name: "BOP - Beladungsoptimierung 1.1",
         Art: "Methoden",
         Kategorie: "Transportplanung",
-        start: "",
+        start: "BOP", // ToDo prüfen ob link funktioniert
         dokumentation: "Methods/BOP1.1_Dokumentation.zip",
         handbuch: "Methods/BOP1.1_Benutzerhandbuch.pdf",
         download: "Methods/BOP1.1_Programm.zip",
@@ -154,7 +154,7 @@ export default {
         name: "Leitstand Pflegestation 1.1",
         Art: "Methoden",
         Kategorie: "Personalplanung",
-        start: "",
+        start: "Leitstand_Pflegestation",
         dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
         handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
         download: "Methods/LeitstandPflegestation1.1_Programm.zip",
@@ -163,7 +163,7 @@ export default {
         name: "Eisenstadt 1.4",
         Art: "Methoden",
         Kategorie: "Standortplanung",
-        start: "",
+        start: "Eisenstadt",
         dokumentation: "Methods/Eisenstadt1.4_Dokumentation.pdf",
         handbuch: "Methods/Eisenstadt1.4_Benutzerhandbuch.pdf",
         download: "Eisenstadt1.4_Programm.zip",
@@ -172,7 +172,7 @@ export default {
         name: "innerbetriebliche Standortplanung 1.1",
         Art: "Methoden",
         Kategorie: "Standortplanung",
-        start: "",
+        start: "Innerbetriebliche_Standortplanung",
         dokumentation:
           "Methods/InnerbetrieblicheStandortplanung1.1_Dokumentation.pdf",
         handbuch:
@@ -183,7 +183,7 @@ export default {
         name: "Standortplanung 3.0",
         Art: "Methoden",
         Kategorie: "Standortplanung",
-        start: "",
+        start: "Standortplanung",
         dokumentation: "Standortplanung3.0_Dokumentation.pdf",
         handbuch: "Methods/Standortplanung3.0_Benutzerhandbuch.pdf",
         download: "Methods/Standortplanung3.0_Programm.zip",
@@ -192,14 +192,14 @@ export default {
         name: "Zuordnungsplanung 2.1",
         Art: "Methoden",
         Kategorie: "Personalplanung",
-        start: "",
+        start: "Zuordnungsplanung",
         dokumentation: "Methods/Zuordnungsplanung2.1_Dokumentation.zip",
         handbuch: "Methods/Zuordnungsplanung2.1_Benutzerhandbuch.pdf",
         download: "",
       },
       {
         name: "Lineare Portfolio Optimierung 2.0",
-        start: "",
+        start: "Portfolio_Optimierung",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation:
@@ -209,7 +209,7 @@ export default {
       },
       {
         name: "Roundtrip 0.9",
-        start: "",
+        start: "Roundtrip",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Roundtrip0.9_Dokumentation.pdf",
@@ -218,7 +218,7 @@ export default {
       },
       {
         name: "Job-Shop 2.2",
-        start: "",
+        start: "", //ToDo start hinzufügen
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/JobShop2.2_Dokumentation.pdf",
@@ -227,7 +227,7 @@ export default {
       },
       {
         name: "Verkehrsplaner",
-        start: "",
+        start: "Verkehrsplaner",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Verkehrsplaner_Dokumentation.zip",
@@ -236,7 +236,7 @@ export default {
       },
       {
         name: "Maschinenbelegungsplanung 5.2",
-        start: "",
+        start: "Maschinenbelegungsplanung",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Maschinenbelegungsplanung5.2_Dokumentation.zip",
@@ -245,7 +245,7 @@ export default {
       },
       {
         name: "OP-Scheduling 2.3",
-        start: "",
+        start: "OP_Scheduling",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/OP-Scheduling2.3_Dokumentation.pdf",
@@ -254,7 +254,7 @@ export default {
       },
       {
         name: "Ernährungsplaner 2.0",
-        start: "",
+        start: "Ernährungsplaner",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Ernährungsplaner2.0_Dokumentation.zip",
@@ -263,7 +263,7 @@ export default {
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
-        start: "",
+        start: "Einkaufswagenoptimierung",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "",
@@ -281,7 +281,7 @@ export default {
       },
       {
         name: "Iterator 1.0",
-        start: "",
+        start: "Iterator",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/Iterator1.0_Dokumentation.pdf",
@@ -290,7 +290,7 @@ export default {
       },
       {
         name: "Iterator 2.0",
-        start: "",
+        start: "Iterator2.0",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/Iterator2.0_Dokumentation.pdf",
@@ -299,7 +299,7 @@ export default {
       },
       {
         name: "LP-Solve Frontend",
-        start: "",
+        start: "LPSolve",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/LP-SolveFrontend_Dokumentation.pdf",
@@ -308,7 +308,7 @@ export default {
       },
       {
         name: "GLPK - GNU Linear Programming Kit GUI",
-        start: "",
+        start: "GLPK",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
@@ -326,16 +326,16 @@ export default {
       },
       {
         name: "LiPS - Linear Program Solver",
-        start: "",
-        Kategorie: "",
+        start: "LiPS",
         Art: "Solver",
+        Kategorie: "",
         dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
         handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
         download: "Solver/LiPS_Programm.zip",
       },
       {
         name: "Dakin 2.0",
-        start: "",
+        start: "Dakin",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/Dakin2.0_Dokumentation.pdf",
@@ -344,7 +344,7 @@ export default {
       },
       {
         name: "Sensibilitätsanalyse",
-        start: "",
+        start: "Sensibilitätsanalyse",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/Sensibilitaetsanalyse1.1_Dokumentation.pdf",
@@ -353,7 +353,7 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "",
+        start: "PrimalDualWandler", //ToDo prüfen ob link funktioniert
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
@@ -362,7 +362,7 @@ export default {
       },
       {
         name: "OR GraphX",
-        start: "",
+        start: "OR_GraphX",
         Art: "Solver",
         Kategorie: "Grafische Solver",
         dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
