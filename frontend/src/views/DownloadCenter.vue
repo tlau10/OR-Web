@@ -13,17 +13,22 @@
             class="elevation-1"
           >
             <template v-slot:[`item.name`]="{ item }">
-              <v-btn :to="item.start" :id="item.start" depressed plain class="text-capitalize">{{
-                item.name
-              }}</v-btn>
+              <v-btn
+                :to="item.start"
+                :id="item.start"
+                depressed
+                plain
+                class="text-capitalize"
+                >{{ item.name }}
+              </v-btn>
             </template>
             <template v-slot:[`item.dokumentation`]="{ item }">
-              <v-btn text icon :href="item.dokumentation" download>
+              <v-btn v-if="item.dokumentation != ''" text icon :href="item.dokumentation" download>
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-btn>
             </template>
             <template v-slot:[`item.handbuch`]="{ item }">
-              <v-btn text icon :href="item.handbuch" download>
+              <v-btn v-if="item.handbuch != ''" text icon :href="item.handbuch" download>
                 <v-icon>mdi-file-account-outline</v-icon>
               </v-btn>
             </template>
@@ -54,8 +59,17 @@ export default {
       },
     ],
     headers: [
-      { text: "Name", align: "start", value: "name", groupable: false },
-      { text: "Art", align: "left", value: "Art" },
+      {
+        text: "Name",
+        align: "start",
+        value: "name",
+        groupable: false,
+      },
+      {
+        text: "Art",
+        align: "left",
+        value: "Art",
+      },
       {
         text: "technische Dokumentation",
         align: "center",
@@ -68,7 +82,12 @@ export default {
         value: "handbuch",
         sortable: false,
       },
-      { text: "Download", align: "center", value: "download", sortable: false },
+      {
+        text: "Download",
+        align: "center",
+        value: "download",
+        sortable: false,
+      },
     ],
     item: [
       {
