@@ -149,12 +149,6 @@ export default {
         start: "Einkaufswagenoptimierung",
         download: "DownloadCenter#Einkaufswagenoptimierung",
       },
-      {
-        name: "Hotelmanager 5.0",
-        Kategorie: "Personalplanung",
-        start: "Hotelmanager",
-        download: "DownloadCenter#Hotelmanager",
-      },
     ],
   }),
 };
