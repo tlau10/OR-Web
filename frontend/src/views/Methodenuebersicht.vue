@@ -102,12 +102,6 @@ export default {
         download: "DownloadCenter#Standortplanung",
       },
       {
-        name: "Zuordnungsplanung 2.1",
-        Kategorie: "Personalplanung",
-        start: "Zuordnungsplanung",
-        download: "DownloadCenter#Zuordnungsplanung",
-      },
-      {
         name: "Lineare Portfolio Optimierung 2.0",
         Kategorie: "Personalplanung",
         start: "Portfolio",
