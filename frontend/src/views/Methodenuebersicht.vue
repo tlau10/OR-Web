@@ -3,32 +3,33 @@
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
     <template>
       <v-container>
-        <v-card> 
-      <v-data-table
-        :headers="headers"
-        :items="method"
-        :items-per-page="20"
-        sort-by="name"
-        group-by="Kategorie"
-        class="elevation-1"
+        <v-card>
+          <v-data-table
+            :headers="headers"
+            :items="method"
+            :items-per-page="20"
+            sort-by="name"
+            group-by="Kategorie"
+            class="elevation-1"
+          >
+            <template v-slot:[`item.name`]="{ item }">
+              <v-btn :to="item.start" depressed plain class="text-capitalize">{{
+                item.name
+              }}</v-btn>
+            </template>
+            <template v-slot:[`item.start`]="{ item }">
+              <v-btn text icon :to="item.start">
+                <v-icon>mdi-information-outline</v-icon>
+              </v-btn>
+            </template>
+            <template v-slot:[`item.download`]="{ item }">
+              <v-btn text icon :to="item.download">
+                <v-icon>mdi-download</v-icon>
+              </v-btn>
+            </template>
+          </v-data-table>
+        </v-card></v-container
       >
-        <template v-slot:[`item.name`]="{ item }">
-          <v-btn :to="item.start" depressed plain class="text-capitalize">{{
-            item.name
-          }}</v-btn>
-        </template>
-        <template v-slot:[`item.start`]="{ item }">
-          <v-btn text icon :to="item.start">
-            <v-icon>mdi-information-outline</v-icon>
-          </v-btn>
-        </template>
-        <template v-slot:[`item.download`]="{ item }">
-          <v-btn text icon :to="item.download">
-            <v-icon>mdi-download</v-icon>
-          </v-btn>
-        </template>
-      </v-data-table>
-        </v-card></v-container>
     </template>
   </div>
 </template>
@@ -100,6 +101,12 @@ export default {
         Kategorie: "Standortplanung",
         start: "Standortplanung",
         download: "DownloadCenter#Standortplanung",
+      },
+      {
+        name: "Leitstand Pflegestation 1.1",
+        Kategorie: "Personalplanung",
+        start: "Leitstand_Pflegestation",
+        download: "DownloadCenter#Leitstand_Pflegestation",
       },
       {
         name: "Lineare Portfolio Optimierung 2.0",
