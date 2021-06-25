@@ -63,14 +63,14 @@ export default {
       {
         name: "Wagner-Whitin 1.2",
         Kategorie: "Bestellmengenplanung",
-        start: "Wagner-Whitin",
-        download: "Methodenuebersicht#Wagner-Whitin",
+        start: "WagnerWhitin",
+        download: "Methodenuebersicht#WagnerWhitin",
       },
       {
         name: "TR-Optimizer 2.1",
         Kategorie: "Transportplanung",
-        start: "TR-Optimizer",
-        download: "DownloadCenter#TR-Optimizer",
+        start: "TR_Optimizer",
+        download: "DownloadCenter#TR_Optimizer",
       },
       {
         name: "PTSS - Paket Transport Simulation System 1.1",
@@ -93,8 +93,8 @@ export default {
       {
         name: "innerbetriebliche Standortplanung 1.1",
         Kategorie: "Standortplanung",
-        start: "innerbetrieblicheStandortplanung",
-        download: "DownloadCenter#innerbetrieblicheStandortplanung",
+        start: "Innerbetriebliche_Standortplanung",
+        download: "DownloadCenter#Innerbetriebliche_Standortplanung",
       },
       {
         name: "Standortplanung 3.0",
@@ -111,8 +111,8 @@ export default {
       {
         name: "Lineare Portfolio Optimierung 2.0",
         Kategorie: "Personalplanung",
-        start: "Portfolio",
-        download: "DownloadCenter#Portfolio",
+        start: "Portfolio_Optimierung",
+        download: "DownloadCenter#Portfolio_Optimierung",
       },
       {
         name: "Roundtrip 0.9",
@@ -141,8 +141,8 @@ export default {
       {
         name: "OP-Scheduling 2.3",
         Kategorie: "Personalplanung",
-        start: "OP-Scheduling",
-        download: "DownloadCenter#OP-Scheduling",
+        start: "OP_Scheduling",
+        download: "DownloadCenter#OP_Scheduling",
       },
       {
         name: "Ernährungsplaner 2.0",
