@@ -192,15 +192,6 @@ export default {
         download: "Methods/Standortplanung3.0_Programm.zip",
       },
       {
-        name: "Zuordnungsplanung 2.1",
-        Art: "Methoden",
-        Kategorie: "Personalplanung",
-        start: "Zuordnungsplanung",
-        dokumentation: "Methods/Zuordnungsplanung2.1_Dokumentation.zip",
-        handbuch: "Methods/Zuordnungsplanung2.1_Benutzerhandbuch.pdf",
-        download: "",
-      },
-      {
         name: "Lineare Portfolio Optimierung 2.0",
         start: "Portfolio_Optimierung",
         Art: "Methoden",
