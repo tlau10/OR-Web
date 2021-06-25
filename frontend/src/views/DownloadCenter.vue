@@ -51,7 +51,7 @@
             </template>
             <template v-slot:[`item.download`]="{ item }">
               <v-btn text icon :href="item.download" download>
-                <v-icon>mdi-file-account-outline</v-icon>
+                <v-icon>mdi-download</v-icon>
               </v-btn>
             </template>
           </v-data-table>
