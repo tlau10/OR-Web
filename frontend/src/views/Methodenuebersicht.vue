@@ -14,6 +14,8 @@
             sort-by="name"
             group-by="Kategorie"
             class="elevation-1"
+            disable-pagination
+            hide-default-footer
           >
             <template v-slot:[`item.name`]="{ item }">
               <v-btn :to="item.start" depressed plain class="text-capitalize">{{
