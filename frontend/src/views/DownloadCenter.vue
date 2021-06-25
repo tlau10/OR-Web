@@ -274,15 +274,6 @@ export default {
         download: "Methods/Einkaufswagenoptimierung1.0_Programm.zip",
       },
       {
-        name: "Hotelmanager 5.0",
-        start: "",
-        Art: "Methoden",
-        Kategorie: "Personalplanung",
-        dokumentation: "",
-        handbuch: "Methods/Hotelmanager5.0_Benutzerhandbuch.pdf",
-        download: "Methods/Hotelmanager5.0_Programm.zip",
-      },
-      {
         name: "Iterator 1.0",
         start: "Iterator",
         Art: "Solver",
