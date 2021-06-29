@@ -4,6 +4,8 @@
     <template>
       <v-container>
         <v-card>
+          <div>
+            <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
           <v-data-table
             :headers="headers"
             v-model="selected"
@@ -12,6 +14,7 @@
             :items="item"
             :items-per-page="30"
             sort-by="name"
+            :search="search"
             group-by="Art"
             class="elevation-1"
             disable-pagination
@@ -55,6 +58,7 @@
               </v-btn>
             </template>
           </v-data-table>
+          </div>
         </v-card>
       </v-container>
     </template>
@@ -75,6 +79,7 @@ export default {
         disabled: true,
       },
     ],
+    search: '',
     headers: [
       {
         text: "Name",
