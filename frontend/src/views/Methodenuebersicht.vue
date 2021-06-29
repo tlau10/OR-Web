@@ -3,32 +3,38 @@
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
     <template>
       <v-container>
-        <v-card> 
-      <v-data-table
-        :headers="headers"
-        :items="method"
-        :items-per-page="20"
-        sort-by="name"
-        group-by="Kategorie"
-        class="elevation-1"
+        <v-card>
+          <v-data-table
+            :headers="headers"
+            v-model="selected"
+            height="650"
+            fixed-header
+            :items="method"
+            :items-per-page="20"
+            sort-by="name"
+            group-by="Kategorie"
+            class="elevation-1"
+            disable-pagination
+            hide-default-footer
+          >
+            <template v-slot:[`item.name`]="{ item }">
+              <v-btn :to="item.start" depressed plain class="text-capitalize">{{
+                item.name
+              }}</v-btn>
+            </template>
+            <template v-slot:[`item.start`]="{ item }">
+              <v-btn text icon :to="item.start">
+                <v-icon>mdi-information-outline</v-icon>
+              </v-btn>
+            </template>
+            <template v-slot:[`item.download`]="{ item }">
+              <v-btn text icon :to="item.download">
+                <v-icon>mdi-download</v-icon>
+              </v-btn>
+            </template>
+          </v-data-table>
+        </v-card></v-container
       >
-        <template v-slot:[`item.name`]="{ item }">
-          <v-btn :to="item.start" depressed plain class="text-capitalize">{{
-            item.name
-          }}</v-btn>
-        </template>
-        <template v-slot:[`item.start`]="{ item }">
-          <v-btn text icon :to="item.start">
-            <v-icon>mdi-information-outline</v-icon>
-          </v-btn>
-        </template>
-        <template v-slot:[`item.download`]="{ item }">
-          <v-btn text icon :to="item.download">
-            <v-icon>mdi-download</v-icon>
-          </v-btn>
-        </template>
-      </v-data-table>
-        </v-card></v-container>
     </template>
   </div>
 </template>
@@ -62,14 +68,14 @@ export default {
       {
         name: "Wagner-Whitin 1.2",
         Kategorie: "Bestellmengenplanung",
-        start: "Wagner-Whitin",
-        download: "Methodenuebersicht#Wagner-Whitin",
+        start: "WagnerWhitin",
+        download: "Methodenuebersicht#WagnerWhitin",
       },
       {
         name: "TR-Optimizer 2.1",
         Kategorie: "Transportplanung",
-        start: "TR-Optimizer",
-        download: "DownloadCenter#TR-Optimizer",
+        start: "TR_Optimizer",
+        download: "DownloadCenter#TR_Optimizer",
       },
       {
         name: "PTSS - Paket Transport Simulation System 1.1",
@@ -92,8 +98,8 @@ export default {
       {
         name: "innerbetriebliche Standortplanung 1.1",
         Kategorie: "Standortplanung",
-        start: "innerbetrieblicheStandortplanung",
-        download: "DownloadCenter#innerbetrieblicheStandortplanung",
+        start: "Innerbetriebliche_Standortplanung",
+        download: "DownloadCenter#Innerbetriebliche_Standortplanung",
       },
       {
         name: "Standortplanung 3.0",
@@ -102,16 +108,16 @@ export default {
         download: "DownloadCenter#Standortplanung",
       },
       {
-        name: "Zuordnungsplanung 2.1",
+        name: "Leitstand Pflegestation 1.1",
         Kategorie: "Personalplanung",
-        start: "Zuordnungsplanung",
-        download: "DownloadCenter#Zuordnungsplanung",
+        start: "Leitstand_Pflegestation",
+        download: "DownloadCenter#Leitstand_Pflegestation",
       },
       {
         name: "Lineare Portfolio Optimierung 2.0",
         Kategorie: "Personalplanung",
-        start: "Portfolio",
-        download: "DownloadCenter#Portfolio",
+        start: "Portfolio_Optimierung",
+        download: "DownloadCenter#Portfolio_Optimierung",
       },
       {
         name: "Roundtrip 0.9",
@@ -140,8 +146,8 @@ export default {
       {
         name: "OP-Scheduling 2.3",
         Kategorie: "Personalplanung",
-        start: "OP-Scheduling",
-        download: "DownloadCenter#OP-Scheduling",
+        start: "OP_Scheduling",
+        download: "DownloadCenter#OP_Scheduling",
       },
       {
         name: "Ernährungsplaner 2.0",
@@ -154,12 +160,6 @@ export default {
         Kategorie: "Personalplanung",
         start: "Einkaufswagenoptimierung",
         download: "DownloadCenter#Einkaufswagenoptimierung",
-      },
-      {
-        name: "Hotelmanager 5.0",
-        Kategorie: "Personalplanung",
-        start: "Hotelmanager",
-        download: "DownloadCenter#Hotelmanager",
       },
     ],
   }),
