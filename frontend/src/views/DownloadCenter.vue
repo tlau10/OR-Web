@@ -3,61 +3,70 @@
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
     <template>
       <v-container>
+      
         <v-card>
           <div>
-            <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
-          <v-data-table
-            :headers="headers"
-            v-model="selected"
-            height="650"
-            fixed-header
-            :items="item"
-            :items-per-page="30"
-            sort-by="name"
-            :search="search"
-            group-by="Art"
-            class="elevation-1"
-            disable-pagination
-            hide-default-footer
-          >
-            <template v-slot:[`item.name`]="{ item }">
-              <v-btn
-                :to="item.start"
-                :id="item.start"
-                depressed
-                plain
-                class="text-capitalize"
-                >{{ item.name }}
-              </v-btn>
-            </template>
-            <template v-slot:[`item.dokumentation`]="{ item }">
-              <v-btn
-                v-if="item.dokumentation != ''"
-                text
-                icon
-                :href="item.dokumentation"
-                download
-              >
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </template>
-            <template v-slot:[`item.handbuch`]="{ item }">
-              <v-btn
-                v-if="item.handbuch != ''"
-                text
-                icon
-                :href="item.handbuch"
-                download
-              >
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </template>
-            <template v-slot:[`item.download`]="{ item }">
-              <v-btn text icon :href="item.download" download>
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </template>
-          </v-data-table>
+              <v-text-field
+              v-model="search"
+              label="Search"
+              class="mx-4"
+              append-icon="mdi-magnify"
+              single-line
+              hide-details
+            />
+            <br />
+            <v-data-table
+              :headers="headers"
+              v-model="selected"
+              height="650"
+              fixed-header
+              :items="item"
+              :items-per-page="30"
+              sort-by="name"
+              :search="search"
+              group-by="Art"
+              class="elevation-1"
+              disable-pagination
+              hide-default-footer
+            >
+              <template v-slot:[`item.name`]="{ item }">
+                <v-btn
+                  :to="item.start"
+                  :id="item.start"
+                  depressed
+                  plain
+                  class="text-capitalize"
+                  >{{ item.name }}
+                </v-btn>
+              </template>
+              <template v-slot:[`item.dokumentation`]="{ item }">
+                <v-btn
+                  v-if="item.dokumentation != ''"
+                  text
+                  icon
+                  :href="item.dokumentation"
+                  download
+                >
+                  <v-icon>mdi-file-cog-outline</v-icon>
+                </v-btn>
+              </template>
+              <template v-slot:[`item.handbuch`]="{ item }">
+                <v-btn
+                  v-if="item.handbuch != ''"
+                  text
+                  icon
+                  :href="item.handbuch"
+                  download
+                >
+                  <v-icon>mdi-file-account-outline</v-icon>
+                </v-btn>
+              </template>
+              <template v-slot:[`item.download`]="{ item }">
+                <v-btn text icon :href="item.download" download>
+                  <v-icon>mdi-download</v-icon>
+                </v-btn>
+              </template>
+            </v-data-table>
           </div>
         </v-card>
       </v-container>
@@ -79,7 +88,7 @@ export default {
         disabled: true,
       },
     ],
-    search: '',
+    search: "",
     headers: [
       {
         text: "Name",
