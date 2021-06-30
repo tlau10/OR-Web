@@ -3,10 +3,9 @@
     <v-breadcrumbs :items="items" large></v-breadcrumbs>
     <template>
       <v-container>
-      
         <v-card>
           <div>
-              <v-text-field
+            <v-text-field
               v-model="search"
               label="Search"
               class="mx-4"
