@@ -8,9 +8,6 @@
             <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
           <v-data-table
             :headers="headers"
-            v-model="selected"
-            height="1450"
-            fixed-header
             :items="item"
             :items-per-page="30"
             sort-by="name"
