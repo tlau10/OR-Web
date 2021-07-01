@@ -71,6 +71,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: "history", //switch Router from hash to history mode then linking of <v-btn>-tag from methodenuebersicht and solveruebersicht to DownloadCenter#<ID-Name> works 
+  base: process.env.BASE_URL,
   routes
 })
 
