@@ -33,8 +33,8 @@
               </v-btn>
             </template>
           </v-data-table>
-        </v-card></v-container
-      >
+        </v-card>
+      </v-container>
     </template>
   </div>
 </template>
@@ -69,7 +69,7 @@ export default {
         name: "Wagner-Whitin 1.2",
         Kategorie: "Bestellmengenplanung",
         start: "WagnerWhitin",
-        download: "Methodenuebersicht#WagnerWhitin",
+        download: "DownloadCenter#WagnerWhitin",
       },
       {
         name: "TR-Optimizer 2.1",
