@@ -9,7 +9,7 @@
           <v-data-table
             :headers="headers"
             v-model="selected"
-            height="650"
+            height="1450"
             fixed-header
             :items="item"
             :items-per-page="30"
@@ -116,7 +116,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "",
+        start: "", //ToDo start hinzufügen
         dokumentation: "Methods/Wagner-WithinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WithinLP1.3_Benutzerhandbuch.pdf",
         download: "Methods/WagnerWithinLP1.3_Programm.zip",
