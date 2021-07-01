@@ -171,7 +171,7 @@ export default {
         start: "Eisenstadt",
         dokumentation: "Methods/Eisenstadt1.4_Dokumentation.pdf",
         handbuch: "Methods/Eisenstadt1.4_Benutzerhandbuch.pdf",
-        download: "Eisenstadt1.4_Programm.zip",
+        download: "Methods/Eisenstadt1.4_Programm.zip",
       },
       {
         name: "innerbetriebliche Standortplanung 1.1",
@@ -189,7 +189,7 @@ export default {
         Art: "Methoden",
         Kategorie: "Standortplanung",
         start: "Standortplanung",
-        dokumentation: "Standortplanung3.0_Dokumentation.pdf",
+        dokumentation: "Methods/Standortplanung3.0_Dokumentation.pdf",
         handbuch: "Methods/Standortplanung3.0_Benutzerhandbuch.pdf",
         download: "Methods/Standortplanung3.0_Programm.zip",
       },
@@ -299,7 +299,7 @@ export default {
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
-        handbuch: "Solver/GLPKFrontend1.0_Benutzerhandbuch.pdf",
+        handbuch: "Solver/GLPK_Frontend1.0_Benutzerhandbuch.pdf",
         download: "Solver/GLPK_Frontend1.0_Programm.zip",
       },
       {
@@ -340,12 +340,12 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "PrimalDualWandler", //ToDo prüfen ob link funktioniert
+        start: "PrimalDualWandler",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
         handbuch: "Solver/PrimalDualWandler_Benutzerhandbuch.pdf",
-        download: "Solver/PrimeDualWandler_Programm.zip",
+        download: "Solver/PrimalDualWandler_Programm.zip",
       },
       {
         name: "OR GraphX",
