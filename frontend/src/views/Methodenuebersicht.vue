@@ -86,8 +86,8 @@ export default {
       {
         name: "BOP - Beladungsoptimierung 1.1",
         Kategorie: "Transportplanung",
-        start: "BOP",
-        download: "DownloadCenter#BOP",
+        start: "Bop",
+        download: "DownloadCenter#Bop",
       },
       {
         name: "Eisenstadt 1.4",
