@@ -49,6 +49,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/PTSS.vue')
   },
   {
+    path: '/BOP',
+    name: 'Beladungsoptimierung',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Bop.vue')
+  },
+  {
     path: '/Einkaufswagen',
     name: 'Einkaufswagenoptimierung',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Einkaufswagenoptimierung.vue')
@@ -197,7 +202,13 @@ const routes = [
     path: '/DownloadCenter',
     name: 'DownloadCenter',
     component: () => import(/* webpackChunkName: "about" */ '../views/DownloadCenter.vue')
-  }
+  },
+  {
+    path: '/Github',
+    name: 'Github',
+    beforeEnter() {location.href = 'https://github.com/tlau10/OR-WebSS21'},
+  },
+
 ]
 
 const router = new VueRouter({

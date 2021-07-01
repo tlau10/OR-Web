@@ -42,9 +42,12 @@
 	        <br>	9. Versuch mit 17 Knoten und 35 Kanten. 3min 11 Sekunden
 	        <br>	10. Versuch mit 18 Knoten und 38 Kanten. 14min 44 Sekunden
 	        <br>	11. Versuch mit 19 Knoten und 40 Kanten. Nach 22 Minuten noch nicht fertig
+			<br>
+			<br>
 
-
+			<button id="btn">Download</button>
+			<!-- Todo -->
+			<a src="@/views/DownloadCenter.vue">DownloadCenter</a>
         </body>
-
     </v-container>
 </template>

@@ -46,22 +46,33 @@
     </v-main>
 
     <!--Footer-->
-    <v-footer class="ma-5" dark padless>
-      <v-card flat tile class="grey lighten-3 black--text text-center">
-        <v-card-text class="black--text">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-          Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-          accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-          a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula
-          lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus
-          iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum
-          tempor vel ut orci. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
+    <v-footer
+      :padless="padless"
+    >
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="teal darken-2 text-center"
+      >
+        <v-card-text>
+          <v-btn
+            v-for="fItem in fItems"
+            :key="fItem.icon"
+            :to="fItem.to"
+            class="mx-4"
+            icon
+            
+          >
+            <v-icon size="24px">
+              {{ fItem.icon }}
+            </v-icon>
+          </v-btn>
         </v-card-text>
 
         <v-divider></v-divider>
 
-        <v-card-text class="black--text">
+        <v-card-text class="white--text">
           {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
         </v-card-text>
       </v-card>
@@ -81,8 +92,16 @@ export default {
       { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
       { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"},
       { title: "DownloadCenter", icon: "mdi-archive-arrow-down", to: "/DownloadCenter"},
-      { title: "Methode", icon: "mdi-archive-arrow-down", to: "/BOP"}
+      { title: "Methode", icon: "mdi-archive-arrow-down", to: "/PTSS"}
     ],
+    fItems: [
+        {icon:'mdi-home',  to:"/"},
+        {icon: 'mdi-github', to:"/Github"},
+        {icon: 'mdi-book-open-variant', to:"/Impressum"},
+        {icon: 'mdi-email', to:""},
+      ],
+      padless: false,
+      variant: 'default',
   }),
 };
 </script>
