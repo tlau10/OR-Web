@@ -308,8 +308,8 @@ export default {
         Kategorie: "",
         Art: "Solver",
         dokumentation: "",
-        handbuch: "Solver/PowerLP2_Benutzerhandbuch.pdf",
-        download: "",
+        handbuch: "Solver/PowerLP2.0_Benutzerhandbuch.pdf",
+        download: "Solver/PowerLP2.0_Programm.zip",
       },
       {
         name: "LiPS - Linear Program Solver",
