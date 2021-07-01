@@ -5,56 +5,79 @@
       <v-container>
         <v-card>
           <div>
-            <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
-          <v-data-table
-            :headers="headers"
-            :items="item"
-            :items-per-page="30"
-            sort-by="name"
-            :search="search"
-            group-by="Art"
-            class="elevation-1"
-            disable-pagination
-            hide-default-footer
-          >
-            <template v-slot:[`item.name`]="{ item }">
-              <v-btn
-                :to="item.start"
-                :id="item.start"
-                depressed
-                plain
-                class="text-capitalize"
-                >{{ item.name }}
-              </v-btn>
-            </template>
-            <template v-slot:[`item.dokumentation`]="{ item }">
-              <v-btn
-                v-if="item.dokumentation != ''"
-                text
-                icon
-                :href="item.dokumentation"
-                download
+            <v-text-field
+              v-model="search"
+              label="Search"
+              class="mx-4"
+              single-line
+            />
+            <v-data-table
+              :headers="headers"
+              :items="item"
+              :items-per-page="30"
+              :search="search"
+              sort-by="name"
+              item-key="name"
+              group-key="Art"
+              group-by="Art"
+              class="elevation-1"
+              hide-action
+              disable-pagination
+              hide-default-footer
+            >
+              <template
+                v-slot:[`group.header`]="{ group, headers, toggle, isOpen }"
               >
-                <v-icon>mdi-file-cog-outline</v-icon>
-              </v-btn>
-            </template>
-            <template v-slot:[`item.handbuch`]="{ item }">
-              <v-btn
-                v-if="item.handbuch != ''"
-                text
-                icon
-                :href="item.handbuch"
-                download
-              >
-                <v-icon>mdi-file-account-outline</v-icon>
-              </v-btn>
-            </template>
-            <template v-slot:[`item.download`]="{ item }">
-              <v-btn text icon :href="item.download" download>
-                <v-icon>mdi-download</v-icon>
-              </v-btn>
-            </template>
-          </v-data-table>
+                <td :colspan="headers.length" @click="toggle" :ref="group">
+                  <v-btn small icon>
+                    <v-icon v-if="isOpen">mdi-minus</v-icon>
+                    <v-icon v-else>mdi-plus</v-icon>
+                  </v-btn>
+                  <span class="mx-5 font-weight-bold">{{ group }}</span>
+                  <!--TODO Funktionalität Schließen-Button 
+                <v-btn icon small class="ma-0">
+                  <v-icon>mdi-close</v-icon>
+                </v-btn> -->
+                </td>
+              </template>
+              <template v-slot:[`item.name`]="{ item }">
+                <v-btn
+                  :to="item.start"
+                  :id="item.start"
+                  depressed
+                  plain
+                  class="text-capitalize"
+                  >{{ item.name }}
+                </v-btn>
+              </template>
+              <template v-slot:[`item.dokumentation`]="{ item }">
+                <v-btn
+                  v-if="item.dokumentation != ''"
+                  text
+                  icon
+                  :href="item.dokumentation"
+                  download
+                >
+                  <v-icon>mdi-file-cog-outline</v-icon>
+                </v-btn>
+              </template>
+              <template v-slot:[`item.handbuch`]="{ item }">
+                <v-btn
+                  v-if="item.handbuch != ''"
+                  text
+                  icon
+                  :href="item.handbuch"
+                  download
+                >
+                  <v-icon>mdi-file-account-outline</v-icon>
+                </v-btn>
+              </template>
+              <template v-slot:[`item.download`]="{ item }">
+                <v-btn text icon :href="item.download" download>
+                  <v-icon>mdi-download</v-icon>
+                </v-btn>
+              </template>
+            </v-data-table>
           </div>
         </v-card>
       </v-container>
@@ -340,7 +363,7 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "PrimalDualWandler",
+        start: "PrimalDualWandler", //ToDo prüfen ob Link funktioniert
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
