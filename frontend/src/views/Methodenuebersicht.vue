@@ -14,16 +14,28 @@
             disable-pagination
             hide-default-footer
           >
-           <template
-                v-slot:[`group.header`]="{ group, headers, toggle, isOpen }">
-                  <td :colspan="headers.length" @click="toggle" :ref="group">
-                  <v-btn small icon>
-                    <v-icon v-if="isOpen">mdi-minus</v-icon>
-                    <v-icon v-else>mdi-plus</v-icon>
-                  </v-btn>
-                  <span class="mx-5 font-weight-bold">{{ group }}</span>
-                </td>
-           </template>
+            <template
+              v-slot:[`group.header`]="{ group, headers, toggle, isOpen }"
+            >
+              <td
+                :colspan="headers.length"
+                @click="toggle"
+                :ref="group"
+                class="hover"
+              >
+                <v-btn small icon>
+                  <v-icon v-if="isOpen">mdi-minus</v-icon>
+                  <v-icon v-else>mdi-plus</v-icon>
+                </v-btn>
+                <span
+                  class="mx-5 font-weight-bold"
+                  @mouseover.native="hover = true"
+                  @mouseleave.native="hover = false"
+                >
+                  {{ group }}
+                </span>
+              </td>
+            </template>
             <template v-slot:[`item.name`]="{ item }">
               <v-btn :to="item.start" depressed plain class="text-capitalize">{{
                 item.name
