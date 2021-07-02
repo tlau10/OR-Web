@@ -4,10 +4,13 @@
     <template>
       <v-container>
         <v-card>
+           <div>
+            <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
           <v-data-table
             :headers="headers"
             :items="method"
             :items-per-page="20"
+            :search="search"
             sort-by="name"
             group-by="Kategorie"
             class="elevation-1"
@@ -52,6 +55,7 @@
               </v-btn>
             </template>
           </v-data-table>
+          </div>
         </v-card>
       </v-container>
     </template>
@@ -71,6 +75,7 @@ export default {
         disabled: true,
       },
     ],
+    search: "",
     headers: [
       { text: "Methodenname", align: "start", value: "name", groupable: false },
       { text: "Kategorie", align: "left", value: "Kategorie" },
