@@ -28,17 +28,22 @@
               <template
                 v-slot:[`group.header`]="{ group, headers, toggle, isOpen }"
               >
-                <td :colspan="headers.length" @click="toggle" :ref="group" class="hover" >
-                  <v-btn small icon >
+                <td
+                  :colspan="headers.length"
+                  @click="toggle"
+                  :ref="group"
+                  class="hover"
+                >
+                  <v-btn small icon>
                     <v-icon v-if="isOpen">mdi-minus</v-icon>
                     <v-icon v-else>mdi-plus</v-icon>
                   </v-btn>
-                  <span class="mx-5 font-weight-bold" @mouseover.native="hover = true"
-    @mouseleave.native="hover = false">{{ group }}</span>
-                  <!--TODO Funktionalität Schließen-Button 
-                <v-btn icon small class="ma-0">
-                  <v-icon>mdi-close</v-icon>
-                </v-btn> -->
+                  <span
+                    class="mx-5 font-weight-bold"
+                    @mouseover.native="hover = true"
+                    @mouseleave.native="hover = false"
+                    >{{ group }}
+                    </span>
                 </td>
               </template>
               <template v-slot:[`item.name`]="{ item }">
@@ -100,7 +105,7 @@ export default {
         disabled: true,
       },
     ],
-    search: '',
+    search: "",
     headers: [
       {
         text: "Name",
@@ -382,7 +387,7 @@ export default {
       },
     ],
   }),
-   hover: false,
+  hover: false,
 };
 </script>
 <style lang="scss">
