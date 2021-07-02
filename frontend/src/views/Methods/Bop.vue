@@ -18,7 +18,7 @@
                 
                 <hr noshade size=1>
                 <div class="infoPics">
-                    <img src="@/assets/bop1.jpg"/>	
+                    <img src="@/assets/bop.jpg"/>	
                 </div>
                 <hr noshade size=1>
                 <h2>Beschreibung der Methode:</h2>
