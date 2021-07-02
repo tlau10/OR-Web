@@ -53,7 +53,7 @@ node --version<template>
         flat
         tile
         width="100%"
-        class="teal darken-2 text-center"
+        class="teal darken-1 text-center"
       >
         <v-card-text>
           <v-btn
@@ -62,7 +62,7 @@ node --version<template>
             :to="fItem.to"
             class="mx-4"
             icon
-            
+            color="white"
           >
             <v-icon size="24px">
               {{ fItem.icon }}
