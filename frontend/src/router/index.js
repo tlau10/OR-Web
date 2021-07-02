@@ -222,6 +222,23 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: "history", //switch Router from hash to history mode then linking of <v-btn>-tag from methodenuebersicht and solveruebersicht to DownloadCenter#<ID-Name> works 
+  base: process.env.BASE_URL,
+  scrollBehavior: function (to, from, savedPosition) {
+    //if there is #<ID-Name>
+    if (to.hash) {
+      //then scroll to the affected id so that it is shown below (not behind) <v-app-bar>
+      //therefore is an offset here given 
+      return {
+        selector: to.hash,
+        behavior: 'smooth',
+        offset: { x: 0, y: 150 }
+      }
+    } else {
+      //else show the top of the requested page
+      return { x: 0, y: 0 }
+    }
+  },
   routes
 })
 

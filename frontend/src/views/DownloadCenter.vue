@@ -9,25 +9,38 @@
               v-model="search"
               label="Search"
               class="mx-4"
-              append-icon="mdi-magnify"
               single-line
-              hide-details
             />
-            <br />
             <v-data-table
               :headers="headers"
-              v-model="selected"
-              height="650"
-              fixed-header
               :items="item"
               :items-per-page="30"
-              sort-by="name"
               :search="search"
+              sort-by="name"
+              item-key="name"
+              group-key="Art"
               group-by="Art"
               class="elevation-1"
+              hide-action
               disable-pagination
               hide-default-footer
             >
+              <template
+                v-slot:[`group.header`]="{ group, headers, toggle, isOpen }"
+              >
+                <td :colspan="headers.length" @click="toggle" :ref="group" class="hover" >
+                  <v-btn small icon >
+                    <v-icon v-if="isOpen">mdi-minus</v-icon>
+                    <v-icon v-else>mdi-plus</v-icon>
+                  </v-btn>
+                  <span class="mx-5 font-weight-bold" @mouseover.native="hover = true"
+    @mouseleave.native="hover = false">{{ group }}</span>
+                  <!--TODO Funktionalität Schließen-Button 
+                <v-btn icon small class="ma-0">
+                  <v-icon>mdi-close</v-icon>
+                </v-btn> -->
+                </td>
+              </template>
               <template v-slot:[`item.name`]="{ item }">
                 <v-btn
                   :to="item.start"
@@ -124,7 +137,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "",
+        start: "", //ToDo start hinzufügen
         dokumentation: "Methods/Wagner-WithinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WithinLP1.3_Benutzerhandbuch.pdf",
         download: "Methods/WagnerWithinLP1.3_Programm.zip",
@@ -161,7 +174,7 @@ export default {
         name: "BOP - Beladungsoptimierung 1.1",
         Art: "Methoden",
         Kategorie: "Transportplanung",
-        start: "Bop",
+        start: "BOP",
         dokumentation: "Methods/BOP1.1_Dokumentation.zip",
         handbuch: "Methods/BOP1.1_Benutzerhandbuch.pdf",
         download: "Methods/BOP1.1_Programm.zip",
@@ -182,7 +195,7 @@ export default {
         start: "Eisenstadt",
         dokumentation: "Methods/Eisenstadt1.4_Dokumentation.pdf",
         handbuch: "Methods/Eisenstadt1.4_Benutzerhandbuch.pdf",
-        download: "Eisenstadt1.4_Programm.zip",
+        download: "Methods/Eisenstadt1.4_Programm.zip",
       },
       {
         name: "innerbetriebliche Standortplanung 1.1",
@@ -200,7 +213,7 @@ export default {
         Art: "Methoden",
         Kategorie: "Standortplanung",
         start: "Standortplanung",
-        dokumentation: "Standortplanung3.0_Dokumentation.pdf",
+        dokumentation: "Methods/Standortplanung3.0_Dokumentation.pdf",
         handbuch: "Methods/Standortplanung3.0_Benutzerhandbuch.pdf",
         download: "Methods/Standortplanung3.0_Programm.zip",
       },
@@ -310,7 +323,7 @@ export default {
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
-        handbuch: "Solver/GLPKFrontend1.0_Benutzerhandbuch.pdf",
+        handbuch: "Solver/GLPK_Frontend1.0_Benutzerhandbuch.pdf",
         download: "Solver/GLPK_Frontend1.0_Programm.zip",
       },
       {
@@ -319,8 +332,8 @@ export default {
         Kategorie: "",
         Art: "Solver",
         dokumentation: "",
-        handbuch: "Solver/PowerLP2_Benutzerhandbuch.pdf",
-        download: "",
+        handbuch: "Solver/PowerLP2.0_Benutzerhandbuch.pdf",
+        download: "Solver/PowerLP2.0_Programm.zip",
       },
       {
         name: "LiPS - Linear Program Solver",
@@ -351,12 +364,12 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "PrimalDualWandler", //ToDo prüfen ob link funktioniert
+        start: "PrimalDualWandler", //ToDo prüfen ob Link funktioniert
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
         handbuch: "Solver/PrimalDualWandler_Benutzerhandbuch.pdf",
-        download: "Solver/PrimeDualWandler_Programm.zip",
+        download: "Solver/PrimalDualWandler_Programm.zip",
       },
       {
         name: "OR GraphX",
@@ -369,6 +382,7 @@ export default {
       },
     ],
   }),
+   hover: false,
 };
 </script>
 <style lang="scss">
