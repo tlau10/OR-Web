@@ -173,7 +173,7 @@ export default {
         name: "BOP - Beladungsoptimierung 1.1",
         Art: "Methoden",
         Kategorie: "Transportplanung",
-        start: "Bop",
+        start: "BOP",
         dokumentation: "Methods/BOP1.1_Dokumentation.zip",
         handbuch: "Methods/BOP1.1_Benutzerhandbuch.pdf",
         download: "Methods/BOP1.1_Programm.zip",
