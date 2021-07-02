@@ -4,19 +4,41 @@
     <template>
       <v-container>
         <v-card>
+           <div>
+            <v-text-field v-model="search" label="Search" class="mx-4" single-line/>
           <v-data-table
             :headers="headers"
-            v-model="selected"
-            height="650"
-            fixed-header
             :items="method"
             :items-per-page="20"
+            :search="search"
             sort-by="name"
             group-by="Kategorie"
             class="elevation-1"
             disable-pagination
             hide-default-footer
           >
+            <template
+              v-slot:[`group.header`]="{ group, headers, toggle, isOpen }"
+            >
+              <td
+                :colspan="headers.length"
+                @click="toggle"
+                :ref="group"
+                class="hover"
+              >
+                <v-btn small icon>
+                  <v-icon v-if="isOpen">mdi-minus</v-icon>
+                  <v-icon v-else>mdi-plus</v-icon>
+                </v-btn>
+                <span
+                  class="mx-5 font-weight-bold"
+                  @mouseover.native="hover = true"
+                  @mouseleave.native="hover = false"
+                >
+                  {{ group }}
+                </span>
+              </td>
+            </template>
             <template v-slot:[`item.name`]="{ item }">
               <v-btn :to="item.start" depressed plain class="text-capitalize">{{
                 item.name
@@ -33,8 +55,9 @@
               </v-btn>
             </template>
           </v-data-table>
-        </v-card></v-container
-      >
+          </div>
+        </v-card>
+      </v-container>
     </template>
   </div>
 </template>
@@ -52,6 +75,7 @@ export default {
         disabled: true,
       },
     ],
+    search: "",
     headers: [
       { text: "Methodenname", align: "start", value: "name", groupable: false },
       { text: "Kategorie", align: "left", value: "Kategorie" },
@@ -69,7 +93,7 @@ export default {
         name: "Wagner-Whitin 1.2",
         Kategorie: "Bestellmengenplanung",
         start: "WagnerWhitin",
-        download: "Methodenuebersicht#WagnerWhitin",
+        download: "DownloadCenter#WagnerWhitin",
       },
       {
         name: "TR-Optimizer 2.1",
@@ -163,6 +187,7 @@ export default {
       },
     ],
   }),
+  hover: false,
 };
 </script>
 <style lang="scss">
