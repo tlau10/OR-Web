@@ -182,6 +182,7 @@ export default {
       },
     ],
   }),
+  hover: false,
 };
 </script>
 <style lang="scss">
