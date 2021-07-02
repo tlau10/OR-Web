@@ -13,7 +13,7 @@
                 <h1>LP-Solve Frontend</h1>
                 <hr noshade size=1>
                 <div class="infoPics">
-                <img SRC="@/assets/lpsolve_ide.jpg">
+                <img height="400px" src="@/assets/lpsolve_ide.jpg">
                 </div>
                 <hr noshade size=1>
                 <h2>Beschreibung des Solvers:</h2>

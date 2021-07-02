@@ -179,9 +179,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PowerLP.vue')
   },
   {
-    path: '/PrimeDualWandler',
-    name: 'PrimeDualWandler',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PrimeDualWandler.vue')
+    path: '/PrimalDualWandler',
+    name: 'PrimalDualWandler',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PrimalDualWandler.vue')
   },
   {
     path: '/Sensibilitätsanalyse',
