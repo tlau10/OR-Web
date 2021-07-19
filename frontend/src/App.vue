@@ -84,8 +84,9 @@ node --version<template>
 export default {
   data: () => ({
     drawer: null,
+    //items for Navbar
     items: [
-      { title: "Home", icon: "mdi-view-dashboard", to: "/Home" },
+      { title: "Home", icon: "mdi-view-dashboard", to: "/" },
       { title: "Methoden", icon: "mdi-debug-step-over", to: "/methoden" },
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
@@ -94,6 +95,7 @@ export default {
       { title: "Impressum", icon: "mdi-alpha-i-circle", to: "/Impressum" },
       { title: "DownloadCenter", icon: "mdi-archive-arrow-down", to: "/DownloadCenter"}
     ],
+    //items for Footer
     fItems: [
         {icon:'mdi-home',  to:"/"},
         {icon: 'mdi-github', to:"/Github"},
