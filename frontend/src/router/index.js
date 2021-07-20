@@ -218,6 +218,11 @@ const routes = [
     name: 'Github',
     beforeEnter() {location.href = 'https://github.com/tlau10/OR-WebSS21'},
   },
+  {
+    path: '/Datenschutz',
+    name: 'Datenschutz',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Datenschutz.vue')
+  },
 
 ]
 
