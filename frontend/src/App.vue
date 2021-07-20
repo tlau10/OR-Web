@@ -86,7 +86,7 @@ export default {
     drawer: null,
     //items for Navbar
     items: [
-      { title: "Home", icon: "mdi-view-dashboard", to: "/" },
+      { title: "Home", icon: "mdi-home", to: "/" },
       { title: "Methoden", icon: "mdi-debug-step-over", to: "/methoden" },
       { title: "Solver", icon: "mdi-check-bold", to: "/solver" },
       { title: "Handbuch", icon: "mdi-book-open-variant", to: "/handbuch" },
