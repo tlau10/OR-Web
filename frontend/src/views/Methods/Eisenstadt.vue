@@ -68,6 +68,10 @@
                     <br>Bei gleicher Einstellung mit Geschwindigkeit Schnell 1m 32s
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Eisenstadt">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

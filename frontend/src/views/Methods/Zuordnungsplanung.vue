@@ -40,6 +40,10 @@
                     Bei Enumeration liegt die Grenze bei 8 Zeilen und 8 Spalten.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <!--<a href="">Download</a> TODO -->
+            </div>
         </body>
     </v-container>
 </template>

@@ -40,8 +40,11 @@
             Je nach Größe und Gewicht kommt ab einem gewissen Alter ein negativer Energiebedarf raus. 
             Diese Grenze sollte in der Regel von keinem Menschen erreicht werden.
         </p>
-    </div>
+        </div>
+        <div>
+            <!-- <a href="">Zur Methode</a> TODO-->
+            <a href="DownloadCenter#Ernährungsplaner">Download</a>
+        </div>
     </body>
-    
     </v-container>
 </template>

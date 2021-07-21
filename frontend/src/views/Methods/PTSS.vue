@@ -45,9 +45,11 @@
 			<br>
 			<br>
 
-			<button id="btn">Download</button>
-			<!-- Todo -->
-			<a src="@/views/DownloadCenter.vue">DownloadCenter</a>
+			<div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#PTSS">Download</a>
+				<a href="mailto: spamemil@gmx.net">Email</a>
+            </div>
         </body>
     </v-container>
 </template>

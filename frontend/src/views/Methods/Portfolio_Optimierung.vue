@@ -51,6 +51,10 @@
                     Alle aufw&auml;ndigeren Berechnungen der Typen 1 und 4 in einer Schrittweise von 1 werden innerhalb von wenigen Minuten ausgerechnet.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Portfolio_Optimierung">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

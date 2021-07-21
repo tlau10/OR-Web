@@ -43,6 +43,9 @@
                     <li>Die einfachen Standardbeispiele funktionieren. Bei gr&ouml;&szlig;eren Berechnungen k&ouml;nnen Fehler passieren.</li>   
                 </ul>
             </div>
+            <div>
+            <a href="DownloadCenter#Sensibilitätsanalyse">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

@@ -36,6 +36,10 @@
                     Fallbeispiel 1; Dauer 100 000 sek. auf 100.0X Schnelligkeit : 20 min
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Verkehrsplaner">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

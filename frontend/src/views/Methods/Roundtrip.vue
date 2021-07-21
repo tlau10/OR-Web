@@ -29,6 +29,10 @@
                 <p>
                     Lauff&auml;hig bis 100 St&auml;dte	
                 </p>
+                <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Roundtrip">Download</a>
+                </div>
             </div>
         </body>
     </v-container>

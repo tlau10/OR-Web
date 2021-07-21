@@ -34,6 +34,10 @@
                     erreichen.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#OP_Scheduling">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

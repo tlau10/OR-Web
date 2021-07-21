@@ -98,7 +98,7 @@ export default {
         {icon:'mdi-home',  to:"/"},
         {icon: 'mdi-github', to:"/Github"},
         {icon: 'mdi-book-open-variant', to:"/Impressum"},
-        {icon: 'mdi-email', to:""},
+        {icon: 'mdi-email', to:"/Mail"},
       ],
       padless: false,
       variant: 'default',

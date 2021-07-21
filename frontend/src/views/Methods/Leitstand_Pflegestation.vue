@@ -38,6 +38,10 @@
                     da die Einteilung in 30 Min.-Perioden erfolgt.)
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Leitstand_Pflegestation">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

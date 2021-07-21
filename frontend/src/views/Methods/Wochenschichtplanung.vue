@@ -34,6 +34,10 @@
                 Diese Methode ist nur aus dem VPN der Hochschule Konstanz erreichbar.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <!--<a href="DownloadCenter#WagnerWhitin">Download</a>TODO -->
+            </div>
         </body>
     </v-container>
 </template>

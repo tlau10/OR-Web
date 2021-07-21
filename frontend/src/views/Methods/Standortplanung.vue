@@ -35,6 +35,10 @@
                     Zu der Ausf&uumlhrung des Tools wird eine Java Umgebung der Version 7 oder h&oumlher ben&oumltigt.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Standortplanung">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

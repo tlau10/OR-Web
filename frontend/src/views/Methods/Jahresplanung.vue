@@ -32,6 +32,10 @@
                     Diese Methode ist nur aus dem VPN der Hochschule Konstanz erreichbar.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <!-- <a href="DownloadCenter#Jahresplanung">Download</a>-->
+            </div>
         </body>
     
     </v-container>

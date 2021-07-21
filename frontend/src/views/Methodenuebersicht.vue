@@ -86,8 +86,8 @@ export default {
       {
         name: "Wagner-Whitin-LP 1.3",
         Kategorie: "Bestellmengenplanung",
-        start: "Wagner-Whitin-LP",
-        download: "DownloadCenter#Wagner-Whitin-LP",
+        start: "",//TODO
+        download: "DownloadCenter#Wagner-Whitin-LP 1.3",
       },
       {
         name: "Wagner-Whitin 1.2",
@@ -120,7 +120,7 @@ export default {
         download: "DownloadCenter#Eisenstadt",
       },
       {
-        name: "innerbetriebliche Standortplanung 1.1",
+        name: "Innerbetriebliche Standortplanung 1.1",
         Kategorie: "Standortplanung",
         start: "Innerbetriebliche_Standortplanung",
         download: "DownloadCenter#Innerbetriebliche_Standortplanung",
@@ -182,7 +182,7 @@ export default {
       {
         name: "Einkaufswagenoptimierung 1.0",
         Kategorie: "Personalplanung",
-        start: "Einkaufswagenoptimierung",
+        start: "Einkaufswagen",
         download: "DownloadCenter#Einkaufswagenoptimierung",
       },
     ],

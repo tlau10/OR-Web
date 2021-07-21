@@ -129,9 +129,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Wochenschichtplanung.vue')
   },
   {
-    path: '/WagnerWithin',
-    name: 'WagnerWithin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWithin.vue')
+    path: '/WagnerWhitin',
+    name: 'WagnerWhitin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitin.vue')
   },
   {
     path: '/Zuordnungsplanung',
@@ -217,6 +217,11 @@ const routes = [
     path: '/Github',
     name: 'Github',
     beforeEnter() {location.href = 'https://github.com/tlau10/OR-WebSS21'},
+  },
+  {
+    path: '/Mail',
+    name: 'Mail',
+    beforeEnter() {location.href = 'mailto: testMail@web.com'},
   },
 
 ]

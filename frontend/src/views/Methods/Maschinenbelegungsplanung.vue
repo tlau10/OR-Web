@@ -33,6 +33,10 @@
                     Bedingungen, wie dem Freihalten festgelegter Kapazitäten usw.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Maschinenbelegungsplanung">Download</a>
+            </div>
         </body>
     </v-container>
 </template>
