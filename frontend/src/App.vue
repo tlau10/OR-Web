@@ -1,4 +1,4 @@
-node --version<template>
+<template>
   <v-app id="inspire">
     <!--Navigation-->
     <v-navigation-drawer v-model="drawer" app>
