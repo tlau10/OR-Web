@@ -134,6 +134,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitin.vue')
   },
   {
+    path: '/WagnerWhitinLP',
+    name: 'WagnerWhitinLP',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitinLP.vue')
+  },
+  {
     path: '/Zuordnungsplanung',
     name: 'Zuordnungsplanung',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')

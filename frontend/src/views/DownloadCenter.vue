@@ -137,7 +137,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "", //ToDo start hinzufügen
+        start: "WagnerWhitinLP", //ToDo start hinzufügen
         dokumentation: "Methods/Wagner-WhitinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WhitinLP1.3_Benutzerhandbuch.pdf",
         download: "Methods/WagnerWhitinLP1.3_Programm.zip",
@@ -238,7 +238,7 @@ export default {
       },
       {
         name: "Job-Shop 2.2",
-        start: "JobShop", //ToDo start hinzufügen
+        start: "JobShop",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/JobShop2.2_Dokumentation.pdf",

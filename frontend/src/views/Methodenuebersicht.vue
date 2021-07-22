@@ -86,7 +86,7 @@ export default {
       {
         name: "Wagner-Whitin-LP 1.3",
         Kategorie: "Bestellmengenplanung",
-        start: "",//TODO
+        start: "WagnerWhitinLP",//TODO
         download: "DownloadCenter#Wagner-Whitin-LP 1.3",
       },
       {
