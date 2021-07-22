@@ -99,6 +99,7 @@ export default {
         {icon: 'mdi-github', to:"/Github"},
         {icon: 'mdi-book-open-variant', to:"/Impressum"},
         {icon: 'mdi-email', to:""},
+        {icon: 'mdi-format-section', to:"/Datenschutz"}
       ],
       padless: false,
       variant: 'default',
