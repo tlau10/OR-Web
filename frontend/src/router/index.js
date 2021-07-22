@@ -139,6 +139,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')
   },
   {
+    path: '/JobShop',
+    name: 'JobShop',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/JobShop.vue')
+  },
+  {
     path: '/Dakin',
     name: 'Dakin',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Dakin.vue')
@@ -221,7 +226,7 @@ const routes = [
   {
     path: '/Mail',
     name: 'Mail',
-    beforeEnter() {location.href = 'mailto: testMail@web.com'},
+    beforeEnter() {location.href = 'mailto: doris.bohnet@htwg-konstanz.de'},
   },
 
 ]

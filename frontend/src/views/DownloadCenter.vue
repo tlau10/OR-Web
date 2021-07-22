@@ -238,7 +238,7 @@ export default {
       },
       {
         name: "Job-Shop 2.2",
-        start: "", //ToDo start hinzufügen
+        start: "JobShop", //ToDo start hinzufügen
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/JobShop2.2_Dokumentation.pdf",
@@ -364,7 +364,7 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "PrimalDualWandler", //ToDo prüfen ob Link funktioniert
+        start: "PrimalDualWandler",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",
