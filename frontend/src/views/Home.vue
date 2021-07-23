@@ -11,10 +11,11 @@
               <p>
                 In dieser Applikation finden Sie Informationen zu Methoden und
                 Solver, die für Operations Research (OR) verwendet werden.
-                Außerdem haben Sie die Möglichkeit, die Solver und Methoden
+                Außerdem haben Sie die Option, die Solver und Methoden
                 herunterzuladen und auf Ihrem Endgerät auszuführen. Falls Sie
                 lieber eine Methode oder einen Solver in der Applikation selbst
                 laufen lassen wollen, so wird Ihnen das auch hier ermöglicht.
+                <!-- ToDo ggf. ausführbare Methode/Solver verlinken-->
               </p>
               <v-carousel
                 cycle
