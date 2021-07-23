@@ -43,6 +43,9 @@
                     Zellen nicht mit Doppelklick selektieren, da sie sonst deselektiert werden. Einfacher Klick gen&uuml;gt.
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#PowerLP">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

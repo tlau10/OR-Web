@@ -27,6 +27,10 @@
                     Mehr Informationen zur Funktionsweise des Wagner Whitin Algorithmus, finden Sie im Programmordner der Methodendatenbank unter \WagnerWhitin\DOC\BESF-WagnerWhitin.docx
                 </p>
                 </div>
+                <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#WagnerWhitin">Download</a>
+                </div>
             </body>
     </v-container>
 </template>

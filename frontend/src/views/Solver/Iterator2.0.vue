@@ -44,6 +44,9 @@
                     Diese sind &uuml;ber folgenden Pfad erreichbar:<br>
                     "C:\Methodenbank\Solver\Interaktive Solver\Iterator\Iterator 2.0\01 Programm\DATEN"
                 </p>
+            </div>
+            <div>
+            <a href="DownloadCenter#Iterator2.0">Download</a>
             </div>	
         </body>
     </v-container>

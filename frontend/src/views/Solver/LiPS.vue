@@ -31,6 +31,9 @@
                     Externe Software: Hierbei handelt es sich um eine Freeware.
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#LiPS">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

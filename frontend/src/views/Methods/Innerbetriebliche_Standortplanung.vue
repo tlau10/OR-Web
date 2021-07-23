@@ -64,6 +64,10 @@
                 Prozentanzeige funktioniert bei gr&ouml;&szlig;eren Berechnungen nicht.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Innerbetriebliche_Standortplanung">Download</a>
+            </div>
         </body>
     
     </v-container>

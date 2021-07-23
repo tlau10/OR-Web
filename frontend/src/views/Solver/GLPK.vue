@@ -44,6 +44,9 @@
                     Grenzen liegen bei 100 Restriktionen und 75 Variablen.
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#GLPK">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

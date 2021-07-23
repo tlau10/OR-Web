@@ -73,7 +73,7 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          {{ new Date().getFullYear() }} — <strong>Fachhochschule Konstanz</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -97,8 +97,8 @@ export default {
         {icon:'mdi-home',  to:"/"},
         {icon: 'mdi-github', to:"/Github"},
         {icon: 'mdi-book-open-variant', to:"/Impressum"},
-        {icon: 'mdi-email', to:""},
-        {icon: 'mdi-format-section', to:"/Datenschutz"}
+        {icon: 'mdi-format-section', to:"/Datenschutz"},
+        {icon: 'mdi-email', to:"/Mail"},
       ],
       padless: false,
       variant: 'default',

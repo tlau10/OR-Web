@@ -35,6 +35,10 @@
                 <br> Grenze liegt bei 9 Empf&auml;ngern und 4 Produzenten.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#TR_Optimizer">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

@@ -114,14 +114,24 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Wochenschichtplanung.vue')
   },
   {
-    path: '/WagnerWithin',
-    name: 'WagnerWithin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWithin.vue')
+    path: '/WagnerWhitin',
+    name: 'WagnerWhitin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitin.vue')
+  },
+  {
+    path: '/WagnerWhitinLP',
+    name: 'WagnerWhitinLP',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitinLP.vue')
   },
   {
     path: '/Zuordnungsplanung',
     name: 'Zuordnungsplanung',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')
+  },
+  {
+    path: '/JobShop',
+    name: 'JobShop',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/JobShop.vue')
   },
   {
     path: '/Dakin',
@@ -207,6 +217,11 @@ const routes = [
     path: '/Datenschutz',
     name: 'Datenschutz',
     component: () => import(/* webpackChunkName: "about" */ '../views/Datenschutz.vue')
+  },
+  {
+    path: '/Mail',
+    name: 'Mail',
+    beforeEnter() {location.href = 'mailto: doris.bohnet@htwg-konstanz.de'},
   },
 
 ]

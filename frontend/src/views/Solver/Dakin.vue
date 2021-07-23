@@ -27,6 +27,9 @@
                     Das Standardbeispiel funktioniert, jedoch kann es zu Fehlern kommen bei der graphischen L&ouml;sung. Dies ist ein Prototyp!
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#Dakin">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

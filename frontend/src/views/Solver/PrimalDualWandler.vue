@@ -29,6 +29,9 @@
                     Grenzen liegen bei 40 Variablen und 40 Restriktionen.
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#PrimalDualWandler">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

@@ -30,6 +30,10 @@
                         "Aufteilung eines vorhandenen Bestandes von Elementen unterschiedlichen Gewichts
                         auf eine Menge von Behältern mit unterschiedlicher Tragkraft".</p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#Einkaufswagenoptimierung">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

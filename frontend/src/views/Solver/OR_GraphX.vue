@@ -26,6 +26,9 @@
                     Ein Standardbeispiel steht Ihnen auch zur Verfügung. 
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#OR_GraphX">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

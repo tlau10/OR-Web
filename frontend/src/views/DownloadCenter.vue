@@ -137,20 +137,20 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "", //ToDo start hinzufügen
-        dokumentation: "Methods/Wagner-WithinLP1.3_Dokumentation.pdf",
-        handbuch: "Methods/Wagner-WithinLP1.3_Benutzerhandbuch.pdf",
-        download: "Methods/WagnerWithinLP1.3_Programm.zip",
+        start: "WagnerWhitinLP", //ToDo start hinzufügen
+        dokumentation: "Methods/Wagner-WhitinLP1.3_Dokumentation.pdf",
+        handbuch: "Methods/Wagner-WhitinLP1.3_Benutzerhandbuch.pdf",
+        download: "Methods/WagnerWhitinLP1.3_Programm.zip",
       },
       {
         name: "Wagner-Whitin 1.2",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "WagnerWithin",
+        start: "WagnerWhitin",
         Art: "Methoden",
         dokumentation: "Methods/Wagner-Whitin1.2_Dokumentation.pdf",
         handbuch: "Methods/Wagner-Whitin1.2_Benutzerhandbuch.pdf",
-        download: "Methods/WagnerWithin1.2_Programm.zip",
+        download: "Methods/WagnerWhitin1.2_Programm.zip",
       },
       {
         name: "TR-Optimizer 2.1",
@@ -238,7 +238,7 @@ export default {
       },
       {
         name: "Job-Shop 2.2",
-        start: "", //ToDo start hinzufügen
+        start: "JobShop",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/JobShop2.2_Dokumentation.pdf",
@@ -364,7 +364,7 @@ export default {
       },
       {
         name: "Primal Dual Wandler",
-        start: "PrimalDualWandler", //ToDo prüfen ob Link funktioniert
+        start: "PrimalDualWandler",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
         dokumentation: "Solver/PrimalDualWandler_Dokumentation.pdf",

@@ -32,6 +32,10 @@
                     für die spätere Berechnung relevanten Daten eingegeben werden.
                 </p>
             </div>
+            <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#BOP">Download</a>
+            </div>
         </body>
     </v-container>
 </template>

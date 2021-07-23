@@ -25,6 +25,9 @@
                     Externe Software: Hierbei handelt es sich um eine Freeware.
                 </p>
             </div>
+            <div>
+            <a href="DownloadCenter#LPSolve">Download</a>
+            </div>
         </body>
     </v-container>
 </template>
