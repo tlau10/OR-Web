@@ -19,21 +19,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/methoden',
-    name: 'Methoden',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methoden.vue')
-  },
-  {
-    path: '/solver',
-    name: 'Solver',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver.vue')
-  },
-  {
-    path: '/handbuch',
-    name: 'Handbuch',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Handbuch.vue')
-  },
-  {
     path: '/methodenuebersicht',
     name: 'Methodenübersicht',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methodenuebersicht.vue')
