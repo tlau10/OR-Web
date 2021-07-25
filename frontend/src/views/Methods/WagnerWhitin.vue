@@ -31,17 +31,14 @@
                     <p><a href="http://localhost:8080/api/hello">Zur Methode</a></p>
                 
                     <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
-                    <div id="app">
-                        {{ info }}
-                    </div>
+                    <p>{{ info }}</p>
                 </div>
             </body>
     </v-container>
 </template>
 
 <script>
-        var app = new Vue({
-        el: '#app',
+  export default {
             data () {
                 return {
                 info: null
@@ -52,5 +49,5 @@
                 .get("http://localhost:8080/api/hello")
                 .then(response => (this.info = response))
             }
-        })
+  }
 </script>
