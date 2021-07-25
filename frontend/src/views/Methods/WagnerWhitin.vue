@@ -28,9 +28,29 @@
                 </p>
                 </div>
                 <div>
-                <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#WagnerWhitin">Download</a>
+                    <p><a href="http://localhost:8080/api/hello">Zur Methode</a></p>
+                
+                    <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
+                    <div id="app">
+                        {{ info }}
+                    </div>
                 </div>
             </body>
     </v-container>
 </template>
+
+<script>
+        var app = new Vue({
+        el: '#app',
+            data () {
+                return {
+                info: null
+                }
+            },
+            mounted () {
+                axios
+                .get("http://localhost:8080/api/hello")
+                .then(response => (this.info = response))
+            }
+        })
+</script>
