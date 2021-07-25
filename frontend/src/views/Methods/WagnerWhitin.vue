@@ -31,7 +31,7 @@
                     <p><a href="http://localhost:8080/api/hello">Zur Methode</a></p>
                 
                     <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
-                    <p>{{ info }}</p>
+                    <p>{{ msg }}</p>
                 </div>
             </body>
     </v-container>
@@ -39,15 +39,17 @@
 
 <script>
   export default {
-            data () {
-                return {
-                info: null
-                }
-            },
-            mounted () {
-                axios
-                .get("http://localhost:8080/api/hello")
-                .then(response => (this.info = response))
-            }
+    data() {
+        return {
+            msg: ''
+        }
+    },
+    mounted() {
+        fetch("http://localhost:8080/api/hello")
+        .then((response) => response.text())
+        .then((data) => {
+            this.msg = data;
+        });
+    }
   }
 </script>
