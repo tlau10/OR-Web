@@ -1,120 +1,49 @@
 <template>
-  <v-card>
-      <div class="row ml-4 mt-4">
-        <div class="col-md-6">
-          <div class="row mb-3">
-            <div class="input-group">
-              Web socket connection:&nbsp;
-
-              <div class="btn-group">
-                <button
-                  type="button"
-                  id="connect"
-                  class="btn btn-sm btn-outline-secondary"
-                  onclick="connect()"
-                >
-                  Connect
-                </button>
-
-                <button
-                  type="button"
-                  id="disconnect"
-                  class="btn btn-sm btn-outline-secondary"
-                  onclick="disconnect()"
-                  disabled
-                >
-                  Disconnect
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="input-group" id="sendmessage" style="display: none">
-              <input
-                type="text"
-                id="message"
-                class="form-control"
-                placeholder="Message"
-              />
-
-              <div class="input-group-append">
-                <button id="send" class="btn btn-primary" onclick="send()">
-                  Send
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div id="content"></div>
-        </div>
-      </div>
-  </v-card>
+  <div id="app">
+    <h2>Vue.js WebSocket Tutorial</h2> 
+    <button v-on:click="sendMessage('hello')">Send Message</button>
+  </div>
 </template>
 
 <script>
-var ws;
+export default {
+  name: 'App',
+  data: function() {
+    return {
+      connection: null
+    }
+  },
+  methods: {
+    sendMessage: function(message) {
+      console.log("Hello")
+      console.log(this.connection);
+      this.connection.send(message);
+    }
+  },
+  created: function() {
+    console.log("Starting connection to WebSocket Server")
+    this.connection = new WebSocket("wss://echo.websocket.org")
 
-function setConnected(connected) {
-  $("#connect").prop("disabled", connected);
+    this.connection.onmessage = function(event) {
+      console.log(event);
+    }
 
-  $("#disconnect").prop("disabled", !connected);
+    this.connection.onopen = function(event) {
+      console.log(event)
+      console.log("Successfully connected to the echo websocket server...")
+    }
 
-  if (connected) {
-    $("#sendmessage").show();
-  } else {
-    $("#sendmessage").hide();
   }
-}
-
-function connect() {
-  /*<![CDATA[*/
-
-  var url =
-    /*[['ws://'+${#httpServletRequest.serverName}+':'+${#httpServletRequest.serverPort}+@{/web-socket}]]*/ "ws://localhost:8080/web-socket";
-
-  /*]]>*/
-
-  ws = new WebSocket(url);
-
-  ws.onopen = function () {
-    showBroadcastMessage(
-      '<div class="alert alert-success">Connected to server</div>'
-    );
-  };
-
-  ws.onmessage = function (data) {
-    showBroadcastMessage(createTextNode(data.data));
-  };
-
-  setConnected(true);
-}
-
-function disconnect() {
-  if (ws != null) {
-    ws.close();
-
-    showBroadcastMessage(
-      '<div class="alert alert-warning">Disconnected from server</div>'
-    );
-  }
-
-  setConnected(false);
-}
-
-function send() {
-  ws.send($("#message").val());
-
-  $("#message").val("");
-}
-
-function createTextNode(msg) {
-  return '<div class="alert alert-info">' + msg + "</div>";
-}
-
-function showBroadcastMessage(message) {
-  $("#content").html($("#content").html() + message);
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

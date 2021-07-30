@@ -54,9 +54,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Eisenstadt.vue')
   },
   {
-    path: '/Ernährungsplaner',
-    name: 'Ernährungsplaner',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Ernährungsplaner.vue')
+    path: '/Ernaehrungsplaner',
+    name: 'Ernaehrungsplaner',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Ernaehrungsplaner.vue')
   },
   {
     path: '/IB_Standortplanung',
@@ -184,9 +184,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/PrimalDualWandler.vue')
   },
   {
-    path: '/Sensibilitätsanalyse',
-    name: 'Sensibilitätsanalyse',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Sensibilitätsanalyse.vue')
+    path: '/Sensibilitaetsanalyse',
+    name: 'Sensibilitaetsanalyse',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Sensibilitaetsanalyse.vue')
   },
   {
     path: '/WebIteratorRSA',
@@ -197,11 +197,6 @@ const routes = [
     path: '/WebIteratorSAU',
     name: 'WebIteratorSAU',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/WebIteratorSAU.vue')
-  },
-  {
-    path: '/Home',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
   },
   {
     path: '/Impressum',
