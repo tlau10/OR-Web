@@ -88,7 +88,7 @@ export default {
     items: [
       { title: "Home", icon: "mdi-home", to: "/" },
       { title: "Methodenübersicht", icon: "mdi-function-variant", to: "/methodenuebersicht"},
-      { title: "Solverübersicht", icon: "mdi-function-variant", to: "/solveruebersicht"},
+      { title: "Solverübersicht", icon: "mdi-file-check", to: "/solveruebersicht"},
       { title: "Impressum", icon: "mdi-alpha-i-circle", to: "/Impressum" },
       { title: "DownloadCenter", icon: "mdi-archive-arrow-down", to: "/DownloadCenter"}
     ],

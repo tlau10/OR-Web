@@ -37,7 +37,7 @@
                           class="text-h1 text--disabled"
                           v-if="slide == 'Solver'"
                         >
-                          mdi-calculator</v-icon
+                          mdi-file-check</v-icon
                         >
                         <v-icon
                           class="text-h1 text--disabled"
