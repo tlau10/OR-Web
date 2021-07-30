@@ -18,6 +18,7 @@ public class WebSocketHandler extends TextWebSocketHandler{
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 		sessions.add(session);
+		LOGGER.info("connection etablished");
 		super.afterConnectionEstablished(session);
 	}
 
@@ -30,6 +31,7 @@ public class WebSocketHandler extends TextWebSocketHandler{
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		super.handleTextMessage(session, message);
+		LOGGER.info("message"+message+"send");
 		sessions.forEach(webSocketSession -> {
 			try {
 				webSocketSession.sendMessage(message);
