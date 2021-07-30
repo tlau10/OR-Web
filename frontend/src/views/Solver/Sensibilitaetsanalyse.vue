@@ -6,11 +6,11 @@
         <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-        <title>Sensibilit&auml;tsanalyse</title>
+        <title>Sensibilitaetsanalyse</title>
         </head>
         <body >
             <div class="content">
-                <h1>Sensibilitätsanalyse</h1>
+                <h1>Sensibilitaetsanalyse</h1>
                 <hr noshade size=1>
                 <div class="infoPics">
                     <img height="380px" src="@/assets/sensior.jpg">
@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div>
-            <a href="DownloadCenter#Sensibilitätsanalyse">Download</a>
+            <a href="DownloadCenter#Sensibilitaetsanalyse">Download</a>
             </div>
         </body>
     </v-container>

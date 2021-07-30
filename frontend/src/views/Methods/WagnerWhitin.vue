@@ -28,9 +28,28 @@
                 </p>
                 </div>
                 <div>
-                <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#WagnerWhitin">Download</a>
+                    <p><a href="http://localhost:8080/api/hello">Zur Methode</a></p>
+                
+                    <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
+                    <p>{{ msg }}</p>
                 </div>
             </body>
     </v-container>
 </template>
+
+<script>
+  export default {
+    data() {
+        return {
+            msg: ''
+        }
+    },
+    mounted() {
+        fetch("http://localhost:8080/api/hello")
+        .then((response) => response.text())
+        .then((data) => {
+            this.msg = data;
+        });
+    }
+  }
+</script>

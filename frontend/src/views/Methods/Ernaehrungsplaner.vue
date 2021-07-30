@@ -6,11 +6,11 @@
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-        <title>Ernährungsplaner</title>
+        <title>Ernaehrungsplaner</title>
     </head>
     <body>
         <div class="content">
-        <h1>Ernährungsplaner 2.0</h1>
+        <h1>Ernaehrungsplaner 2.0</h1>
         
         <hr noshade size=1>		
         
@@ -43,7 +43,7 @@
         </div>
         <div>
             <!-- <a href="">Zur Methode</a> TODO-->
-            <a href="DownloadCenter#Ernährungsplaner">Download</a>
+            <a href="DownloadCenter#Ernaehrungsplaner">Download</a>
         </div>
     </body>
     </v-container>
