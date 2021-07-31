@@ -86,8 +86,8 @@ export default {
       {
         name: "Wagner-Whitin-LP 1.3",
         Kategorie: "Bestellmengenplanung",
-        start: "WagnerWhitinLP",//TODO
-        download: "DownloadCenter#Wagner-Whitin-LP 1.3",
+        start: "WagnerWhitinLP",
+        download: "DownloadCenter#WagnerWhitinLP",
       },
       {
         name: "Wagner-Whitin 1.2",
@@ -176,14 +176,14 @@ export default {
       {
         name: "Ernährungsplaner 2.0",
         Kategorie: "Personalplanung",
-        start: "Ernährungsplaner",
-        download: "DownloadCenter#Ernährungsplaner",
+        start: "Ernaehrungsplaner",
+        download: "DownloadCenter#Ernaehrungsplaner",
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
         Kategorie: "Personalplanung",
         start: "Einkaufswagen",
-        download: "DownloadCenter#Einkaufswagenoptimierung",
+        download: "DownloadCenter#Einkaufswagen",
       },
     ],
   }),
