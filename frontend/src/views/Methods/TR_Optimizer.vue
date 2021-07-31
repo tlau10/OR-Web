@@ -16,7 +16,7 @@
                 <hr noshade size=1>
                 
                 <div class="infoPics">
-                    <img SRC="@/assets/Tr-Optimizer1.gif">
+                    <img SRC="@/assets/tr-Optimizer1.gif">
                 </div>
                 
                 <hr noshade size=1>

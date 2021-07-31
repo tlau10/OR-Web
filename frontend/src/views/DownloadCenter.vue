@@ -35,10 +35,6 @@
                   </v-btn>
                   <span class="mx-5 font-weight-bold" @mouseover.native="hover = true"
     @mouseleave.native="hover = false">{{ group }}</span>
-                  <!--TODO Funktionalität Schließen-Button 
-                <v-btn icon small class="ma-0">
-                  <v-icon>mdi-close</v-icon>
-                </v-btn> -->
                 </td>
               </template>
               <template v-slot:[`item.name`]="{ item }">
@@ -137,7 +133,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "WagnerWhitinLP", //ToDo start hinzufügen
+        start: "WagnerWhitinLP", 
         dokumentation: "Methods/Wagner-WhitinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WhitinLP1.3_Benutzerhandbuch.pdf",
         download: "Methods/WagnerWhitinLP1.3_Programm.zip",
@@ -184,7 +180,7 @@ export default {
         Art: "Methoden",
         Kategorie: "Personalplanung",
         start: "Leitstand_Pflegestation",
-        dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
+        dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.zip",
         handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
         download: "Methods/LeitstandPflegestation1.1_Programm.zip",
       },
@@ -201,7 +197,7 @@ export default {
         name: "innerbetriebliche Standortplanung 1.1",
         Art: "Methoden",
         Kategorie: "Standortplanung",
-        start: "Innerbetriebliche_Standortplanung",
+        start: "IB_Standortplanung",
         dokumentation:
           "Methods/InnerbetrieblicheStandortplanung1.1_Dokumentation.pdf",
         handbuch:
@@ -274,7 +270,7 @@ export default {
       },
       {
         name: "Ernährungsplaner 2.0",
-        start: "Ernährungsplaner",
+        start: "Ernaehrungsplaner",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Ernährungsplaner2.0_Dokumentation.zip",
@@ -283,7 +279,7 @@ export default {
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
-        start: "Einkaufswagenoptimierung",
+        start: "Einkaufswagen",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "",
@@ -318,11 +314,11 @@ export default {
         download: "Solver/LPSolveFrontend_Programm.zip",
       },
       {
-        name: "GLPK - GNU Linear Programming Kit GUI",
+        name: "GLPK - GNU Linear Programming Kit GUI Frontend 1.0",
         start: "GLPK",
         Art: "Solver",
         Kategorie: "",
-        dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
+        dokumentation: "Solver/GLPK_Frontend1.0_Dokumentation.pdf",
         handbuch: "Solver/GLPK_Frontend1.0_Benutzerhandbuch.pdf",
         download: "Solver/GLPK_Frontend1.0_Programm.zip",
       },
@@ -340,7 +336,7 @@ export default {
         start: "LiPS",
         Art: "Solver",
         Kategorie: "",
-        dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
+        dokumentation: "",
         handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
         download: "Solver/LiPS_Programm.zip",
       },
@@ -355,11 +351,11 @@ export default {
       },
       {
         name: "Sensibilitätsanalyse",
-        start: "Sensibilitätsanalyse",
+        start: "Sensibilitaetsanalyse",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
-        dokumentation: "Solver/Sensibilitaetsanalyse1.1_Dokumentation.pdf",
-        handbuch: "Solver/Sensibilitaetsanalyse1.1_Benutzerhandbuch.pdf",
+        dokumentation: "Solver/Sensibilitätsanalyse1.1_Dokumentation.pdf",
+        handbuch: "Solver/Sensibilitätsanalyse1.1_Benutzerhandbuch.pdf",
         download: "Solver/Sensibilitätsanalyse1.1_Programm.zip",
       },
       {
@@ -378,7 +374,7 @@ export default {
         Kategorie: "Grafische Solver",
         dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
         handbuch: "",
-        download: "Solver/ORGraphX_Programm.zip",
+        download: "", // ToDo URL zu OR-GraphX einbinden
       },
     ],
   }),
