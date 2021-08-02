@@ -48,12 +48,10 @@ function init() {
  */
 function socket() {
   var wsUri = "ws://localhost:8080/web-socket";
-  console.log("getValues");
   var ruestkosten = document.getElementById("ruestkosten").value;
   var anzPerioden = document.getElementById("anzPerioden").value;
   var lagerkosten = document.getElementById("lagerkosten").value;
   var message = ruestkosten + " " + anzPerioden + " " + lagerkosten;
-  console.log(message);
   var websocket = new WebSocket(wsUri);
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
