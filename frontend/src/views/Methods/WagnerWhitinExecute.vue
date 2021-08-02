@@ -3,10 +3,11 @@
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=11" />
+
       <title>Wagner Whitin</title>
     </head>
 
-    <body onload="init()">
+    <body>
       <h1>Wagner Whitin 1.2 - Algorithmus</h1>
       <!-- <form method="POST"> -->
       <label for="ruestkosten">Rüstkosten</label>
@@ -26,71 +27,69 @@
           <td><input id="lagerkosten" name="lagerkosten" type="number" /></td>
         </tr>
       </table>
-      <button onclick="getValues()">Speichern</button>
+      <input type="button" onclick="getValues();" value="Speichern" />
+       <p><a href="javascript:getValues();">Bottom Text</a></p>
+       <button onclick="getValues()"></button>
       <!--  </form> -->
       <div id="output"></div>
     </body>
   </v-container>
 </template>
-<script language="javascript" type="text/javascript">
-   var wsUri = "ws://localhost:8080/web-socket";
-    var output;
-  var message;
+<script  type = "text/javascript" >
+var wsUri = "ws://localhost:8080/web-socket";
+var output;
+var websocket = new WebSocket(wsUri);
 
-  function init()
-  {
+function init() {
     output = document.getElementById("output");
-    websocket = new WebSocket(wsUri);
-    websocket.onopen = function(evt) { onOpen(evt) };
-  //  websocket.onclose = function(evt) { onClose(evt) };
-    websocket.onmessage = function(evt) { onMessage(evt) };
-    websocket.onerror = function(evt) { onError(evt) };
-  }
+    websocket.onopen = function (evt) { this.onOpen(evt) };
+    //  websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function (evt) { this.onMessage(evt) };
+    websocket.onerror = function (evt) { this.onError(evt) };
+    console.log('init');
+}
 
-  function onOpen(evt)
-  {
+function onOpen(evt) {
     writeToScreen("CONNECTED");
-    doSend("WebSocket rocks");
-  }
+}
 
-  function onClose(evt)
-  {
+function onClose(evt) {
     writeToScreen("DISCONNECTED");
-  }
+}
 
-  function onMessage(evt)
-  {
-    writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data+'</span>');
-    websocket.close();
-  }
+function onMessage(evt) {
+    writeToScreen('<span style="color: blue;"> RESPONSE: ' + evt.data + '</span>');
+    //    websocket.close();
+}
 
-  function onError(evt)
-  {
-    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
-  }
+function onError(evt) {
+    writeToScreen('<span style="color: red;"> ERROR:' + evt.data+' </span>' );
+}
 
-  function doSend(message)
-  {
+function doSend(message) {
     writeToScreen("SENT: " + message);
     websocket.send(message);
-  }
-
-function getValues(){
-  var ruestkosten= document.getElementById("ruestkosten").value;
-  var anzPerioden=document.getElementById("anzPerioden").value;
-  var lagerkosten=document.getElementById("lagerkosten").value;
-  
-  message = ruestkosten +" " +anzPerioden+" "+ lagerkosten;
-  console.log(message);
-  doSend(message);
-  
 }
-  function writeToScreen(message)
-  {
+
+function getValues() {
+    console.log('getValues');
+  /*  var ruestkosten = document.getElementById("ruestkosten").value;
+    var anzPerioden = document.getElementById("anzPerioden").value;
+    var lagerkosten = document.getElementById("lagerkosten").value;
+
+    var message = ruestkosten + " " + anzPerioden + " " + lagerkosten;
+    console.log(message);
+    init();
+    doSend(message);
+
+*/
+}
+function writeToScreen(message) {
     var pre = document.createElement("p");
     pre.style.wordWrap = "break-word";
     pre.innerHTML = message;
     output.appendChild(pre);
-  }
-  window.addEventListener("load", init, false);
+}
+// window.addEventListener("load", init, false);
+
 </script>
