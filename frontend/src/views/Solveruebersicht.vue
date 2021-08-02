@@ -91,7 +91,7 @@ export default {
             download: "DownloadCenter#LPSolve",
         },
         {
-            name: "GLPK - GNU Linear Programming Kit GUI",
+            name: "GLPK - GNU Linear Programming Kit GUI Frontend 1.0",
             Kategorie: "",
             start: "GLPK",
             download: "DownloadCenter#GLPK",
