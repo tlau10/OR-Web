@@ -15,38 +15,38 @@ import java.text.NumberFormat;
 public class WagnerWhitin {
 
     // vor der Berechnung wird von der GUI geliefert
-    private static double ruestkosten;
-    private static double lagerkosten[];
-    private static int anzahlPerioden;
+    private double ruestkosten;
+    private double lagerkosten[];
+    private int anzahlPerioden;
     // ---------------------------------------------
     /**
      * Das Array ergebnis[Periodenanzahl][Periodenanzahl] ist die Berechnungsmatrix
      * des Wagner-Whitin Algorithmus Es wird in der Ausgabe nicht angezeigt und ist
      * nur zur internen Berechnung da
      */
-    private static double ergebnis[][];
+    private double ergebnis[][];
     /**
      * Das Array minimal[Periodenanzahl][1] speichert für jede Periode den
      * Minimalwert der Kosten auf [n][0] und die Periode, in der zuletzt produziert
      * wurde [n][1]
      */
-    private static double minimal[][];
-    private static double minGesamtKosten;
+    private double minimal[][];
+    private double minGesamtKosten;
     /**
      * Aufbau des Arrays ausgabe[t][Wert]: Wert 0 - Nachfragemenge zum Zeitpunkt t
      * (wird per Setter von der GUI geliefert) Wert 1 - Bestellmenge zum Zeitpunkt t
      * Wert 2 - Anzahl der Perioden, fÃ¼r die zum Zeitpunkt t bestellt wird Wert 3 -
      * Lagerbestand zum Zeitpunkt t
      */
-    private static double ausgabe[][];
-    private static Object[][] objectAusgabe;
-    private static double periodenlauf[];
+    private double ausgabe[][];
+    private Object[][] objectAusgabe;
+    private double periodenlauf[];
 
     /**
      * Diese Methode startet den kompletten Vorgang der Berechnung Die Methode
      * print() kann aktiviert werden, falls eine Konsolen-Ausgabe benÃ¶tigt wird
      */
-    public static void start() {
+    public void start() {
 
         berechnen();
         ausgabeBerechnen();
@@ -58,7 +58,7 @@ public class WagnerWhitin {
     /**
      * Diese Methode berechnet die Lösungsmatrix mittels Wagner-Whitin Algorithmus
      */
-    public static void berechnen() {
+    public void berechnen() {
         // Diese Variable speichert zur Laufzeit die Periode, in der zuletzt produziert
         // wurde
         int produziertePeriode;
@@ -116,7 +116,7 @@ public class WagnerWhitin {
      * Diese Methode berechnet die Lagerkosten seit der letzten Produktion für die
      * neu dazugekommene Menge
      */
-    private static double lagerkostenBerechnen(double nachfragemenge, int produziertePeriode, int aktuellePeriode) {
+    private double lagerkostenBerechnen(double nachfragemenge, int produziertePeriode, int aktuellePeriode) {
 
         double preis = 0;
 
@@ -130,7 +130,7 @@ public class WagnerWhitin {
     /**
      * Diese Methode ermöglicht eine Konsolenausgabe aller berechneten Daten
      */
-    public static void print() {
+    public void print() {
         for (int i = 0; i < ergebnis.length; i++) {
             for (int j = 0; j < ergebnis[i].length; j++) {
                 if (j + 1 == ergebnis[i].length) {
@@ -174,7 +174,7 @@ public class WagnerWhitin {
      * Diese Methode berechnet die Daten, die für die Ausgabe benötigt werden Dies
      * geschieht anhand der Daten aus der Berechnungsmatrix
      */
-    public static void ausgabeBerechnen() {
+    public void ausgabeBerechnen() {
 
         int produziertePeriode = (int) minimal[minimal.length - 1][1];
         double bestellmenge = 0;
@@ -221,7 +221,7 @@ public class WagnerWhitin {
      * Diese Methode dreht die Matrix um 90Â°, da dies fÃ¼r die JTable benÃ¶tigt
      * wird
      */
-    public static void ausgabeDrehen() {
+    public void ausgabeDrehen() {
 
         objectAusgabe = new Object[ausgabe.length][ausgabe[0].length + 1];
 
@@ -239,12 +239,12 @@ public class WagnerWhitin {
 
     }
 
-    public static void setRuestkosten(double ruestkosten) {
-        WagWhit.ruestkosten = ruestkosten;
+    public void setRuestkosten(double ruestkosten) {
+        this.ruestkosten = ruestkosten;
     }
 
-    public static void setAnzahlPerioden(int anzahlPerioden) {
-        WagWhit.anzahlPerioden = anzahlPerioden;
+    public void setAnzahlPerioden(int anzahlPerioden) {
+        this.anzahlPerioden = anzahlPerioden;
         lagerkosten = new double[anzahlPerioden];
         ergebnis = new double[anzahlPerioden][anzahlPerioden];
         minimal = new double[anzahlPerioden][2];
@@ -252,23 +252,23 @@ public class WagnerWhitin {
         periodenlauf = new double[anzahlPerioden];
     }
 
-    public static double getRuestkosten() {
+    public double getRuestkosten() {
         return ruestkosten;
     }
 
-    public static double[] getLagerkosten() {
+    public double[] getLagerkosten() {
         return lagerkosten;
     }
 
-    public static double getLagerkosten(int Periode) {
+    public double getLagerkosten(int Periode) {
         return lagerkosten[0];
     }
 
-    public static int getAnzahlPerioden() {
+    public int getAnzahlPerioden() {
         return anzahlPerioden;
     }
 
-    public static void setPeriodenbedarf(int[] periodenbedarf) {
+    public void setPeriodenbedarf(int[] periodenbedarf) {
 
         ausgabe = new double[periodenbedarf.length][5];
         for (int i = 0; i < ausgabe.length; i++) {
@@ -276,15 +276,15 @@ public class WagnerWhitin {
         }
     }
 
-    public static void setLagerkosten(double[] lagerkosten) {
-        WagWhit.lagerkosten = lagerkosten;
+    public void setLagerkosten(double[] lagerkosten) {
+        this.lagerkosten = lagerkosten;
     }
 
-    public static Object[][] getObjectAusgabe() {
+    public Object[][] getObjectAusgabe() {
         return objectAusgabe;
     }
 
-    public static double getMinGesamtKosten() {
+    public double getMinGesamtKosten() {
         return minGesamtKosten;
     }
 }
