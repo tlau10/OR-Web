@@ -9,7 +9,6 @@
 
     <body>
       <h1>Wagner Whitin 1.2 - Algorithmus</h1>
-      <!-- <form method="POST"> -->
       <label for="ruestkosten">Rüstkosten</label>
       <input id="ruestkosten" name="ruestkosten" type="number" min="1" />
       <label for="anzPerioden">Anzahl der Perioden</label>
@@ -27,69 +26,53 @@
           <td><input id="lagerkosten" name="lagerkosten" type="number" /></td>
         </tr>
       </table>
-      <input type="button" onclick="getValues();" value="Speichern" />
-       <p><a href="javascript:getValues();">Bottom Text</a></p>
-       <button onclick="getValues()"></button>
-      <!--  </form> -->
+      <input id="start" type="button" value="Speichern" />
       <div id="output"></div>
     </body>
   </v-container>
 </template>
 <script  type = "text/javascript" >
-var wsUri = "ws://localhost:8080/web-socket";
+var start;
 var output;
-var websocket = new WebSocket(wsUri);
-
+/**
+ * init() wird aufgerufen, sobald die Seite geladen ist, weist den Variablen die ID zu und setzt den EventListener auf den Button mit der ID "start"
+ */
 function init() {
-    output = document.getElementById("output");
-    websocket.onopen = function (evt) { this.onOpen(evt) };
-    //  websocket.onclose = function(evt) { onClose(evt) };
-    websocket.onmessage = function (evt) { this.onMessage(evt) };
-    websocket.onerror = function (evt) { this.onError(evt) };
-    console.log('init');
+  start = document.getElementById("start");
+  output = document.getElementById("output");
+  //Sobald der Button mit der ID "start" angeklickt wird, wird die Funktion socket() aufgerufen
+  start.addEventListener("click", socket, false);
 }
-
-function onOpen(evt) {
-    writeToScreen("CONNECTED");
-}
-
-function onClose(evt) {
-    writeToScreen("DISCONNECTED");
-}
-
-function onMessage(evt) {
-    writeToScreen('<span style="color: blue;"> RESPONSE: ' + evt.data + '</span>');
-    //    websocket.close();
-}
-
-function onError(evt) {
-    writeToScreen('<span style="color: red;"> ERROR:' + evt.data+' </span>' );
-}
-
-function doSend(message) {
-    writeToScreen("SENT: " + message);
+/**
+ * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
+ */
+function socket() {
+  var wsUri = "ws://localhost:8080/web-socket";
+  console.log("getValues");
+  var ruestkosten = document.getElementById("ruestkosten").value;
+  var anzPerioden = document.getElementById("anzPerioden").value;
+  var lagerkosten = document.getElementById("lagerkosten").value;
+  var message = ruestkosten + " " + anzPerioden + " " + lagerkosten;
+  console.log(message);
+  var websocket = new WebSocket(wsUri);
+  //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
+  websocket.onopen = function () {
     websocket.send(message);
+    writeToScreen(message);
+    websocket.close();
+  };
 }
-
-function getValues() {
-    console.log('getValues');
-  /*  var ruestkosten = document.getElementById("ruestkosten").value;
-    var anzPerioden = document.getElementById("anzPerioden").value;
-    var lagerkosten = document.getElementById("lagerkosten").value;
-
-    var message = ruestkosten + " " + anzPerioden + " " + lagerkosten;
-    console.log(message);
-    init();
-    doSend(message);
-
-*/
-}
+/**
+ * writeToScreen(message) - Test-Funktion
+ */
 function writeToScreen(message) {
-    var pre = document.createElement("p");
-    pre.style.wordWrap = "break-word";
-    pre.innerHTML = message;
-    output.appendChild(pre);
+  var pre = document.createElement("p");
+  pre.style.wordWrap = "break-word";
+  pre.innerHTML = message;
+  output.appendChild(pre);
 }
-// window.addEventListener("load", init, false);
-
+/**
+ * Ruft init() Funktion auf, sobald die Seite geladen ist
+ */
+window.addEventListener("load", init, false);
 </script>
