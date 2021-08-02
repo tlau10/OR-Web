@@ -9,8 +9,9 @@ import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
+import com.orweb.main.Threads.WagnerWhitinThread;
 
-public class WebSocketHandler extends TextWebSocketHandler{
+public class WebSocketHandler extends TextWebSocketHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WebSocketHandler.class);
 
 	private final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
@@ -31,7 +32,9 @@ public class WebSocketHandler extends TextWebSocketHandler{
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		super.handleTextMessage(session, message);
-		LOGGER.info("message"+message+"send");
+		LOGGER.info("message" + message.getText() + "send");
+		WagnerWhitinThread wwt = new WagnerWhitinThread(session, message);
+		wwt.run();
 		sessions.forEach(webSocketSession -> {
 			try {
 				webSocketSession.sendMessage(message);
