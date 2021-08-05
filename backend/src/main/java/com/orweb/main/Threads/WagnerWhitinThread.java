@@ -15,7 +15,15 @@ public class WagnerWhitinThread extends Thread {
     }
 
     public void run() {
+        
+        double[] lk = {1.3, 2.4, 3.7,6.0,10};
+        int[] p = {4,6,3,2,3};
         WagnerWhitin instance = new WagnerWhitin();
+        instance.setAnzahlPerioden(1);
+        instance.setLagerkosten(lk);
+        instance.setRuestkosten(4);
+        instance.setPeriodenbedarf(p);
+        instance.start();
     }
 
 }
