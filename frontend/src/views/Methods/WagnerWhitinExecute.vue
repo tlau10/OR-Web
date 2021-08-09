@@ -10,54 +10,57 @@
     <body>
       <h1>Wagner Whitin 1.2 - Algorithmus</h1>
       <v-container>
-      <v-row>
-        <v-col cols="2">
-          <label for="bestellkostensatz">Bestellkostensatz</label>
-        </v-col>
-        <v-col cols="2">
-          <input
-            id="bestellkostensatz"
-            class="text-right"
-            name="bestellkostensatz"
-            type="number"
-            min="1"
-          />
-        </v-col>
-        <v-col cols="2"> <span>GE</span></v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2">
-          <label for="anzPerioden">Anzahl der Perioden</label>
-        </v-col>
-        <v-col cols="2">
-          <input
-            id="anzPerioden"
-            class="text-right"
-            name="anzPerioden"
-            type="number"
-          />
-        </v-col>
-        <v-col cols="2">
-          <span>Perioden</span>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2">
-          <label for="lagerkostensatz">Lagerkostensatz</label>
-        </v-col>
-        <v-col cols="2">
-          <input
-            id="lagerkostensatz"
-            class="text-right"
-            name="lagerkostensatz"
-            type="number"
-          />
-        </v-col>
-        <v-col cols="2">
-          <span>GE pro ME pro ZE</span>
-          <!-- TODO Kontrollkästchen variable kosten-->
-        </v-col>
-      </v-row>
+        <v-row>
+          <v-col cols="2">
+            <label for="bestellkostensatz">Bestellkostensatz</label>
+          </v-col>
+          <v-col cols="2">
+            <input
+              id="bestellkostensatz"
+              class="text-right"
+              name="bestellkostensatz"
+              type="number"
+              min="1"
+            />
+          </v-col>
+          <v-col cols="2"> <span>GE</span></v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="2">
+            <label for="anzPerioden">Anzahl der Perioden</label>
+          </v-col>
+          <v-col cols="2">
+            <input
+              id="anzPerioden"
+              class="text-right"
+              name="anzPerioden"
+              type="number"
+            />
+          </v-col>
+          <v-col cols="2">
+            <span>Perioden</span>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="2">
+            <label for="lagerkostensatz">Lagerkostensatz</label>
+          </v-col>
+          <v-col cols="2">
+            <input
+              id="lagerkostensatz"
+              class="text-right"
+              name="lagerkostensatz"
+              type="number"
+            />
+          </v-col>
+          <v-col cols="2">
+            <span>GE pro ME pro ZE</span>
+          </v-col>
+          <v-col cols="4">
+            <input id="variableLagerkosten" type="checkbox" />
+            <label for="variableLagerkosten">variable Lagerkosten</label>
+          </v-col>
+        </v-row>
       </v-container>
       <v-btn id="btnCreateTbl" depressed>Erstelle Tabelle</v-btn>
       <div id="tbl"></div>
@@ -86,7 +89,6 @@ function init() {
  * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
  */
 function socket() {
-      
   var wsUri = "ws://localhost:8080/web-socket";
   var message = createMessage();
   var websocket = new WebSocket(wsUri);
@@ -113,31 +115,58 @@ function createTable() {
   var anzPerioden = document.getElementById("anzPerioden").value;
   var lagerkostensatz = document.getElementById("lagerkostensatz").value;
   var i = 1;
-  for (i; i <= anzPerioden; i++) {
-    tbl +=
-      "<tr><td>" +
-      i +
-      '</td><td><input id="bedarf' +
-      i +
-      '" name="bedarf' +
-      i +
-      '" type="number" /></td><td>' +
-      lagerkostensatz +
-      "</td></tr>";
+  if (document.getElementById("variableLagerkosten").checked  == true) {
+    for (i; i <= anzPerioden; i++) {
+      tbl +=
+        "<tr><td>" +
+        i +
+        '</td><td><input id="bedarf' +
+        i +
+        '" name="bedarf' +
+        i +
+        '" type="number" /></td><td>' +
+        '</td><td><input id="lagerkostensatz' +
+        i +
+        '" name="lagerkostensatz' +
+        i +
+        '" type="number" /> ' +
+        "</td></tr>";
+    }
+  } else {
+    for (i; i <= anzPerioden; i++) {
+      tbl +=
+        "<tr><td>" +
+        i +
+        '</td><td><input id="bedarf' +
+        i +
+        '" name="bedarf' +
+        i +
+        '" type="number" /></td><td>' +
+        lagerkostensatz +
+        "</td></tr>";
+    }
   }
   tbl += "</table>";
   var divTbl = document.getElementById("tbl");
   divTbl.innerHTML = tbl;
 }
 
-function createMessage(){
-  var bestellkostensatz = document.getElementById("bestellkostensatz").value;
+function createMessage() {
   var anzPerioden = document.getElementById("anzPerioden").value;
-  var lagerkosten = document.getElementById("lagerkostensatz").value;
-  var msg=bestellkostensatz+";"+anzPerioden+";"+lagerkosten+";";
+  var bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
+
+  var msg = anzPerioden + ";" + bestellkostensatz + ";";
   var i = 1;
   for (i; i <= anzPerioden; i++) {
-    msg +=document.getElementById("bedarf"+i).value+" ";
+    msg += document.getElementById("bedarf" + i).value + " ";
+  }
+  msg += ";";
+  if (document.getElementById("variableLagerkosten").checked  == true) {
+    for (i; i <= anzPerioden; i++) {
+      msg += document.getElementById("variableLagerkosten" + i).value + " ";
+    }
+  } else {
+    msg += document.getElementById("lagerkostensatz").value;
   }
   console.log(msg);
   return msg;
