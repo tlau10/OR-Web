@@ -9,30 +9,57 @@
 
     <body>
       <h1>Wagner Whitin 1.2 - Algorithmus</h1>
-      <div>
-        <label for="bestellkostensatz">Bestellkostensatz</label>
-        <input
-          id="bestellkostensatz"
-          name="bestellkostensatz"
-          type="number"
-          min="1"
-        />
-        <span>GE</span> <br />
-      </div>
-      <div>
-        <label for="anzPerioden">Anzahl der Perioden</label>
-        <input id="anzPerioden" name="anzPerioden" type="number" /><span
-          >Perioden</span
-        >
-      </div>
-      <div>
-        <label for="lagerkostensatz">Lagerkostensatz</label>
-        <input id="lagerkostensatz" name="lagerkostensatz" type="number" /><span
-          >GE pro ME pro ZE</span
-        >
-        <!-- TODO Kontrollkästchen variable kosten-->
-      </div>
-      <button id="btnCreateTbl">Erstelle Tabelle</button>
+      <v-container>
+      <v-row>
+        <v-col cols="2">
+          <label for="bestellkostensatz">Bestellkostensatz</label>
+        </v-col>
+        <v-col cols="2">
+          <input
+            id="bestellkostensatz"
+            class="text-right"
+            name="bestellkostensatz"
+            type="number"
+            min="1"
+          />
+        </v-col>
+        <v-col cols="2"> <span>GE</span></v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="2">
+          <label for="anzPerioden">Anzahl der Perioden</label>
+        </v-col>
+        <v-col cols="2">
+          <input
+            id="anzPerioden"
+            class="text-right"
+            name="anzPerioden"
+            type="number"
+          />
+        </v-col>
+        <v-col cols="2">
+          <span>Perioden</span>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="2">
+          <label for="lagerkostensatz">Lagerkostensatz</label>
+        </v-col>
+        <v-col cols="2">
+          <input
+            id="lagerkostensatz"
+            class="text-right"
+            name="lagerkostensatz"
+            type="number"
+          />
+        </v-col>
+        <v-col cols="2">
+          <span>GE pro ME pro ZE</span>
+          <!-- TODO Kontrollkästchen variable kosten-->
+        </v-col>
+      </v-row>
+      </v-container>
+      <v-btn id="btnCreateTbl" depressed>Erstelle Tabelle</v-btn>
       <div id="tbl"></div>
 
       <input id="start" type="button" value="Speichern" />
@@ -84,26 +111,25 @@ function writeToScreen(message) {
 
 function createTable() {
   var tbl =
-    "<div id=\"tbl\"><table><tr><th>Periode</th><th>Bedarf der Periode</th><th>Lagerkosten der Periode</th></tr>";
+    "<table><tr><th>Periode</th><th>Bedarf der Periode</th><th>Lagerkosten der Periode</th></tr>";
   var anzPerioden = document.getElementById("anzPerioden").value;
   var lagerkostensatz = document.getElementById("lagerkostensatz").value;
-  console.log('erstelle tbody');
   var i = 1;
-  for (i; i <= anzPerioden ; i++) {
-    console.log(i);
+  for (i; i <= anzPerioden; i++) {
     tbl +=
       "<tr><td>" +
       i +
-      "</td><td><input id=\"bedarf"+i+"\" name=\"bedarf"+i+"\" type=\"number\" /></td><td>" +
+      '</td><td><input id="bedarf' +
+      i +
+      '" name="bedarf' +
+      i +
+      '" type="number" /></td><td>' +
       lagerkostensatz +
       "</td></tr>";
-      console.log(i+". Runde: "+tbl)
-  } 
-  tbl += "</table></div>";
+  }
+  tbl += "</table>";
   var divTbl = document.getElementById("tbl");
-  var create = document.createElement(divTbl); //TODO Error
-  divTbl.replaceWith(create);
-
+  divTbl.innerHTML = tbl;
 }
 
 /**
