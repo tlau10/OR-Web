@@ -86,11 +86,9 @@ function init() {
  * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
  */
 function socket() {
+      
   var wsUri = "ws://localhost:8080/web-socket";
-  var ruestkosten = document.getElementById("ruestkosten").value;
-  var anzPerioden = document.getElementById("anzPerioden").value;
-  var lagerkosten = document.getElementById("lagerkosten").value;
-  var message = ruestkosten + " " + anzPerioden + " " + lagerkosten;
+  var message = createMessage();
   var websocket = new WebSocket(wsUri);
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
@@ -130,6 +128,19 @@ function createTable() {
   tbl += "</table>";
   var divTbl = document.getElementById("tbl");
   divTbl.innerHTML = tbl;
+}
+
+function createMessage(){
+  var bestellkostensatz = document.getElementById("bestellkostensatz").value;
+  var anzPerioden = document.getElementById("anzPerioden").value;
+  var lagerkosten = document.getElementById("lagerkostensatz").value;
+  var msg=bestellkostensatz+";"+anzPerioden+";"+lagerkosten+";";
+  var i = 1;
+  for (i; i <= anzPerioden; i++) {
+    msg +=document.getElementById("bedarf"+i).value+" ";
+  }
+  console.log(msg);
+  return msg;
 }
 
 /**
