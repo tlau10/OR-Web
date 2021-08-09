@@ -32,7 +32,6 @@ public class WebSocketHandler extends TextWebSocketHandler {
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		super.handleTextMessage(session, message);
-		LOGGER.info("message" + message + "send");
 		WagnerWhitinThread wwt = new WagnerWhitinThread(session, message);
 		wwt.start();// call run Method
 		sessions.forEach(webSocketSession -> {
