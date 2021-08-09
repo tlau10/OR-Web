@@ -1,11 +1,18 @@
 package com.orweb.main.Threads;
 
+import java.util.Scanner;
+
 import com.orweb.main.logic.Methods.WagnerWhitin;
 
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class WagnerWhitinThread extends Thread {
+    
+	private static final Logger LOGGER = LoggerFactory.getLogger(WagnerWhitinThread.class);
     private WebSocketSession webSocketSession;
     private TextMessage message;
 
@@ -15,14 +22,14 @@ public class WagnerWhitinThread extends Thread {
     }
 
     public void run() {
-        
-        double[] lk = {1.3, 2.4, 3.7,6.0,10};
-        int[] p = {4,6,3,2,3};
+        String txt = message.getPayload();
+        LOGGER.info("message im WagnerWhitinThread" + txt );
+        String[] str = txt.split(";");
         WagnerWhitin instance = new WagnerWhitin();
-        instance.setAnzahlPerioden(1);
-        instance.setLagerkosten(lk);
-        instance.setRuestkosten(4);
-        instance.setPeriodenbedarf(p);
+        instance.setAnzahlPerioden(Integer.parseInt(str[0]));
+        instance.setRuestkosten(Integer.parseInt(str[1]));
+        instance.setLagerkosten(str[2])); //TODO
+        instance.setPeriodenbedarf(str[3].split(" ")); //TODO
         instance.start();
     }
 
