@@ -91,7 +91,7 @@ export default {
             download: "DownloadCenter#LPSolve",
         },
         {
-            name: "GLPK - GNU Linear Programming Kit GUI",
+            name: "GLPK - GNU Linear Programming Kit GUI Frontend 1.0",
             Kategorie: "",
             start: "GLPK",
             download: "DownloadCenter#GLPK",
@@ -100,7 +100,7 @@ export default {
             name: "Power LP 0.7.5",
             Kategorie: "",
             start: "PowerLP",
-            download: "DownloadCenter#Power",
+            download: "DownloadCenter#PowerLP",
         },
         {
             name: "LiPS - Linear Program Solver",
@@ -124,13 +124,13 @@ export default {
             name: "Iterator 2.0",
             Kategorie: "Interaktive Solver",
             start: "Iterator2.0",
-            download: "DownloadCenter#Iterator2.0",//funktioniert nicht
+            download: "DownloadCenter#Iterator",
         },
         {
             name: "Sensibilitätsanalyse",
             Kategorie: "Interaktive Solver",
-            start: "Sensibilitätsanalyse",
-            download: "DownloadCenter#Sensibilitätsanalyse",
+            start: "Sensibilitaetsanalyse",
+            download: "DownloadCenter#Sensibilitaetsanalyse",
         },
         {
             name: "Primal Dual Wandler",
