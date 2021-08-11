@@ -1,6 +1,6 @@
 package com.orweb.main.Handler;
 
-import java.io.IOException;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import org.slf4j.Logger;
@@ -34,12 +34,5 @@ public class WebSocketHandler extends TextWebSocketHandler {
 		super.handleTextMessage(session, message);
 		WagnerWhitinThread wwt = new WagnerWhitinThread(session, message);
 		wwt.start();// call run Method
-		sessions.forEach(webSocketSession -> {
-			try {
-				webSocketSession.sendMessage(message);
-			} catch (IOException e) {
-				LOGGER.error("Error occurred.", e);
-			}
-		});
 	}
 }
