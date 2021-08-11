@@ -95,7 +95,11 @@ function socket() {
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
     websocket.send(message);
-    writeToScreen(message);
+  };
+  websocket.onmessage = function (responseMsg) {
+    writeToScreen(responseMsg);
+  };
+ websocket.onclose = function () {
     websocket.close();
   };
 }
@@ -105,7 +109,7 @@ function socket() {
 function writeToScreen(message) {
   var pre = document.createElement("p");
   pre.style.wordWrap = "break-word";
-  pre.innerHTML = message;
+  pre.innerHTML = message.data;
   output.appendChild(pre);
 }
 
@@ -115,7 +119,7 @@ function createTable() {
   var anzPerioden = document.getElementById("anzPerioden").value;
   var lagerkostensatz = document.getElementById("lagerkostensatz").value;
   var i = 1;
-  if (document.getElementById("variableLagerkosten").checked  == true) {
+  if (document.getElementById("variableLagerkosten").checked == true) {
     for (i; i <= anzPerioden; i++) {
       tbl +=
         "<tr><td>" +
@@ -161,14 +165,13 @@ function createMessage() {
     msg += document.getElementById("bedarf" + i).value + " ";
   }
   msg += ";";
-  if (document.getElementById("variableLagerkosten").checked  == true) {
+  if (document.getElementById("variableLagerkosten").checked == true) {
     for (i; i <= anzPerioden; i++) {
       msg += document.getElementById("variableLagerkosten" + i).value + " ";
     }
   } else {
     msg += document.getElementById("lagerkostensatz").value;
   }
-  console.log(msg);
   return msg;
 }
 
