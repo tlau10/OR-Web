@@ -62,28 +62,31 @@
           </v-col>
         </v-row>
       </v-container>
-      <v-btn id="btnCreateTbl" depressed>Erstelle Tabelle</v-btn>
+      <div>
+        <v-btn id="weiter" depressed>Weiter</v-btn>
+        <v-btn id="berechnung" depressed>Berechnung</v-btn>
+        <v-btn id="reset" depressed>Reset</v-btn>
+      </div>
       <div id="tbl"></div>
-
-      <input id="start" type="button" value="Speichern" />
+      
       <div id="output"></div>
     </body>
   </v-container>
 </template>
 <script  type = "text/javascript" >
-var start;
+var berechnung;
 var output;
-var createTbl;
+var weiter;
 /**
  * init() wird aufgerufen, sobald die Seite geladen ist, weist den Variablen die ID zu und setzt den EventListener auf den Button mit der ID "start"
  */
 function init() {
-  start = document.getElementById("start");
+  berechnung = document.getElementById("berechnung");
   output = document.getElementById("output");
-  createTbl = document.getElementById("btnCreateTbl");
+  weiter = document.getElementById("weiter");
   //Sobald der Button mit der ID "start" angeklickt wird, wird die Funktion socket() aufgerufen
-  start.addEventListener("click", socket, false);
-  createTbl.addEventListener("click", createTable, false);
+  berechnung.addEventListener("click", socket, false);
+  weiter.addEventListener("click", createTable, false);
 }
 /**
  * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
@@ -104,13 +107,38 @@ function socket() {
   };
 }
 /**
- * writeToScreen(message) - Test-Funktion
+ * writeToScreen(message) - erstellt Tabelle für das Ergebnis
  */
 function writeToScreen(message) {
-  var pre = document.createElement("p");
-  pre.style.wordWrap = "break-word";
-  pre.innerHTML = message.data;
-  output.appendChild(pre);
+  var response = message.data
+  var lines = response.split("--")
+
+  var kostenminimum = document.createElement("p");
+  kostenminimum.innerHTML = "Kostenminimum: "+lines[lines.length-1]+" GE";
+  output.appendChild(kostenminimum);
+
+  var tbl = 
+    "<table><tr><th>Periode</th><th>Bedarfsmenge</th><th>Bestellmenge</th><th>Anzahl Perioden</th><th>Lagerbestand</th>"+
+    "<th>Lagerkosten</th></tr>";
+
+  var length_without_kostenminimum = lines.length-1
+  for (let i = 0; i < length_without_kostenminimum; i++){
+    var columns = lines[i].split(" ");
+    tbl+="<tr>";
+    for (let j = 0; j < columns.length; j++){
+      tbl+="<td>"+columns[j]+"</td>";
+    }
+    tbl+="</tr>";
+  }
+  tbl+="</table>";
+
+  var table = document.createElement("p");
+  table.innerHTML = tbl;
+  output.appendChild(table);
+}
+
+function reset(){
+
 }
 
 function createTable() {
@@ -118,6 +146,12 @@ function createTable() {
     "<table><tr><th>Periode</th><th>Bedarf der Periode</th><th>Lagerkosten der Periode</th></tr>";
   var anzPerioden = document.getElementById("anzPerioden").value;
   var lagerkostensatz = document.getElementById("lagerkostensatz").value;
+  var bestellkostensatz = document.getElementById("bestellkostensatz").value;
+
+  //überprüfe ob input eingetragen
+  if(anzPerioden == "" || lagerkostensatz == "" || bestellkostensatz == "")
+    return
+
   var i = 1;
   if (document.getElementById("variableLagerkosten").checked == true) {
     for (i; i <= anzPerioden; i++) {
@@ -158,6 +192,7 @@ function createTable() {
 function createMessage() {
   var anzPerioden = document.getElementById("anzPerioden").value;
   var bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
+  console.log(bestellkostensatz)
 
   var msg = anzPerioden + ";" + bestellkostensatz + ";";
   var i = 1;

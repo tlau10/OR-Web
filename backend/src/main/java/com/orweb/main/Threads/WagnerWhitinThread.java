@@ -31,12 +31,12 @@ public class WagnerWhitinThread extends Thread {
         instance.setLagerkosten(parseStringArrayToDoubleArray(str[3].split(" "), Integer.parseInt(str[0])));
         instance.start();
 
-        responseMsg = parseObjectArrayToString(instance.getObjectAusgabe())+ ";"+ instance.getMinGesamtKosten();
+        responseMsg = parseObjectArrayToString(instance.getObjectAusgabe())+instance.getMinGesamtKosten();
         TextMessage response = new TextMessage(responseMsg);
         LOGGER.info("Text"+ responseMsg);
         try {
-            synchronized(webSocketSession) {//TODO
-                webSocketSession.sendMessage(new TextMessage(response));
+            synchronized(webSocketSession) {
+                webSocketSession.sendMessage(response);
             }
         } catch (IOException e) {
             LOGGER.error("Send Response failed",e);
@@ -67,12 +67,13 @@ public class WagnerWhitinThread extends Thread {
         return doubleArray;
     }
 
-    private String parseObjectArrayToString( Object[][] objectAusgabe){
+    private String parseObjectArrayToString(Object[][] objectAusgabe){
         String str="";
         for (int i = 0; i < objectAusgabe.length; i++) {
             for (int j = 0; j < objectAusgabe[i].length; j++) {
                 str += objectAusgabe[i][j] + " ";
             }
+            str=str.substring(0, str.length() - 1);
             str +="--";
         }
         return str;
