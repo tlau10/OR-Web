@@ -33,11 +33,12 @@ public class WagnerWhitinThread extends Thread {
 
         responseMsg = parseObjectArrayToString(instance.getObjectAusgabe())+instance.getMinGesamtKosten();
         TextMessage response = new TextMessage(responseMsg);
-        LOGGER.info("Text"+ responseMsg);
+        LOGGER.info("Message "+ responseMsg+" send to "+webSocketSession.getId());
         try {
             synchronized(webSocketSession) {
                 webSocketSession.sendMessage(response);
                 webSocketSession.close();
+                LOGGER.info("Connection: "+webSocketSession.getId()+" closed");
             }
         } catch (IOException e) {
             LOGGER.error("Send Response failed",e);

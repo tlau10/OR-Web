@@ -19,7 +19,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 		sessions.add(session);
-		LOGGER.info("connection etablished");
+		LOGGER.info("connection: "+session.getId()+" etablished");
 		super.afterConnectionEstablished(session);
 	}
 
