@@ -62,7 +62,7 @@ function init() {
  * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
  */
 function socket() {
-  let wsUri = "ws://localhost:8080/web-socket";
+  let wsUri = "wss://orweb-backend.herokuapp.com/web-socket"
   let message = createMessage();
   let websocket = new WebSocket(wsUri);
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
