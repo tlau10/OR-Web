@@ -57,8 +57,8 @@
             <span>GE pro ME pro ZE</span>
           </v-col>
           <v-col cols="4">
-            <input id="variableLagerkosten" type="checkbox" />
-            <label for="variableLagerkosten">variable Lagerkosten</label>
+            <input id="letiableLagerkosten" type="checkbox" />
+            <label for="letiableLagerkosten">variable Lagerkosten</label>
           </v-col>
         </v-row>
       </v-container>
@@ -77,6 +77,7 @@
 var berechnung;
 var output;
 var weiter;
+var resetbtn;
 /**
  * init() wird aufgerufen, sobald die Seite geladen ist, weist den Variablen die ID zu und setzt den EventListener auf den Button mit der ID "start"
  */
@@ -84,17 +85,19 @@ function init() {
   berechnung = document.getElementById("berechnung");
   output = document.getElementById("output");
   weiter = document.getElementById("weiter");
+  resetbtn = document.getElementById("reset");
   //Sobald der Button mit der ID "start" angeklickt wird, wird die Funktion socket() aufgerufen
   berechnung.addEventListener("click", socket, false);
   weiter.addEventListener("click", createTable, false);
+  resetbtn.addEventListener("click", reset, false);
 }
 /**
  * socket() erstellt eine Verbindung zum WebSocket, holt Daten aus den input-Feldern und leitet diese an den WebSocket weiter
  */
 function socket() {
-  var wsUri = "ws://localhost:8080/web-socket";
-  var message = createMessage();
-  var websocket = new WebSocket(wsUri);
+  let wsUri = "ws://localhost:8080/web-socket";
+  let message = createMessage();
+  let websocket = new WebSocket(wsUri);
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
     websocket.send(message);
@@ -110,20 +113,20 @@ function socket() {
  * writeToScreen(message) - erstellt Tabelle für das Ergebnis
  */
 function writeToScreen(message) {
-  var response = message.data
-  var lines = response.split("--")
+  let response = message.data
+  let lines = response.split("--")
 
-  var kostenminimum = document.createElement("p");
+  let kostenminimum = document.createElement("p");
   kostenminimum.innerHTML = "Kostenminimum: "+lines[lines.length-1]+" GE";
   output.appendChild(kostenminimum);
 
-  var tbl = 
+  let tbl = 
     "<table><tr><th>Periode</th><th>Bedarfsmenge</th><th>Bestellmenge</th><th>Anzahl Perioden</th><th>Lagerbestand</th>"+
     "<th>Lagerkosten</th></tr>";
 
-  var length_without_kostenminimum = lines.length-1
+  let length_without_kostenminimum = lines.length-1
   for (let i = 0; i < length_without_kostenminimum; i++){
-    var columns = lines[i].split(" ");
+    let columns = lines[i].split(" ");
     tbl+="<tr>";
     for (let j = 0; j < columns.length; j++){
       tbl+="<td>"+columns[j]+"</td>";
@@ -132,28 +135,39 @@ function writeToScreen(message) {
   }
   tbl+="</table>";
 
-  var table = document.createElement("p");
+  let table = document.createElement("p");
   table.innerHTML = tbl;
   output.appendChild(table);
 }
 
 function reset(){
+  while(output.lastChild){
+    output.removeChild(output.lastChild);
+  }
 
+  let tbl=document.getElementById("tbl");
+  while(tbl.lastChild){
+    tbl.removeChild(tbl.lastChild);
+  }
+
+  document.getElementById("anzPerioden").value="";
+  document.getElementById("lagerkostensatz").value="";
+  document.getElementById("bestellkostensatz").value="";
 }
 
 function createTable() {
-  var tbl =
+  let tbl =
     "<table><tr><th>Periode</th><th>Bedarf der Periode</th><th>Lagerkosten der Periode</th></tr>";
-  var anzPerioden = document.getElementById("anzPerioden").value;
-  var lagerkostensatz = document.getElementById("lagerkostensatz").value;
-  var bestellkostensatz = document.getElementById("bestellkostensatz").value;
+  let anzPerioden = document.getElementById("anzPerioden").value;
+  let lagerkostensatz = document.getElementById("lagerkostensatz").value;
+  let bestellkostensatz = document.getElementById("bestellkostensatz").value;
 
   //überprüfe ob input eingetragen
   if(anzPerioden == "" || lagerkostensatz == "" || bestellkostensatz == "")
     return
 
-  var i = 1;
-  if (document.getElementById("variableLagerkosten").checked == true) {
+  let i = 1;
+  if (document.getElementById("letiableLagerkosten").checked == true) {
     for (i; i <= anzPerioden; i++) {
       tbl +=
         "<tr><td>" +
@@ -185,24 +199,29 @@ function createTable() {
     }
   }
   tbl += "</table>";
-  var divTbl = document.getElementById("tbl");
+  let divTbl = document.getElementById("tbl");
   divTbl.innerHTML = tbl;
 }
 
 function createMessage() {
-  var anzPerioden = document.getElementById("anzPerioden").value;
-  var bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
-  console.log(bestellkostensatz)
+  let anzPerioden = document.getElementById("anzPerioden").value;
+  let bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
 
-  var msg = anzPerioden + ";" + bestellkostensatz + ";";
-  var i = 1;
-  for (i; i <= anzPerioden; i++) {
-    msg += document.getElementById("bedarf" + i).value + " ";
+  let msg = anzPerioden + ";" + bestellkostensatz + ";";
+  for (let i=1; i <= anzPerioden; i++) {
+    let bedarf = document.getElementById("bedarf" + i).value;
+    if(bedarf == "")
+      bedarf = "0";
+    
+    msg += bedarf+" ";
   }
   msg += ";";
-  if (document.getElementById("variableLagerkosten").checked == true) {
-    for (i; i <= anzPerioden; i++) {
-      msg += document.getElementById("variableLagerkosten" + i).value + " ";
+  if (document.getElementById("letiableLagerkosten").checked == true) {
+    for (let i=1; i <= anzPerioden; i++) {
+      let lagerkosten = document.getElementById("lagerkostensatz" + i).value;
+      if(lagerkosten == "")
+        lagerkosten = "0";
+      msg += lagerkosten+" ";
     }
   } else {
     msg += document.getElementById("lagerkostensatz").value;

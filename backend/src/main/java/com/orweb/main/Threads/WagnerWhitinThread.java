@@ -37,6 +37,7 @@ public class WagnerWhitinThread extends Thread {
         try {
             synchronized(webSocketSession) {
                 webSocketSession.sendMessage(response);
+                webSocketSession.close();
             }
         } catch (IOException e) {
             LOGGER.error("Send Response failed",e);
