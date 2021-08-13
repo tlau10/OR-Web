@@ -1,6 +1,6 @@
 package com.orweb.main.Handler;
 
-import java.io.IOException;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import org.slf4j.Logger;
@@ -9,8 +9,9 @@ import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
+import com.orweb.main.Threads.WagnerWhitinThread;
 
-public class WebSocketHandler extends TextWebSocketHandler{
+public class WebSocketHandler extends TextWebSocketHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WebSocketHandler.class);
 
 	private final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
@@ -18,7 +19,7 @@ public class WebSocketHandler extends TextWebSocketHandler{
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 		sessions.add(session);
-		LOGGER.info("connection etablished");
+		LOGGER.info("connection: "+session.getId()+" etablished");
 		super.afterConnectionEstablished(session);
 	}
 
@@ -31,13 +32,7 @@ public class WebSocketHandler extends TextWebSocketHandler{
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		super.handleTextMessage(session, message);
-		LOGGER.info("message"+message+"send");
-		sessions.forEach(webSocketSession -> {
-			try {
-				webSocketSession.sendMessage(message);
-			} catch (IOException e) {
-				LOGGER.error("Error occurred.", e);
-			}
-		});
+		WagnerWhitinThread wwt = new WagnerWhitinThread(session, message);
+		wwt.start();// call run Method
 	}
 }

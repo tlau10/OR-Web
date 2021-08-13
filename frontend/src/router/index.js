@@ -124,6 +124,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitin.vue')
   },
   {
+    path: '/WagnerWhitinExecute',
+    name: 'WagnerWhitinExecute',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitinExecute.vue')
+  },
+  {
     path: '/WagnerWhitinLP',
     name: 'WagnerWhitinLP',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitinLP.vue')
