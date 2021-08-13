@@ -1,67 +1,29 @@
 <template>
   <v-container class="spacing-playground pa-6" fluid>
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=11" />
-
-      <title>Wagner Whitin</title>
-    </head>
-
-    <body>
-      <h1>Wagner Whitin 1.2 - Algorithmus</h1>
       <v-container>
+        <v-card flat>
+          <h1>Wagner Whitin 1.2 - Algorithmus</h1>
         <v-row>
-          <v-col cols="2">
-            <label for="bestellkostensatz">Bestellkostensatz</label>
-          </v-col>
-          <v-col cols="2">
-            <input
-              id="bestellkostensatz"
-              class="text-right"
-              name="bestellkostensatz"
-              type="number"
-              min="1"
-            />
-          </v-col>
-          <v-col cols="2"> <span>GE</span></v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="2">
-            <label for="anzPerioden">Anzahl der Perioden</label>
-          </v-col>
-          <v-col cols="2">
-            <input
-              id="anzPerioden"
-              class="text-right"
-              name="anzPerioden"
-              type="number"
-            />
-          </v-col>
-          <v-col cols="2">
-            <span>Perioden</span>
+          <v-col cols="12" sm="2" md="3">
+            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="2">
-            <label for="lagerkostensatz">Lagerkostensatz</label>
-          </v-col>
-          <v-col cols="2">
-            <input
-              id="lagerkostensatz"
-              class="text-right"
-              name="lagerkostensatz"
-              type="number"
-            />
-          </v-col>
-          <v-col cols="2">
-            <span>GE pro ME pro ZE</span>
-          </v-col>
-          <v-col cols="4">
-            <input id="letiableLagerkosten" type="checkbox" />
-            <label for="letiableLagerkosten">variable Lagerkosten</label>
+          <v-col cols="12" sm="2" md="3">
+            <v-text-field id="anzPerioden" label="Anzahl der Perioden"></v-text-field>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col cols="12" sm="2" md="3">
+            <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE"></v-text-field>
+            <input id="variableLagerkosten" type="checkbox" />
+            <v-label for="variableLagerkosten">variable Lagerkosten</v-label>
+          </v-col>
+        </v-row>
+        </v-card>
       </v-container>
+      <v-container>
+        <v-card flat>
       <div>
         <v-btn id="weiter" depressed>Weiter</v-btn>
         <v-btn id="berechnung" depressed>Berechnung</v-btn>
@@ -70,7 +32,8 @@
       <div id="tbl"></div>
       
       <div id="output"></div>
-    </body>
+        </v-card>
+      </v-container>
   </v-container>
 </template>
 <script  type = "text/javascript" >
@@ -153,6 +116,8 @@ function reset(){
   document.getElementById("anzPerioden").value="";
   document.getElementById("lagerkostensatz").value="";
   document.getElementById("bestellkostensatz").value="";
+
+  document.getElementById("variableLagerkosten").checked=false;
 }
 
 function createTable() {
@@ -167,7 +132,7 @@ function createTable() {
     return
 
   let i = 1;
-  if (document.getElementById("letiableLagerkosten").checked == true) {
+  if (document.getElementById("variableLagerkosten").checked == true) {
     for (i; i <= anzPerioden; i++) {
       tbl +=
         "<tr><td>" +
@@ -216,7 +181,7 @@ function createMessage() {
     msg += bedarf+" ";
   }
   msg += ";";
-  if (document.getElementById("letiableLagerkosten").checked == true) {
+  if (document.getElementById("variableLagerkosten").checked == true) {
     for (let i=1; i <= anzPerioden; i++) {
       let lagerkosten = document.getElementById("lagerkostensatz" + i).value;
       if(lagerkosten == "")
