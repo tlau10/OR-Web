@@ -1,11 +1,11 @@
 <template>
-  <v-container class="spacing-playground pa-6" fluid>
+  <v-container fluid>
       <v-container>
         <v-card flat>
           <h1>Wagner Whitin 1.2 - Algorithmus</h1>
-        <v-row>
+        <v-row align="start">
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE"></v-text-field>
+            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE" align="center"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -17,21 +17,25 @@
           <v-col cols="12" sm="2" md="3">
             <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE"></v-text-field>
             <input id="variableLagerkosten" type="checkbox" />
-            <v-label for="variableLagerkosten">variable Lagerkosten</v-label>
+            <v-label for="variableLagerkosten"> variable Lagerkosten</v-label>
           </v-col>
         </v-row>
         </v-card>
       </v-container>
       <v-container>
+        <v-card flat max-width="400">
+          <v-row>
+              <v-col><v-btn id="weiter" depressed color="primary" small>Weiter</v-btn></v-col>
+              <v-spacer></v-spacer>
+              <v-col><v-btn id="berechnung" depressed color="primary" small>Berechnung</v-btn></v-col>
+              <v-spacer></v-spacer>
+              <v-col><v-btn id="reset" depressed color="primary" small>Reset</v-btn></v-col>
+          </v-row>
+        </v-card>
         <v-card flat>
-      <div>
-        <v-btn id="weiter" depressed>Weiter</v-btn>
-        <v-btn id="berechnung" depressed>Berechnung</v-btn>
-        <v-btn id="reset" depressed>Reset</v-btn>
-      </div>
-      <div id="tbl"></div>
-      
-      <div id="output"></div>
+              <div id="tbl"></div>
+          
+              <div id="output"></div>
         </v-card>
       </v-container>
   </v-container>
@@ -78,6 +82,11 @@ function socket() {
 function writeToScreen(message) {
   let response = message.data
   let lines = response.split("--")
+
+  //entferne bereits existierende Tabelle, wenn Anfrage mehrfach gesendet
+  while(output.lastChild){
+    output.removeChild(output.lastChild);
+  }
 
   let kostenminimum = document.createElement("p");
   kostenminimum.innerHTML = "Kostenminimum: "+lines[lines.length-1]+" GE";
