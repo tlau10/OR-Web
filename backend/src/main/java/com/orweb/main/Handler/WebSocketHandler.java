@@ -32,7 +32,20 @@ public class WebSocketHandler extends TextWebSocketHandler {
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		super.handleTextMessage(session, message);
-		WagnerWhitinThread wwt = new WagnerWhitinThread(session, message);
-		wwt.start();// call run Method
+
+		//hole string aus message
+		String requestMessage = message.getPayload();
+
+		//extrahiere id aus message
+		String id = requestMessage.substring(0, 1);
+
+		//entferne id aus messafe
+		requestMessage = requestMessage.substring(2);
+
+		switch(id){
+			case "0":
+				new WagnerWhitinThread(session, requestMessage).start();
+				break;
+		}
 	}
 }

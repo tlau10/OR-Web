@@ -45,6 +45,7 @@ var berechnung;
 var output;
 var weiter;
 var resetbtn;
+const methodenID = 0;
 /**
  * init() wird aufgerufen, sobald die Seite geladen ist, weist den Variablen die ID zu und setzt den EventListener auf den Button mit der ID "start"
  */
@@ -181,7 +182,7 @@ function createMessage() {
   let anzPerioden = document.getElementById("anzPerioden").value;
   let bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
 
-  let msg = anzPerioden + ";" + bestellkostensatz + ";";
+  let msg = methodenID + ";" + anzPerioden + ";" + bestellkostensatz + ";";
   for (let i=1; i <= anzPerioden; i++) {
     let bedarf = document.getElementById("bedarf" + i).value;
     if(bedarf == "")
