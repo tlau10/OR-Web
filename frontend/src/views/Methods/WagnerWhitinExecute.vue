@@ -71,6 +71,7 @@ function socket() {
     console.log("message "+message+" undefined")
     return
   }
+  console.log(message);
 
   let websocket = new WebSocket(wsUri);
 
@@ -161,12 +162,12 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" /></td><td>' +
+        '" type="number" min="0" /></td><td>' +
         '</td><td><input id="lagerkostensatz' +
         i +
         '" name="lagerkostensatz' +
         i +
-        '" type="number" /> ' +
+        '" type="number" min="0" /> ' +
         "</td></tr>";
     }
   } else {
@@ -178,7 +179,7 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" /></td><td>' +
+        '" type="number" min="0" /></td><td>' +
         lagerkostensatz +
         "</td></tr>";
     }
@@ -205,9 +206,11 @@ function createMessage() {
     msg += bedarf+" ";
   }
 
-  //wenn checkBedarf nur nullen enthält, dann
+  //wenn checkBedarf nur nullen enthält oder Bedarf der ersten Periode = 0, dann
   //wird Berechnung abgebrochen, da WagnerWhitin Eingabe nicht akzeptiert
-  if(/^0*$/.test(checkBedarf)){
+  checkBedarfArray = checkBedarf.split("");
+  console.log(checkBedarfArray[0]);
+  if(/^0*$/.test(checkBedarf) || checkBedarfArray[0] == "0"){
     return;
   }
 
