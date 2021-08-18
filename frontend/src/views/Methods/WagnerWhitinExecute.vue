@@ -65,14 +65,24 @@ function init() {
 function socket() {
   let wsUri = "ws://localhost:8080/web-socket";
   let message = createMessage();
+
+  //Socketverbindung wird nur aufgebaut, wenn message erfolgreich generiert wurde
+  if(message == undefined){
+    console.log("message "+message+" undefined")
+    return
+  }
+
   let websocket = new WebSocket(wsUri);
+
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
     websocket.send(message);
   };
+
   websocket.onmessage = function (responseMsg) {
     writeToScreen(responseMsg);
   };
+
  websocket.onclose = function () {
     websocket.close();
   };
@@ -183,13 +193,24 @@ function createMessage() {
   let bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
 
   let msg = methodenID + ";" + anzPerioden + ";" + bestellkostensatz + ";";
+  let checkBedarf = "";
   for (let i=1; i <= anzPerioden; i++) {
     let bedarf = document.getElementById("bedarf" + i).value;
+
+    //ersetze leere Zellen mit einer 0
     if(bedarf == "")
       bedarf = "0";
-    
+
+    checkBedarf += bedarf;
     msg += bedarf+" ";
   }
+
+  //wenn checkBedarf nur nullen enthält, dann
+  //wird Berechnung abgebrochen, da WagnerWhitin Eingabe nicht akzeptiert
+  if(/^0*$/.test(checkBedarf)){
+    return;
+  }
+
   msg += ";";
   if (document.getElementById("variableLagerkosten").checked == true) {
     for (let i=1; i <= anzPerioden; i++) {
