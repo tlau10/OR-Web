@@ -162,8 +162,8 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" min="0" /></td><td>' +
-        '</td><td><input id="lagerkostensatz' +
+        '" type="number" min="0" /></td>' +
+        '<td><input id="lagerkostensatz' +
         i +
         '" name="lagerkostensatz' +
         i +
