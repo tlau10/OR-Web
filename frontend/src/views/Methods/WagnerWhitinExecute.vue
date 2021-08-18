@@ -5,17 +5,17 @@
           <h1>Wagner Whitin 1.2 - Algorithmus</h1>
         <v-row align="start">
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE" align="center"></v-text-field>
+            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE" align="center" type="number" min="0" step="0"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="anzPerioden" label="Anzahl der Perioden"></v-text-field>
+            <v-text-field id="anzPerioden" label="Anzahl der Perioden" type="number" min="0" step="0"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE"></v-text-field>
+            <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE" type="number" min="0" step="0"></v-text-field>
             <input id="variableLagerkosten" type="checkbox" />
             <v-label for="variableLagerkosten"> variable Lagerkosten</v-label>
           </v-col>
@@ -71,7 +71,6 @@ function socket() {
     console.log("message "+message+" undefined")
     return
   }
-  console.log(message);
 
   let websocket = new WebSocket(wsUri);
 
@@ -162,12 +161,12 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" min="0" /></td>' +
+        '" type="number" min="0" step="0" /></td>' +
         '<td><input id="lagerkostensatz' +
         i +
         '" name="lagerkostensatz' +
         i +
-        '" type="number" min="0" /> ' +
+        '" type="number" min="0" step="0" /> ' +
         "</td></tr>";
     }
   } else {
@@ -179,7 +178,7 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" min="0" /></td><td>' +
+        '" type="number" min="0" step="0" /></td><td>' +
         lagerkostensatz +
         "</td></tr>";
     }
@@ -209,7 +208,6 @@ function createMessage() {
   //wenn checkBedarf nur nullen enthält oder Bedarf der ersten Periode = 0, dann
   //wird Berechnung abgebrochen, da WagnerWhitin Eingabe nicht akzeptiert
   checkBedarfArray = checkBedarf.split("");
-  console.log(checkBedarfArray[0]);
   if(/^0*$/.test(checkBedarf) || checkBedarfArray[0] == "0"){
     return;
   }
