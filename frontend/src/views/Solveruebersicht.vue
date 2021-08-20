@@ -86,39 +86,33 @@ export default {
     solver: [
          {
             name: "LP-Solve Frontend",
-            Kategorie: "",
+            Kategorie: "Sonstige",
             start: "LPSolve",
             download: "DownloadCenter#LPSolve",
         },
         {
             name: "GLPK - GNU Linear Programming Kit GUI Frontend 1.0",
-            Kategorie: "",
+            Kategorie: "Sonstige",
             start: "GLPK",
             download: "DownloadCenter#GLPK",
         },
         {
             name: "Power LP 0.7.5",
-            Kategorie: "",
+            Kategorie: "Sonstige",
             start: "PowerLP",
             download: "DownloadCenter#PowerLP",
         },
         {
             name: "LiPS - Linear Program Solver",
-            Kategorie: "",
+            Kategorie: "Sonstige",
             start: "LiPS",
             download: "DownloadCenter#LiPS",
         },
         {
             name: "Dakin 2.0",
-            Kategorie: "",
+            Kategorie: "Sonstige",
             start: "Dakin",
             download: "DownloadCenter#Dakin",
-        },
-        {
-            name: "Iterator 1.0",
-            Kategorie: "Interaktive Solver",
-            start: "Iterator",
-            download: "DownloadCenter#Iterator",
         },
         {
             name: "Iterator 2.0",
@@ -150,5 +144,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/assets/style.scss";
+@import "@/assets/css/style.scss";
 </style>

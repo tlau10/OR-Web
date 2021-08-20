@@ -35,6 +35,10 @@
                   </v-btn>
                   <span class="mx-5 font-weight-bold" @mouseover.native="hover = true"
     @mouseleave.native="hover = false">{{ group }}</span>
+                  <!--TODO Funktionalität Schließen-Button 
+                <v-btn icon small class="ma-0">
+                  <v-icon>mdi-close</v-icon>
+                </v-btn> -->
                 </td>
               </template>
               <template v-slot:[`item.name`]="{ item }">
@@ -70,7 +74,9 @@
                 </v-btn>
               </template>
               <template v-slot:[`item.download`]="{ item }">
-                <v-btn text icon :href="item.download" download>
+                <v-btn 
+                v-if="item.download!=''"
+                text icon :href="item.download" download>
                   <v-icon>mdi-download</v-icon>
                 </v-btn>
               </template>
@@ -133,7 +139,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Art: "Methoden",
         Kategorie: "Bestellmengenplanung",
-        start: "WagnerWhitinLP", 
+        start: "WagnerWhitinLP",
         dokumentation: "Methods/Wagner-WhitinLP1.3_Dokumentation.pdf",
         handbuch: "Methods/Wagner-WhitinLP1.3_Benutzerhandbuch.pdf",
         download: "Methods/WagnerWhitinLP1.3_Programm.zip",
@@ -180,7 +186,7 @@ export default {
         Art: "Methoden",
         Kategorie: "Personalplanung",
         start: "Leitstand_Pflegestation",
-        dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.zip",
+        dokumentation: "Methods/LeitstandPflegestation1.1_Dokumentation.pdf",
         handbuch: "Methods/LeitstandPflegestation1.1_Benutzerhandbuch.pdf",
         download: "Methods/LeitstandPflegestation1.1_Programm.zip",
       },
@@ -197,7 +203,7 @@ export default {
         name: "innerbetriebliche Standortplanung 1.1",
         Art: "Methoden",
         Kategorie: "Standortplanung",
-        start: "IB_Standortplanung",
+        start: "Innerbetriebliche_Standortplanung",
         dokumentation:
           "Methods/InnerbetrieblicheStandortplanung1.1_Dokumentation.pdf",
         handbuch:
@@ -270,7 +276,7 @@ export default {
       },
       {
         name: "Ernährungsplaner 2.0",
-        start: "Ernaehrungsplaner",
+        start: "Ernährungsplaner",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "Methods/Ernährungsplaner2.0_Dokumentation.zip",
@@ -279,7 +285,7 @@ export default {
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
-        start: "Einkaufswagen",
+        start: "Einkaufswagenoptimierung",
         Art: "Methoden",
         Kategorie: "Personalplanung",
         dokumentation: "",
@@ -314,11 +320,11 @@ export default {
         download: "Solver/LPSolveFrontend_Programm.zip",
       },
       {
-        name: "GLPK - GNU Linear Programming Kit GUI Frontend 1.0",
+        name: "GLPK - GNU Linear Programming Kit GUI",
         start: "GLPK",
         Art: "Solver",
         Kategorie: "",
-        dokumentation: "Solver/GLPK_Frontend1.0_Dokumentation.pdf",
+        dokumentation: "Solver/GLPKFrontend1.0_Dokumentation.pdf",
         handbuch: "Solver/GLPK_Frontend1.0_Benutzerhandbuch.pdf",
         download: "Solver/GLPK_Frontend1.0_Programm.zip",
       },
@@ -336,7 +342,7 @@ export default {
         start: "LiPS",
         Art: "Solver",
         Kategorie: "",
-        dokumentation: "",
+        dokumentation: "Solver/LiPS (in Russian)_Dokumentation.pdf",
         handbuch: "Solver/LiPS_Benutzerhandbuch.chm",
         download: "Solver/LiPS_Programm.zip",
       },
@@ -351,11 +357,11 @@ export default {
       },
       {
         name: "Sensibilitätsanalyse",
-        start: "Sensibilitaetsanalyse",
+        start: "Sensibilitätsanalyse",
         Art: "Solver",
         Kategorie: "Interaktive Solver",
-        dokumentation: "Solver/Sensibilitätsanalyse1.1_Dokumentation.pdf",
-        handbuch: "Solver/Sensibilitätsanalyse1.1_Benutzerhandbuch.pdf",
+        dokumentation: "Solver/Sensibilitaetsanalyse1.1_Dokumentation.pdf",
+        handbuch: "Solver/Sensibilitaetsanalyse1.1_Benutzerhandbuch.pdf",
         download: "Solver/Sensibilitätsanalyse1.1_Programm.zip",
       },
       {
@@ -374,7 +380,7 @@ export default {
         Kategorie: "Grafische Solver",
         dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
         handbuch: "",
-        download: "", // ToDo URL zu OR-GraphX einbinden
+        download: "",
       },
     ],
   }),
@@ -382,5 +388,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/assets/style.scss";
+@import "@/assets/css/style.scss";
 </style>

@@ -32,7 +32,7 @@
 
     <!--App bar 009a93  80cdc9-->
     <v-card class="overflow-hidden">
-      <v-app-bar dark prominent src="..\public\orwebBanner.png" height="150%" app>
+      <v-app-bar dark prominent src="@/assets/\orwebBanner.png" height="150%" app>
         <v-app-bar-nav-icon
           @click="drawer = !drawer"
           color="#009a93"

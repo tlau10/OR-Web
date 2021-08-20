@@ -87,7 +87,7 @@ export default {
         name: "Wagner-Whitin-LP 1.3",
         Kategorie: "Bestellmengenplanung",
         start: "WagnerWhitinLP",
-        download: "DownloadCenter#WagnerWhitinLP",
+        download: "DownloadCenter#Wagner-Whitin-LP 1.3",
       },
       {
         name: "Wagner-Whitin 1.2",
@@ -122,8 +122,8 @@ export default {
       {
         name: "Innerbetriebliche Standortplanung 1.1",
         Kategorie: "Standortplanung",
-        start: "IB_Standortplanung",
-        download: "DownloadCenter#IB_Standortplanung",
+        start: "Innerbetriebliche_Standortplanung",
+        download: "DownloadCenter#Innerbetriebliche_Standortplanung",
       },
       {
         name: "Standortplanung 3.0",
@@ -176,14 +176,14 @@ export default {
       {
         name: "Ernährungsplaner 2.0",
         Kategorie: "Personalplanung",
-        start: "Ernaehrungsplaner",
-        download: "DownloadCenter#Ernaehrungsplaner",
+        start: "Ernährungsplaner",
+        download: "DownloadCenter#Ernährungsplaner",
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
         Kategorie: "Personalplanung",
         start: "Einkaufswagen",
-        download: "DownloadCenter#Einkaufswagen",
+        download: "DownloadCenter#Einkaufswagenoptimierung",
       },
     ],
   }),
@@ -191,5 +191,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/assets/style.scss";
+@import "@/assets/css/style.scss";
 </style>

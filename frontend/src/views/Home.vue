@@ -46,6 +46,12 @@
                         >
                           mdi-archive-arrow-down</v-icon
                         >
+                        <v-icon
+                          class="text-h1 text--disabled"
+                          v-if="slide == 'WagnerWhitin'"
+                        >
+                          mdi-scatter-plot</v-icon
+                        >
                       </v-col>
                       <v-col class="text--secondary ml-10" cols="5">
                         <div class="text-h2">
@@ -84,6 +90,17 @@
                               DownloadCenter</router-link
                             >.
                           </p>
+                          <p
+                            class="subheading font-weight-regular"
+                            v-if="slide == 'WagnerWhitin'"
+                          >
+                            WagnerWhitin testen?
+                            <br />
+                            Dann ab zur
+                            <router-link to="/WagnerWhitinExecute">
+                              Methode</router-link
+                            >.
+                          </p>
                         </div>
                       </v-col>
                     </v-row>
@@ -108,8 +125,8 @@ export default {
       },
     ],
     model: 0,
-    colors: ["teal lighten-4", "teal lighten-5", "grey lighten-3"],
-    slides: ["Methoden", "Solver", "Download"],
+    colors: ["teal lighten-4", "teal lighten-5", "grey lighten-3", "grey lighten-4"],
+    slides: ["Methoden", "Solver", "Download", "WagnerWhitin"],
   }),
 };
 </script>
