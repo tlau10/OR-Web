@@ -12,16 +12,15 @@ public class WagnerWhitinThread extends Thread {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WagnerWhitinThread.class);
     private WebSocketSession webSocketSession;
-    private TextMessage message;
+    private String message;
 
-    public WagnerWhitinThread(WebSocketSession webSocketSession, TextMessage message) {
+    public WagnerWhitinThread(WebSocketSession webSocketSession, String message) {
         this.webSocketSession = webSocketSession;
         this.message = message;
     }
 
     public void run() {
-        String txt = message.getPayload();
-        String[] str = txt.split(";");
+        String[] str = message.split(";");
         WagnerWhitin instance = new WagnerWhitin();
         String responseMsg;
 

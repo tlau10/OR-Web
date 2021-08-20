@@ -5,17 +5,17 @@
           <h1>Wagner Whitin 1.2 - Algorithmus</h1>
         <v-row align="start">
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE" align="center"></v-text-field>
+            <v-text-field id="bestellkostensatz" label="Bestellkostensatz in GE" align="center" type="number" min="0" step="0"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="anzPerioden" label="Anzahl der Perioden"></v-text-field>
+            <v-text-field id="anzPerioden" label="Anzahl der Perioden" type="number" min="0" step="0"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12" sm="2" md="3">
-            <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE"></v-text-field>
+            <v-text-field id="lagerkostensatz" label="Lagerkosten in GE pro ME pro ZE" type="number" min="0" step="0"></v-text-field>
             <input id="variableLagerkosten" type="checkbox" />
             <v-label for="variableLagerkosten"> variable Lagerkosten</v-label>
           </v-col>
@@ -45,6 +45,7 @@ var berechnung;
 var output;
 var weiter;
 var resetbtn;
+const methodenID = 0;
 /**
  * init() wird aufgerufen, sobald die Seite geladen ist, weist den Variablen die ID zu und setzt den EventListener auf den Button mit der ID "start"
  */
@@ -64,14 +65,24 @@ function init() {
 function socket() {
   let wsUri = "ws://localhost:8080/web-socket";
   let message = createMessage();
+
+  //Socketverbindung wird nur aufgebaut, wenn message erfolgreich generiert wurde
+  if(message == undefined){
+    console.log("message "+message+" undefined")
+    return
+  }
+
   let websocket = new WebSocket(wsUri);
+
   //onopen-Funktion wird erst ausgeführt, sobald eine WebSocket Verbindung verfügbar ist
   websocket.onopen = function () {
     websocket.send(message);
   };
+
   websocket.onmessage = function (responseMsg) {
     writeToScreen(responseMsg);
   };
+
  websocket.onclose = function () {
     websocket.close();
   };
@@ -150,12 +161,12 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" /></td><td>' +
-        '</td><td><input id="lagerkostensatz' +
+        '" type="number" min="0" step="0" /></td>' +
+        '<td><input id="lagerkostensatz' +
         i +
         '" name="lagerkostensatz' +
         i +
-        '" type="number" /> ' +
+        '" type="number" min="0" step="0" /> ' +
         "</td></tr>";
     }
   } else {
@@ -167,7 +178,7 @@ function createTable() {
         i +
         '" name="bedarf' +
         i +
-        '" type="number" /></td><td>' +
+        '" type="number" min="0" step="0" /></td><td>' +
         lagerkostensatz +
         "</td></tr>";
     }
@@ -181,14 +192,26 @@ function createMessage() {
   let anzPerioden = document.getElementById("anzPerioden").value;
   let bestellkostensatz = document.getElementById("bestellkostensatz").value; // = Rüstkosten
 
-  let msg = anzPerioden + ";" + bestellkostensatz + ";";
+  let msg = methodenID + ";" + anzPerioden + ";" + bestellkostensatz + ";";
+  let checkBedarf = "";
   for (let i=1; i <= anzPerioden; i++) {
     let bedarf = document.getElementById("bedarf" + i).value;
+
+    //ersetze leere Zellen mit einer 0
     if(bedarf == "")
       bedarf = "0";
-    
+
+    checkBedarf += bedarf;
     msg += bedarf+" ";
   }
+
+  //wenn checkBedarf nur nullen enthält oder Bedarf der ersten Periode = 0, dann
+  //wird Berechnung abgebrochen, da WagnerWhitin Eingabe nicht akzeptiert
+  checkBedarfArray = checkBedarf.split("");
+  if(/^0*$/.test(checkBedarf) || checkBedarfArray[0] == "0"){
+    return;
+  }
+
   msg += ";";
   if (document.getElementById("variableLagerkosten").checked == true) {
     for (let i=1; i <= anzPerioden; i++) {

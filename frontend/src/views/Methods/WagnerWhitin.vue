@@ -28,7 +28,7 @@
                 </p>
                 </div>
                 <div>
-                    <p><a href="http://localhost:8080/api/hello">Zur Methode</a></p>
+                    <p><a href="../WagnerWhitinExecute">Zur Methode</a></p>
                 
                     <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
                     <p>{{ msg }}</p>
