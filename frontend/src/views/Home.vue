@@ -15,7 +15,6 @@
                 herunterzuladen und auf Ihrem Endgerät auszuführen. Falls Sie
                 lieber eine Methode oder einen Solver in der Applikation selbst
                 laufen lassen wollen, so wird Ihnen das auch hier ermöglicht.
-                <!-- ToDo ggf. ausführbare Methode/Solver verlinken-->
               </p>
               <v-carousel
                 cycle

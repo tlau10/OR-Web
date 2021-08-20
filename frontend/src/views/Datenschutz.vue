@@ -57,8 +57,8 @@
                   ></u
                 >
               </p>
-              <!-- Es werden keine Logfiles in der Applikation erstellt -->
-          <!--    <h3 class="western">Erstellung von Logfiles</h3>
+              <!-- HINWEIS: Es werden keine Logfiles in der Applikation erstellt -->
+              <!--    <h3 class="western">Erstellung von Logfiles</h3>
               <h4 class="western">
                 Beschreibung und Umfang der Datenverarbeitung
               </h4>
@@ -131,8 +131,8 @@
                 Nutzer gelöscht oder verfremdet, sodass eine Zuordnung des
                 aufrufenden Clients nicht mehr möglich ist.
               </p> -->
-<!--TODO Wird Cookie verwendet? -->
-              <h3 class="western">Verwendung von Cookies</h3>
+              <!-- HINWEIS: Es werden keine Cookies in der Applikation verwendet -->
+              <!--    <h3 class="western">Verwendung von Cookies</h3>
               <h4 class="western">
                 Beschreibung und Umfang der Datenverarbeitung
               </h4>
@@ -178,8 +178,8 @@
                 erfolgen. Werden Cookies für unsere Website deaktiviert, können
                 möglicherweise nicht mehr alle Funktionen der Website
                 vollumfänglich genutzt werden.
-              </p>
-              <!-- ToDo Ist Kontaktformular vorhanden? -->
+              </p> -->
+              <!-- HINWEIS: Auf der Seite WagnerWithinExecute werden die Daten mittels Formular verarbeitet -->
               <h3 class="western">Formulare</h3>
               <h4 class="western">
                 Beschreibung und Umfang der Datenverarbeitung
@@ -207,8 +207,8 @@
                 diesem Fall werden die mit der E-Mail übermittelten
                 personenbezogenen Daten der Nutzerin/des Nutzers gespeichert.
               </p>
-              <!-- Es wird in der Applikation keine Webanalyse durchgeführt -->
-        <!--      <h3 class="western">Webanalyse durch Matomo (ehemals PIWIK)</h3>
+              <!-- HINWEIS: Es wird in der Applikation keine Webanalyse durchgeführt -->
+              <!--      <h3 class="western">Webanalyse durch Matomo (ehemals PIWIK)</h3>
               <h4 class="western">Umfang der Verarbeitung der Daten</h4>
               <p class="western">
                 Wir nutzen auf unserer Website das Open-Source-Software-Tool
