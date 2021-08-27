@@ -122,8 +122,8 @@ export default {
       {
         name: "Innerbetriebliche Standortplanung 1.1",
         Kategorie: "Standortplanung",
-        start: "Innerbetriebliche_Standortplanung",
-        download: "DownloadCenter#Innerbetriebliche_Standortplanung",
+        start: "IB_Standortplanung",
+        download: "DownloadCenter#IB_Standortplanung",
       },
       {
         name: "Standortplanung 3.0",
@@ -176,14 +176,14 @@ export default {
       {
         name: "Ernährungsplaner 2.0",
         Kategorie: "Personalplanung",
-        start: "Ernährungsplaner",
-        download: "DownloadCenter#Ernährungsplaner",
+        start: "Ernaehrungsplaner",
+        download: "DownloadCenter#Ernaehrungsplaner",
       },
       {
         name: "Einkaufswagenoptimierung 1.0",
         Kategorie: "Personalplanung",
         start: "Einkaufswagen",
-        download: "DownloadCenter#Einkaufswagenoptimierung",
+        download: "DownloadCenter#Einkaufswagen",
       },
     ],
   }),
