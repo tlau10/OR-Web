@@ -21,7 +21,7 @@
                     LP-Solve IDE ist ein Frontend f&uuml;r den Batch-Solver LP-Solve. 
                     Er basiert auf der Revised-Simplex Methode und der Branch-and-bound Methode f&uuml;r Integer. Es k&ouml;nnen Dateien des Formats .lp und .mps hochgeladen werden.
                 <p>
-                    <b>Wichtiger Hinweis:</b></br>
+                    <b>Wichtiger Hinweis:</b>
                     Externe Software: Hierbei handelt es sich um eine Freeware.
                 </p>
             </div>

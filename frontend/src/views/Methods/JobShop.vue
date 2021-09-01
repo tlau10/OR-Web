@@ -36,6 +36,10 @@
                 <p>
                     <b>JobShop 2.2 wird in einer 32- und 64-Bit Version zur Verfügung gestellt. Der Start des Programmes erfolgt über die entsprechende Batch- oder Exe-Datei.</b>
                 </p>
+                <div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#JobShop">Download</a>
+            </div>
             </body>
     </v-container>
 </template>

@@ -289,15 +289,6 @@ export default {
         download: "Methods/Einkaufswagenoptimierung1.0_Programm.zip",
       },
       {
-        name: "Iterator 1.0",
-        start: "Iterator",
-        Art: "Solver",
-        Kategorie: "",
-        dokumentation: "Solver/Iterator1.0_Dokumentation.pdf",
-        handbuch: "Solver/Iterator1.0_Benutzerhandbuch.pdf",
-        download: "Solver/Iterator1.0_Programm.zip",
-      },
-      {
         name: "Iterator 2.0",
         start: "Iterator",
         Art: "Solver",

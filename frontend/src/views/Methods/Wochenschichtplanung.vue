@@ -36,7 +36,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <!--<a href="DownloadCenter#WagnerWhitin">Download</a>TODO -->
+                <!--<a href="">Download</a> TODO -->
             </div>
         </body>
     </v-container>

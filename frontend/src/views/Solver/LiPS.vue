@@ -27,12 +27,13 @@
                     Bei dieser Methode handelt es sich um eine externe Software.
                 </p>
                 <p>
-                    <b>Wichtiger Hinweis:</b></br>
+                    <b>Wichtiger Hinweis:</b>
                     Externe Software: Hierbei handelt es sich um eine Freeware.
                 </p>
             </div>
             <div>
-            <a href="DownloadCenter#LiPS">Download</a>
+                <!-- <a href="">Zum Solver</a> TODO-->
+                <a href="DownloadCenter#LiPS">Download</a>
             </div>
         </body>
     </v-container>
