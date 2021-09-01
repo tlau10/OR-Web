@@ -26,6 +26,10 @@
                 <br> Max. 99 Nachfragen
                 </p>
             </div>
+            div>
+                <!-- <a href="">Zur Methode</a> TODO-->
+                <a href="DownloadCenter#WagnerWhitinLP">Download</a>
+            </div>
         </body>
  </v-container>
 </template>

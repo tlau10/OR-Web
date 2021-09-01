@@ -299,7 +299,7 @@ export default {
       },
       {
         name: "Iterator 2.0",
-        start: "Iterator2.0",
+        start: "Iterator",
         Art: "Solver",
         Kategorie: "",
         dokumentation: "Solver/Iterator2.0_Dokumentation.pdf",
@@ -376,7 +376,7 @@ export default {
         Kategorie: "Grafische Solver",
         dokumentation: "Solver/ORGraphX_Dokumentation.pdf",
         handbuch: "",
-        download: "/ORX",
+        download: "",
       },
     ],
   }),

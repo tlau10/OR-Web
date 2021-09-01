@@ -66,7 +66,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#Innerbetriebliche_Standortplanung">Download</a>
+                <a href="DownloadCenter#IB_Standortplanung">Download</a>
             </div>
         </body>
     

@@ -32,7 +32,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#Einkaufswagenoptimierung">Download</a>
+                <a href="DownloadCenter#Einkaufswagen">Download</a>
             </div>
         </body>
     </v-container>
