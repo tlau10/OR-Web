@@ -117,7 +117,7 @@ export default {
         {
             name: "Iterator 2.0",
             Kategorie: "Interaktive Solver",
-            start: "Iterator2.0",
+            start: "Iterator",
             download: "DownloadCenter#Iterator",
         },
         {
