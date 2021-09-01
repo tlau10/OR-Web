@@ -158,11 +158,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Iterator.vue')
   },
   {
-    path: '/Iterator2.0',
-    name: 'Iterator2.0',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Solver/Iterator2.0.vue')
-  },
-  {
     path: '/LiPS',
     name: 'LiPS',
     component: () => import(/* webpackChunkName: "about" */ '../views/Solver/LiPS.vue')
