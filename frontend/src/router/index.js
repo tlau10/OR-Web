@@ -133,11 +133,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/WagnerWhitinLP.vue')
   },
   {
-    path: '/Zuordnungsplanung',
-    name: 'Zuordnungsplanung',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Methods/Zuordnungsplanung.vue')
-  },
-  {
     path: '/JobShop',
     name: 'JobShop',
     component: () => import(/* webpackChunkName: "about" */ '../views/Methods/JobShop.vue')
