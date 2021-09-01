@@ -6,12 +6,12 @@
         <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-        <title>OP-Scheduling 2.3 - Auslastungsoptimierung von Operationss&aumllen</title>
+        <title>OP-Scheduling 2.3 - Auslastungsoptimierung von Operationss&auml;len</title>
         </head>
 
         <body>
             <div class="content">
-                <h1>OP-Scheduling 2.3 - Auslastungsoptimierung von Operationss&aumllen</h1>
+                <h1>OP-Scheduling 2.3 - Auslastungsoptimierung von Operationss&auml;len</h1>
             
                 <hr noshade size=1>
                 <div class="infoPics">
@@ -23,14 +23,14 @@
                 <h2>Beschreibung der Methode:</h2>
                 <p>
                     OP-Scheduling befasst sich mit der Auslastungsoptimierung von
-                    Operationss&aumllen. Die Problematik ist vergleichbar mit der Auslastungsplanung
+                    Operationss&auml;len. Die Problematik ist vergleichbar mit der Auslastungsplanung
                     von Maschinen.
                 </p>
                 <p>
-                    Umgesetzt ist die Optimierung nach der (gleichm&auml&szligigen) minimalen
-                    Auslastung der OP-S&aumlle &uumlber die vorgegebenen Perioden.
+                    Umgesetzt ist die Optimierung nach der (gleichm&auml;&szlig;igen) minimalen
+                    Auslastung der OP-S&auml;le &uuml;ber die vorgegebenen Perioden.
                     Hierbei wird versucht die Maximalbelegungsdauer eines Saales gering zu halten,
-                    sowie gleich hohe oder geringere Belegungsdauern f&uumlr die anderen S&aumlle zu
+                    sowie gleich hohe oder geringere Belegungsdauern f&uuml;r die anderen S&auml;le zu
                     erreichen.
                 </p>
             </div>

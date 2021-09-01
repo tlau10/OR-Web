@@ -19,9 +19,9 @@
                 </div>
                 
                 <hr noshade size=1>
-                <p>
+               
                     <h2>Beschreibung der Methode:</h2>
-                    
+                     <p>
                     Dieses Tool ist in erster Linie als Unterst&uuml;tzung f&uuml;r einen St&auml;dteplaner gedacht. 
                     Der Planer hat die M&ouml;glichkeit ein individuelles Bushaltestellennetz zu erstellen 
                     und zu optimieren. Nach der Definition von Buslinien kann das Model simuliert werden. 
