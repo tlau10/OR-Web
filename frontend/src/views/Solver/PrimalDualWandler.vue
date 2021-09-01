@@ -31,7 +31,7 @@
             </div>
             <div>
                 <!-- <a href="">Zum Solver</a> TODO-->
-                <a href="DownloadCenter#PrimalDualWandler">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#PrimalDualWandler'}">Download</router-link>
             </div>
         </body>
     </v-container>

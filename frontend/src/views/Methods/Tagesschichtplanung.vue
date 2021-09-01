@@ -24,7 +24,7 @@
                     Die optimale L&ouml;sung wird mit dem Solver XA berechnet.
                     Zu Beginn muss ein Bedarfsplan, sowie ein Schichtmusterplan erstellt werden.
                 </p>
-                <b>Wichtiger Hinweis:</b></br>
+                <b>Wichtiger Hinweis:</b>
                 <p>
                     Es muss ein kompletter Tag geplant werden.
 
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <!--<a href="">Download</a> TODO-->
+                <!--<router-link :to="{ path: '/DownloadCenter', hash: '#...'}">Download</router-link> TODO-->
             </div>
         </body>
     </v-container>

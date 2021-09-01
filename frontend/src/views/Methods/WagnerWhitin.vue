@@ -20,8 +20,8 @@
                     Dies ist ein Programm, welches optimale Losgr&ouml;&szlig;en f&uuml;r Produkte, mit einer immer wieder &auml;ndernden Nachfrage, bei einstufiger Fertigung und ohne das Ber&uuml;cksichtigen vorhandener Kapazit&auml;ten, errechnet. Das geschieht auf Basis des Wagner Whitin Algorithmus.
                 </p>
                 <ul>
-                    <p>Eingegeben werden k&ouml;nnen die R&uuml;stkosten, die Anzahl der Perioden und die Lagerkosten, sowie den Bedarf pro Periode durch einen Klick auf den &quotWeiter&quot-Button.</p>
-                    <p>Klickt man nun auf &quotBerechnen&quot so wird das Kostenminimum errechnet. Zus&auml;tzlich wird eine Tabelle mit den Perioden, deren Bedarfsmengen, deren Bestellmengen, f&uuml;r welche Anzahl von Perioden in einer Periode bestellt wird und der Lagerbestand der Periode angezeigt.</p>
+                    <p>Eingegeben werden k&ouml;nnen die R&uuml;stkosten, die Anzahl der Perioden und die Lagerkosten, sowie den Bedarf pro Periode durch einen Klick auf den &quot;Weiter&quot;-Button.</p>
+                    <p>Klickt man nun auf &quot;Berechnen&quot; so wird das Kostenminimum errechnet. Zus&auml;tzlich wird eine Tabelle mit den Perioden, deren Bedarfsmengen, deren Bestellmengen, f&uuml;r welche Anzahl von Perioden in einer Periode bestellt wird und der Lagerbestand der Periode angezeigt.</p>
                 </ul>
                 <p>
                     Mehr Informationen zur Funktionsweise des Wagner Whitin Algorithmus, finden Sie im Programmordner der Methodendatenbank unter \WagnerWhitin\DOC\BESF-WagnerWhitin.docx
@@ -30,7 +30,7 @@
                 <div>
                     <p><a href="../WagnerWhitinExecute">Zur Methode</a></p>
                 
-                    <p><a href="DownloadCenter#WagnerWhitin">Download</a></p>
+                    <router-link :to="{ path: '/DownloadCenter', hash: '#WagnerWhitin'}">Download</router-link>
                     <p>{{ msg }}</p>
                 </div>
             </body>

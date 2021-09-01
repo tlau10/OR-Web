@@ -46,7 +46,7 @@
             </div>
             <div>
                 <!-- <a href="">Zum Solver</a> TODO-->
-                <a href="DownloadCenter#GLPK">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#GLPK'}">Download</router-link>
             </div>
         </body>
     </v-container>

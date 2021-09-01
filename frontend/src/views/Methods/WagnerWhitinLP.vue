@@ -28,7 +28,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#WagnerWhitinLP">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#WagnerWhitinLP'}">Download</router-link>
             </div>
         </body>
  </v-container>

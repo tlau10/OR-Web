@@ -66,7 +66,7 @@
       </div>
       <div>
         <!-- <a href="">Zur Methode</a> TODO-->
-        <a href="DownloadCenter#IB_Standortplanung">Download</a>
+        <router-link :to="{ path: '/DownloadCenter', hash: '#IB_Standortplanung'}">Download</router-link>
       </div>
     </body>
   </v-container>

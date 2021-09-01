@@ -43,7 +43,7 @@
         </div>
         <div>
             <!-- <a href="">Zur Methode</a> TODO-->
-            <a href="DownloadCenter#Ernaehrungsplaner">Download</a>
+            <router-link :to="{ path: '/DownloadCenter', hash: '#Ernaehrungsplaner'}">Download</router-link>
         </div>
     </body>
     </v-container>

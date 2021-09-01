@@ -31,7 +31,7 @@
                 </p>
                 <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#Roundtrip">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#Roundtrip'}">Download</router-link>
                 </div>
             </div>
         </body>

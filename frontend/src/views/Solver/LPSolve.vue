@@ -27,7 +27,7 @@
             </div>
             <div>
                  <!-- <a href="">Zum Solver</a> TODO-->
-                <a href="DownloadCenter#LPSolve">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#LPSolve'}">Download</router-link>
             </div>
         </body>
     </v-container>

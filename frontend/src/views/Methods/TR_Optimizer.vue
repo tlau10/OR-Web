@@ -37,7 +37,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#TR_Optimizer">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#TR_Optimizer'}">Download</router-link>
             </div>
         </body>
     </v-container>

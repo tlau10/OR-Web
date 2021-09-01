@@ -47,7 +47,8 @@
                 </p>
             </div>
             <div>
-            <a href="DownloadCenter#WebIteratorSAU">Download</a>
+                <!-- <a href="">Zum Solver</a> TODO-->
+                <!--<router-link :to="{ path: '/DownloadCenter', hash: '#...'}">Download</router-link> TODO-->
             </div>
         </body>
     </v-container>

@@ -29,7 +29,7 @@
             </div>
             <div>
                 <!-- <a href="">Zum Solver</a> TODO-->
-                <a href="DownloadCenter#Dakin">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#Dakin'}">Download</router-link>
             </div>
         </body>
     </v-container>

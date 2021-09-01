@@ -32,7 +32,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#Einkaufswagen">Download</a>
+               <router-link :to="{ path: '/DownloadCenter', hash: '#Einkaufswagen' }">Download</router-link>
             </div>
         </body>
     </v-container>

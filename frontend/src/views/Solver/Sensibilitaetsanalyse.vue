@@ -45,7 +45,7 @@
             </div>
             <div>   
                 <!-- <a href="">Zum Solver</a> TODO-->
-                <a href="DownloadCenter#Sensibilitaetsanalyse">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#Sensibilitaetsanalyse'}">Download</router-link>
             </div>
         </body>
     </v-container>

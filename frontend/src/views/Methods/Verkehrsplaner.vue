@@ -38,7 +38,7 @@
             </div>
             <div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#Verkehrsplaner">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#Verkehrsplaner'}">Download</router-link>
             </div>
         </body>
     </v-container>

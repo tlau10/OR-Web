@@ -47,7 +47,7 @@
 
 			<div>
                 <!-- <a href="">Zur Methode</a> TODO-->
-                <a href="DownloadCenter#PTSS">Download</a>
+                <router-link :to="{ path: '/DownloadCenter', hash: '#PTSS'}">Download</router-link>
             </div>
         </body>
     </v-container>
